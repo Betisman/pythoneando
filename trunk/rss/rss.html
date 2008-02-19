@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <!--  <META HTTP-EQUIV="Refresh" CONTENT="0;URL=example/HelloWorld.action">-->
+	<script language="javascript">
+		function ftp_login(form) {
+			var login = form.login.value;
+			var clave = form.clave.value;
+			var servidor = form.servidor.value;
+			if (login && clave && servidor) {
+				var ftp_connect = "ftp://" + login + ":" + clave + "@" + servidor;
+				window.location = ftp_connect;
+			}else {
+				alert("No fue posible la conexion!");
+			}
+		}
+		// -->
+	</script>
+</head>
+
+<body>
+	<FORM name=login>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="15%">Usuario:</td>
+				<td width="85%"><input name="login" size="30"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input name="clave" type="password" size="30"></td>
+			</tr>
+			<tr>
+				<td>Servidor ftp://</td>
+				<td><input name="servidor" size="30"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input name="button" type="button" onClick=ftp_login(this.form) value="conexion"></td>
+			</tr>
+		</table>
+	</FORM>
+</body>
+</html>

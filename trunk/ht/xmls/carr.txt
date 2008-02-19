@@ -1,0 +1,13 @@
+RESULTADOS (14:51)
+
+ThePiso 3 - 4 Bukakke Team (minuto 90)
+Real Servelete de Carfesan 0 - 9 Rosa Koblenz (minuto 90)
+Pitisianos SAD 4 - 3 A.S.U. Politehnica TM (minuto 90)
+Inframundo CD Drogadictos anónimos 9 - 1 Espino F.C (minuto 90)
+milan chupao 0 - 6 villar de ciervo fc (minuto 90)
+Rinoteam 1 - 4 Chardinos (minuto 90)
+CONGRIO F.C. 7 - 0 Teixugueiras fb (minuto 90)
+
+
+
+Carrusel automatico v1.0 implementado en carr.py

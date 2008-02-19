@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script type="text/javascript" src="jquery-1.2.3.js"></script>
+	<script type="text/javascript" src="jquery.ui/ui.tablesorter.js"></script>
+	<script  src="jquery.ui/jquery.dimensions.js"></script>
+	<script src="jquery.ui/ui.mouse.js"></script>
+	<script src="jquery.ui/ui.draggable.js"></script>
+	<script src="jquery.ui/ui.droppable.js"></script>
+	<script src="jquery.ui/ui.sortable.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $("#myList").sortable({});
+	  });
+  </script>
+  <style>ul { list-style: none; }
+li { background: #727EA3; color: #FFF; width: 100px; margin: 5px; font-size: 10px; font-family: Arial; padding: 3px; }</style>
+	
+    <script type="text/javascript">
+      $(document).ready(function(){
+	  $('#external_links a').click(function() {
+    return confirm('You are going to visit: ' + this.href);
+	});
+
+	$('<p></p>')
+	    .html('Hey World!')
+	    .css('background', 'yellow')
+	    .appendTo("body");
+		
+	$("a").click(function(){
+	   alert("Thanks for visiting!");
+		result(false);
+	 });
+	 
+	$("a")
+	   .filter(".clickme")
+	     .click(function(){
+	       alert("You are now leaving the site.");
+	     })
+	   .end()
+	   .filter(".hideme")
+	     .click(function(){
+	       $(this).hide();
+	       return false;
+	     })
+	   .end();
+	)};
+    </script>
+  </head>
+  <body>
+  <link rel="stylesheet" href="jquery.ui/themes/flora/flora.all.css" type="text/css" media="screen" title="Flora (Default)">
+  <script type="text/javascript">
+  $('<p></p>')
+    .html('Hey World!')
+    .css('background', 'yellow')
+    .appendTo("body");
+$('#message').css('background', 'yellow').html('Hello!').show();
+  </script>
+  <div id="external_links">
+	<a href="http://jquery.com/">jQuery</a>
+	<a href="http://www.hibernate.org/">HIBERNATE</a>
+	<a href="http://www.muchodeporte.com/" class="clickme">I give a message when you leave</a>
+	<a href="http://yahoo.com/" class="hideme">Click me to hide!</a>
+	<a href="http://microsoft.com/">I'm a normal link</a>
+	</div>
+	<p>parrafo</p>
+	<div id="message">
+		<p>Esto es una prueba</p>
+	</div>
+	<script type="text/javascript">
+$('#message').css('background', 'yellow').html('Esto es una prueba!').show();
+  </script>
+	<div id="externo">
+	</div>
+	<div id="message">
+	</div>
+	<script type="text/javascript">
+  $(document).ready(function(){
+    $("#sel2").tablesorter({sortList:[[0,0]], widgets: ['zebra']});
+  });
+  </script>
+	<div id="tabla2">
+		<table id="sel2" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+		<thead>
+			<tr>
+				<th>Hola</th>
+				<th>Adios</th>
+				<th>Oye!</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>32</td>
+				<td>rbb</td>
+				<td>jquerying</td>
+			</tr>
+			<tr>
+				<td>feo</td>
+				<td>thepiso</td>
+				<td>pythoneando</td>
+			</tr>
+			<tr>
+				<td>loro</td>
+				<td>pitisianos</td>
+				<td>java</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<div id="tabla">
+		<table id="sel" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+			<thead>
+				<tr>
+					<th>Equipo</th>
+					<th>Liga</th>
+					<th>Estadio</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<script type="text/javascript">
+	$.ajax({
+    url: 'm40.xml',
+    type: 'GET',
+    dataType: 'xml',
+    timeout: 1000,
+    error: function(){
+        alert('Error loading XML document');
+    },
+    success: function(xml){
+    $(xml).find('equipo').each(function(){
+        var nombre = $(this).find('nombre').text();
+		var liga = $(this).find('liganombre').text();
+		var estadio = $(this).find('estadionombre').text();
+		var fila = $('<tr></tr>');
+		$('<td></td>').html(nombre).appendTo(fila);
+		$('<td></td>').html(liga).appendTo(fila);
+		$('<td></td>').html(estadio).appendTo(fila);
+		fila.appendTo('#sel tbody');
+    });
+	$("#sel").tablesorter({sortList:[[1,1]], widgets: ['zebra']});
+}
+});
+	</script>
+	<div id="lista">
+		<a href="#">PINCHA</a>
+		<ul id="myList"></ul>
+	</div>
+	<script type="text/javascript">
+	$('#externo').load('externo.html');
+	$('#lista a').click(function(){
+	$.ajax({
+    url: 'm40.xml',
+    type: 'GET',
+    dataType: 'xml',
+    timeout: 1000,
+    error: function(){
+        alert('Error loading XML document');
+    },
+    success: function(xml){
+    $(xml).find('estadionombre').each(function(){
+        var item_text = $(this).text();
+        $('<li></li>')
+            .html(item_text)
+            .appendTo('#lista ul');
+    });
+	$(xml).find('liga').each(function(){
+		var id = $(this).find('ligaid').text();
+		var nombre = $(this).find('liganombre').text();
+		$('<li></li>')
+            .html('<a href="http://www.hattrick.org/...?...='+id+'">'+nombre+'</a>')
+            .appendTo('#lista ul');
+	});
+	var liga = $(xml).find('liga[@id="96596"]').find('liganombre').text();
+	$('<li></li>')
+		.html('La liga en la que estoy es '+liga)
+		.appendTo('#lista ol');
+	$(xml).find("liga[@id='96596']").each(function(){
+		var text = $(this).find('liganombre').text();
+		$('<li></li>')
+            .html('Mi liga es '+text)
+            .appendTo('#lista ul');
+		});
+		$("#myList").sortable({});
+}
+});
+	
+});
+	</script>
+	
+  </body>
+  </html>

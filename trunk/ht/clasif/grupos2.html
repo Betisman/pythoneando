@@ -1,0 +1,1396 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <title>
+   Cup Manager
+  </title>
+  <meta name="keywords" content="Cup Manager,Hattrick,www.hattrick.org,cupmanager,fixture,manage,hattrick,hattricks,hattrix,tournament,credithunter,win,price,prizes,supporter,table,soccer,football,fussball,generate,home,organize,cup,league,groups,challenge,eliminatory,groupplay,uefa,fifa,automatic,champions,invite,hattrix-files,files,tool,app,program,multi,cupmanager.org,org,manager,friendly,online,web,futbol,knockout,statistics,register,Cups,Cups Management,Trophy,fotbal,sport,online,free,tool,management,international,cup,cups,turney,competition,friendly,football" />
+  <meta name="description" content="An online tool for cup management, designed for Hattrick" />
+  <meta name="author" content="www.cupmanager.org" />
+  <meta name="distribution" content="Global" />
+  <meta name="copyright" content="Florin Pandelea" />
+  <meta name="robots" content="all" />
+  <meta name="language" content="english" />
+  <meta http-equiv="Content-Type" content="text/html; CHARSET=UTF-8" />
+  <link rel="STYLESHEET" href="../css/cupmanager.css" type="text/css" />
+  <script language="JavaScript">
+   function changeLanguage()
+		{
+			document.langForm.submit();
+		}
+  </script>
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   _uacct = "UA-259541-1";
+		urchinTracker();
+  </script>
+ </head>
+ <body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0">
+  <table border="0" width="998" cellpadding="0" cellspacing="0" align="center" height="100%">
+   <tr>
+    <td width="80" valign="top" height="100%">
+     &nbsp;
+    </td>
+    <td width="768" valign="top">
+     <table width="100%" cellpadding="0" cellspacing="0" border="0" height="100%">
+      <tr>
+       <td colspan="2" height="90px">
+        <table cellspacing="0" cellpadding="0" border="0" width="768" height="100%" align="center">
+         <tr>
+          <td width="100%" height="100%" align="center" valign="middle" style="padding-top: 1px;">
+           <!-- Casale Media 2007 (C) -->
+           <!-- Ad Format: Leaderboard -->
+           <!-- Domain(s): cupmanager.org -->
+           <script type="text/javascript">
+            <!--
+			var casaleD=new Date();var casaleR=(casaleD.getTime()%8673806982)+Math.random();
+			var casaleUU=escape(window.location.href); var casaleHost='.casalemedia.com/';
+			var casaleWH='" width="728" height="90" ';
+			var casaleFR='marginwidth="0" marginheight="0" frameborder="0" scrolling="no"';
+			casaleFR +=' allowtransparency="true">';
+			document.write('<ifr'+'ame src="http://as'+casaleHost+'s?s=80844&amp;u='+casaleUU);
+			document.write('&amp;f=2&amp;id='+casaleR+casaleWH+casaleFR+'<a hr'+'ef="http://c');
+			document.write(casaleHost+'c?s=80844&amp;f=2&amp;id='+casaleR+'" target="_blank">');
+			document.write('<i'+'mg src="http://as'+casaleHost+'s?s=80844&amp;u='+casaleUU);
+			document.write('&amp;f=2&amp;id='+casaleR+'&amp;if=0'+casaleWH+'border="0"><\/a>');
+			document.write('<\/ifr'+'ame>');
+			//-->
+           </script>
+           <noscript>
+            <iframe src="http://as.casalemedia.com/s?s=80844&amp;u=http%3A%2F%2Fcupmanager.org&amp;f=2&amp;id=1" width="728" align="middle" height="90" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" allowtransparency="true">
+             <a href="http://c.casalemedia.com/c?s=80844&amp;f=2&amp;id=0" target="_blank">
+              <img src="http://as.casalemedia.com/s?s=80844&amp;u=http%3A%2F%2Fcupmanager.org&amp;f=2&amp;id=0&amp;if=0" width="728" height="90" border="0" alt="" />
+             </a>
+            </iframe>
+           </noscript>
+           <!-- Casale Media 2007 (C) -->
+           <!-- BEGIN TAG - popup - www.cupmanager.org - DO NOT MODIFY -->
+           <script type="text/javascript" src="http://content.rmxads.com/rmtag3.js">
+           </script>
+           <script language="JavaScript">
+            var rm_host = "http://optimizedby.rmxads.com";
+var rm_section_id = 161384;
+var rm_banned_pop_types = 30;
+var rm_pop_times = 1;
+var rm_pop_frequency = 3600;
+
+rmShowPop();
+           </script>
+           <!-- END TAG -->
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2" height="5px">
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2" height="30px" bgcolor="#267F30">
+        <font style="font-weight : bold; font-size: 14px; font-family : verdana, helvetica, arial; color: #FFFFFF;">
+         &nbsp;Cupmanager.org
+        </font>
+        &nbsp;
+        <font style="font-weight : bold; font-size: 10px; font-family : verdana, helvetica, arial; color: #FFCC66;">
+         more than football
+        </font>
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2" height="30px">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" height="30px">
+         <form name="langForm" method="post" action="./index.php">
+         </form>
+         <tr>
+          <td width="100%" align="left" valign="middle">
+           <select name="language" onchange="changeLanguage()">
+            <option value="bosnian">
+             Bosanski
+            </option>
+            <option value="bulgarian">
+             Bulgarian
+            </option>
+            <option value="catalan">
+             Catalan
+            </option>
+            <option value="dansk">
+             Dansk
+            </option>
+            <option value="german">
+             Deutsch
+            </option>
+            <option value="english">
+             English
+            </option>
+            <option value="spanish" selected="SELECTED">
+             Espanol
+            </option>
+            <option value="hrvatski">
+             Hrvatski
+            </option>
+            <option value="french">
+             Francais
+            </option>
+            <option value="italian">
+             Italiano
+            </option>
+            <option value="lithuanian">
+             Lithuanian
+            </option>
+            <option value="magyar">
+             Magyar
+            </option>
+            <option value="dutch">
+             Nederlands
+            </option>
+            <option value="norsk">
+             Norsk
+            </option>
+            <option value="portuguese">
+             Portuguese
+            </option>
+            <option value="romanian">
+             Rom&acirc;n&#259;
+            </option>
+            <option value="russian">
+             Russian
+            </option>
+            <option value="srpski">
+             Srpski
+            </option>
+            <option value="suomi">
+             Suomi
+            </option>
+            <option value="slovak">
+             Slovak
+            </option>
+            <option value="turkish">
+             T&uuml;rk&ccedil;e
+            </option>
+           </select>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2" height="*">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" height="100%">
+         <tr>
+          <td width="130px" height="100%" valign="top">
+           <table cellpadding="0" cellspacing="0" width="130">
+            <tr>
+             <td width="100%">
+              <table border="0" cellpadding="1" cellspacing="0" width="120px" bgcolor="#267F30" align="left">
+               <tr>
+                <td>
+                 <table border="0" cellpadding="0" cellspacing="0" width="118">
+                  <tr>
+                   <td bgcolor="#267F30" class="labels" height="15">
+                    &nbsp;
+                    <font color="#FFFFFF">
+                     Menu
+                    </font>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA">
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=teamdetails&amp;nUserId=216607">
+                     Betisman &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;-
+                    <a href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=216607" style="font-weight: normal">
+                     Equipo &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;-
+                    <a href="./index.php?mainpage=cups&amp;szMenu=main" style="font-weight: normal">
+                     Copas &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;-
+                    <a href="./index.php?mainpage=face2face&amp;szMenu=main" style="font-weight: normal">
+                     Face2Face &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;-
+                    <a href="./index.php?mainpage=bookmarks&amp;szMenu=main" style="font-weight: normal">
+                     Favoritos &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;-
+                    <a href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=216607&amp;szAction=blacklist" style="font-weight: normal">
+                     Lista negra &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;-
+                    <a href="./index.php?mainpage=setting&amp;szMenu=main" style="font-weight: normal">
+                     Preferencias &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;-
+                    <a href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=216607&amp;szAction=update" style="font-weight: normal">
+                     Actualizar &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;-
+                    <a href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=216607&amp;szAction=changelogo" style="font-weight: normal">
+                     Cambiar logo &raquo;
+                    </a>
+                    <br />
+                    <!--  &nbsp;&nbsp;&nbsp;&nbsp;-<A HREF="./index.php?mainpage=poll&szMenu=main&szAction=my" style="font-weight: normal; text-decoration: underline;"><font color="#FF0000">V</font><font color="#FFA000">o</font><font color="#0000FF">x </font><font color="#00FF00">p</font><font color="#FFA000">o</font><font color="#FFA00F">p</font><font color="#FA0FF0">u</font><font color="#0000FF">li &raquo;</font></A><BR>
+ -->
+                    &nbsp;&nbsp;&nbsp;&nbsp;-
+                    <a href="./index.php?mainpage=supporter&amp;szMenu=main&amp;szAction=my" style="font-weight: normal">
+                     Supporter &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=search&amp;szMenu=search&amp;szSearch=cup">
+                     Buscar &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=top">
+                     Ranking &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=stats">
+                     Estadisticas &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=supporter">
+                     Supporter &raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=about&amp;szMenu=cupmanager">
+                     Cup Manager &raquo;
+                    </a>
+                    <br />
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA">
+                    &nbsp;
+                   </td>
+                  </tr>
+                 </table>
+                </td>
+               </tr>
+              </table>
+             </td>
+            </tr>
+           </table>
+           <br />
+           <table cellpadding="0" cellspacing="0" width="130">
+            <tr>
+             <td width="100%">
+              <table border="0" cellpadding="1" cellspacing="0" width="120px" bgcolor="#267F30" align="left">
+               <tr>
+                <td>
+                 <table border="0" cellpadding="0" cellspacing="0" width="118">
+                  <tr>
+                   <td bgcolor="#267F30" class="labels" height="15">
+                    &nbsp;
+                    <font color="#FFFFFF">
+                     Comunidad
+                    </font>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA">
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=mailbox&amp;szAction=inbox">
+                     Correo&nbsp;&raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=invitations&amp;szAction=inbox">
+                     Invitations&nbsp;&raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=alliances&amp;szAction=info">
+                     Federaciones&nbsp;&raquo;
+                    </a>
+                    <br />
+                    &nbsp;&nbsp;
+                    <a href="./indexconf.php">
+                     Conferencias&nbsp;&raquo;
+                    </a>
+                    <br />
+                    <br />
+                    &nbsp;&nbsp;
+                    <a href="./index.php?mainpage=logout">
+                     Salir
+                    </a>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA">
+                    &nbsp;
+                   </td>
+                  </tr>
+                 </table>
+                </td>
+               </tr>
+              </table>
+             </td>
+            </tr>
+            <tr>
+             <td height="20">
+              &nbsp;
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <table style="border: 2px solid #FFCC66" cellpadding="1" cellspacing="0" width="120px" align="left">
+               <tr>
+                <td height="22" valign="middle">
+                 &nbsp;
+                 <a href="./index.php?mainpage=newcup&amp;szMenu=main">
+                  <img align="absmiddle" src="../css/create.gif" border="0" alt="Crear una nueva copa" />
+                 </a>
+                 &nbsp;
+                 <a href="./index.php?mainpage=cups&amp;szMenu=main">
+                  <img align="absmiddle" src="../css/list.gif" border="0" alt="Copas" />
+                 </a>
+                 &nbsp;
+                 <a href="./index.php?mainpage=bookmarks&amp;szMenu=main">
+                  <img align="absmiddle" src="../css/bookmark.gif" border="0" alt="Favoritos" />
+                 </a>
+                </td>
+               </tr>
+              </table>
+             </td>
+            </tr>
+           </table>
+           <br />
+           <table cellpadding="0" cellspacing="0" width="130">
+            <tr>
+             <td width="100%">
+             </td>
+            </tr>
+           </table>
+           <br />
+           <a href="http://www.hattrick.org" title="CHPP - Certified Hattrick Product Provider" target="_blank">
+            <img src="../css/chpp_logo.gif" border="0" alt="CHPP - Certified Hattrick Product Provider" />
+           </a>
+          </td>
+          <td width="638px" height="100%" valign="top">
+           <table valign="top" width="638" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+             <td width="5">
+              &nbsp;
+             </td>
+             <td width="412" valign="top">
+              <script language="JavaScript" type="text/javascript">
+               function changeSpan(nSpanId)
+	{
+		var objSpan, szClass;
+		var szEval = "objSpan = document.getElementById('"+nSpanId+"');";
+		eval(szEval);
+		szEval = "szClass = objSpan.className";
+		eval(szEval);
+		if(szClass=='normalgreyshow'){
+			szEval = "objSpan.className = 'normalgreyhide'";			
+			eval(szEval);
+		}else{
+			szEval = "objSpan.className = 'normalgreyshow'";			
+			eval(szEval);
+		}
+	}
+              </script>
+              <table width="100%" border="0" height="105px" align="center">
+               <tr>
+                <td width="100px" valign="top">
+                 <img width="95px" height="115px" src="../css/nologo.gif" />
+                </td>
+                <td align="left" valign="middle">
+                 <table width="100%" align="center">
+                  <tr>
+                   <td align="left" width="30%" valign="top">
+                    <b>
+                     ID de Copa
+                    </b>
+                   </td>
+                   <td align="left" width="1%" valign="top">
+                    :
+                   </td>
+                   <td align="left" valign="middle">
+                    <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703">
+                     84703
+                    </a>
+                    &nbsp;
+                    <a href="javascript:changeSpan('cupdetailscode');" title="Hattrick's conference code to advertise your cup">
+                     <img src="../css/code.png" width="16" height="16" align="absmiddle" alt="Hattrick's conference code to advertise your cup" border="0" />
+                    </a>
+                    &nbsp;
+                    <a title="Agregar a favoritos" href="./index.php?mainpage=bookmarksadd&amp;szMenu=main&amp;id=84703&amp;type=1" class="lnk">
+                     <img align="absmiddle" src="../css/bookmark.gif" border="0" alt="Agregar a favoritos" />
+                    </a>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="left" width="30%" valign="top">
+                    <b>
+                     Nombre
+                    </b>
+                   </td>
+                   <td align="left" width="1%" valign="top">
+                    :
+                   </td>
+                   <td align="left">
+                    Liga M-40
+                   </td>
+                  </tr>
+                  <tr>
+                   <td width="30%" valign="top">
+                    <b>
+                     Edición
+                    </b>
+                   </td>
+                   <td align="left" width="1%" valign="top">
+                    :
+                   </td>
+                   <td align="left">
+                    I
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="left" width="30%">
+                    <b>
+                     Administrador
+                    </b>
+                   </td>
+                   <td align="left" width="1%">
+                    :
+                   </td>
+                   <td align="left">
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=216607">
+                     Betisman
+                    </a>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="left" width="30%">
+                    <b>
+                     Fecha de inicio
+                    </b>
+                   </td>
+                   <td align="left" width="1%">
+                    :
+                   </td>
+                   <td align="left">
+                    05.03.2008
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="left" width="30%" valign="top">
+                    <b>
+                     Reglas
+                    </b>
+                   </td>
+                   <td class="general" align="left" width="1%" valign="top">
+                    :
+                   </td>
+                   <td class="general" align="left">
+                    2 grupos, 8 equipos por grupo, 8 equipos calificados
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="left" width="30%">
+                    <b>
+                     Estado
+                    </b>
+                   </td>
+                   <td align="left" width="1%">
+                    :
+                   </td>
+                   <td align="left">
+                    Jugando
+                   </td>
+                  </tr>
+                  <tr>
+                   <td colspan="3">
+                    &nbsp;
+                   </td>
+                  </tr>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td class="lnk" colspan="2" align="center">
+                 <a class="lnk" href="./index.php?nCupId=84703" target="_blank">
+                  http://www.cupmanager.org/files/index.php?nCupId=84703
+                 </a>
+                </td>
+               </tr>
+              </table>
+              <span id="cupdetailscode" class="normalgreyhide">
+               <table width="100%" border="0" align="center">
+                <tr>
+                 <td width="100%" align="center">
+                  <textarea rows="10" cols="60">
+                   [b]ID de Copa[/b]: 84703
+[b]Nombre[/b]: Liga M-40
+[b]Edición[/b]:  I 
+[b]Administrador[/b]: Betisman, [teamid=487829]
+[b]Fecha de inicio[/b]: 05.03.2008
+[b]Reglas[/b]: 2 grupos, 8 equipos por grupo, 8 equipos calificados
+[b]Estado[/b]: Jugando
+
+[link=http://www.cupmanager.org/files/index.php?nCupId=84703]
+                  </textarea>
+                 </td>
+                </tr>
+               </table>
+              </span>
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+               <tr>
+                <td width="100%">
+                 &nbsp;
+                </td>
+               </tr>
+              </table>
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+               <tr>
+                <td colspan="2" width="100%">
+                 <table border="0" width="410px" align="center" cellpadding="1" cellspacing="1">
+                  <tr>
+                   <td bgcolor="#267F30" class="labels" colspan="2" valign="middle" align="left">
+                    &nbsp;
+                    <font color="#FFFFFF">
+                     Grupo&nbsp;1
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     J
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     G
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     E
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     P
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="45px" class="labels" align="center" valign="middle">
+                    <font color="#FFFFFF">
+                     G
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     Pts.
+                    </font>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    1.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=244075">
+                     CONGRIO F.C.
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    2.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=216607">
+                     Real Betisman Balompié
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    3.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=246285">
+                     Hapiio FC
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    4.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=267825">
+                     milan chupao
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    5.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=289192">
+                     Raul Gran Capitan
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    6.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=274067">
+                     Pitisianos SAD
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    7.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=246125">
+                     Real Servelete de Carfesan
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    8.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=289263">
+                     Bukakke Team
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                 </table>
+                 <br />
+                 <br />
+                 <table border="0" width="410px" align="center" cellpadding="1" cellspacing="1">
+                  <tr>
+                   <td bgcolor="#267F30" class="labels" colspan="2" valign="middle" align="left">
+                    &nbsp;
+                    <font color="#FFFFFF">
+                     Grupo&nbsp;2
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     J
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     G
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     E
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     P
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="45px" class="labels" align="center" valign="middle">
+                    <font color="#FFFFFF">
+                     G
+                    </font>
+                   </td>
+                   <td bgcolor="#267F30" width="25px" class="labels" valign="middle" align="center">
+                    <font color="#FFFFFF">
+                     Pts.
+                    </font>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    1.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=277798">
+                     A.D. Dimitri PITERMAN
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    2.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=283984">
+                     Inframundo CD Drogadictos anónimos
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    3.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=244069">
+                     ollauris F.C.
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    4.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=208857">
+                     Jumfrys F.K.
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    5.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=250720">
+                     Chaconcines
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    6.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=290565">
+                     Espino F.C
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    7.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=258736">
+                     ThePiso
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                  <tr>
+                   <td bgcolor="#FAFAFA" align="right" valign="middle" width="15px">
+                    8.
+                   </td>
+                   <td bgcolor="#FAFAFA" width="225px" valign="middle">
+                    <img align="absmiddle" src="../css/flags/36.gif" border="0" alt="" />
+                    &nbsp;
+                    <a class="lnk" href="./index.php?mainpage=teamdetails&amp;szMenu=main&amp;nUserId=247033">
+                     Caranza F.C.
+                    </a>
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0 - 0
+                   </td>
+                   <td bgcolor="#FAFAFA" align="center" valign="middle">
+                    0
+                   </td>
+                  </tr>
+                 </table>
+                 <br />
+                 <br />
+                </td>
+               </tr>
+              </table>
+             </td>
+             <td width="5">
+              &nbsp;
+             </td>
+             <td width="216" valign="top">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tr>
+                <td bgcolor="#267F30" class="labels" height="15" width="100%">
+                 &nbsp;
+                 <font color="#FFFFFF">
+                  Opciones
+                 </font>
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=cupnews">
+                  Noticias
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=fulldetails">
+                  Mirar todos los detalles completos de la copa
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=accepted">
+                  Equipos aceptados
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=refused">
+                  Equipos rechazados
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=waiting">
+                  Lista de espera
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=groups">
+                  Grupos
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=results">
+                  Fixtures/Resultados
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./indexconf.php?nItemId=84703&amp;nFolderType=C">
+                  Conferencia
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=vote">
+                  Vota esta copa
+                 </a>
+                 <br />
+                </td>
+               </tr>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tr>
+                <td height="20">
+                 &nbsp;
+                </td>
+               </tr>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tr>
+                <td>
+                 <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                   <td width="100%" align="center">
+                    &nbsp;
+                   </td>
+                  </tr>
+                 </table>
+                </td>
+               </tr>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tr>
+                <td height="20">
+                 &nbsp;
+                </td>
+               </tr>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tr>
+                <td bgcolor="#267F30" class="labels" height="15">
+                 &nbsp;
+                 <font color="#FFFFFF">
+                  Estadisticas
+                 </font>
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=stattopscorer&amp;editionid=1">
+                  Goleador
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=statgoals&amp;editionid=1">
+                  Goles
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=statratings&amp;editionid=1">
+                  Calificaciones
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=dreamteam&amp;szMenu=main&amp;nCupId=84703&amp;szAction=dreamteam&amp;editionid=1">
+                  Dream team
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=statattendance&amp;editionid=1">
+                  Público
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=statcards&amp;editionid=1">
+                  Tarjetas
+                 </a>
+                 <br />
+                </td>
+               </tr>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tr>
+                <td height="20">
+                 &nbsp;
+                </td>
+               </tr>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tr>
+                <td bgcolor="#267F30" class="labels" height="15">
+                 &nbsp;
+                 <font color="#FFFFFF">
+                  Administracion de la copa
+                 </font>
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=replace">
+                  Reempazar equipo
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=changearena">
+                  Cambiar estadio
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=updateresults">
+                  Actualizar resultados
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=setresult">
+                  Añadir resultado(s) manualmente
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=modifystarted">
+                  Modificar datos de la copa
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=pausecup">
+                  Cambiar la fecha de la ronda
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=coorganizer">
+                  Co-Organizadores
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=message2part">
+                  Send message to participants
+                 </a>
+                 <br />
+                 &nbsp;
+                 <a class="lnk" href="./index.php?mainpage=cupdetails&amp;szMenu=main&amp;nCupId=84703&amp;szAction=delete">
+                  Borrar copa
+                 </a>
+                 <br />
+                </td>
+               </tr>
+              </table>
+             </td>
+            </tr>
+           </table>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2" height="50">
+        &nbsp;
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <!--/Start Trafic.ro/-->
+        <script type="text/javascript">
+         t_rid="cupmanagerorg";
+        </script>
+        <script type="text/javascript" src="http://storage.trafic.ro/js/trafic.js">
+        </script>
+        <noscript>
+         <a href="http://www.trafic.ro/top/?rid=cupmanagerorg" target="_blank">
+          <img border="0" alt="trafic ranking" src="http://log.trafic.ro/cgi-bin/pl.dll?rid=cupmanagerorg" />
+         </a>
+        </noscript>
+        <!--/End Trafic.ro/-->
+       </td>
+       <td style="padding-top: 10px;" align="center">
+        106&nbsp;usuarios conectados
+        <br />
+        &copy;&nbsp;MMIII-MMVII&nbsp;&nbsp;&nbsp;cupmanager.org
+       </td>
+      </tr>
+     </table>
+    </td>
+    <td width="160" height="100%" valign="top" align="center">
+     <table cellpadding="0" cellspacing="0" width="100%" height="100%" border="0">
+      <tr>
+       <td width="100%" height="*" valign="top" style="padding-left: 5px;padding -top: 1px;">
+        <!-- BEGIN TAG - 120x600 - www.cupmanager.org - DO NOT MODIFY -->
+        <script type="text/javascript" src="http://optimizedby.rmxads.com/st?ad_type=ad&amp;ad_size=120x600&amp;section=161384">
+        </script>
+        <!-- END TAG -->
+       </td>
+      </tr>
+      <tr>
+       <td height="20">
+        <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0">
+         <tr>
+          <td width="100%" valign="bottom">
+           &nbsp;
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

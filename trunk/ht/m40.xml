@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?><m40>
+	<equipos>
+		<equipo id="487829">
+			<nombre>Real Betisman Balompié</nombre>
+			<teamid>487829</teamid>
+			<nombrecorto>Betisman</nombrecorto>
+			<estadio id="487829">
+				<estadioid>487829</estadioid>
+				<estadionombre>Coliseo de la Palmera</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>96596</ligaid>
+				<liganombre>X.513</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1436965">
+			<nombre>A.D. Dimitri PITERMAN</nombre>
+			<teamid>1436965</teamid>
+			<nombrecorto>PITERMAN</nombrecorto>
+			<estadio id="487829">
+				<estadioid>1433527</estadioid>
+				<estadionombre>CANTARRANAS Arena</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>170513</ligaid>
+				<liganombre>X.2186</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1581841">
+			<nombre>Chaconcines</nombre>
+			<teamid>1581841</teamid>
+			<nombrecorto>Chaconcines</nombrecorto>
+			<estadio id="487829">
+				<estadioid>1578403</estadioid>
+				<estadionombre>Chaconcin´s Stadium</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>96357</ligaid>
+				<liganombre>X.274</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="989753">
+			<nombre>CONGRIO F.C.</nombre>
+			<teamid>989753</teamid>
+			<nombrecorto>CONGRIO</nombrecorto>
+			<estadio id="487829">
+				<estadioid>986315</estadioid>
+				<estadionombre>Estadio Cocomo</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>181891</ligaid>
+				<liganombre>X.3324</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="492014">
+			<nombre>Espino F.C</nombre>
+			<teamid>492014</teamid>
+			<nombrecorto>Espino</nombrecorto>
+			<estadio id="487829">
+				<estadioid>492014</estadioid>
+				<estadionombre>Monumental Pucelano</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>181855</ligaid>
+				<liganombre>X.3288</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1457502">
+			<nombre>Inframundo CD Drogadictos anónimos</nombre>
+			<teamid>1457502</teamid>
+			<nombrecorto>Drogadictos</nombrecorto>
+			<estadio id="487829">
+				<estadioid>1454064</estadioid>
+				<estadionombre>Inframundo CD Arena</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>171056</ligaid>
+				<liganombre>X.2729</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="48756">
+			<nombre>Jumfrys F.K.</nombre>
+			<teamid>48756</teamid>
+			<nombrecorto>Jumfrys</nombrecorto>
+			<estadio id="487829">
+				<estadioid>48756</estadioid>
+				<estadionombre>Jumfry Bogart</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>60540</ligaid>
+				<liganombre>IX.269</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="799149">
+			<nombre>milan chupao</nombre>
+			<teamid>799149</teamid>
+			<nombrecorto>chupao</nombrecorto>
+			<estadio id="487829">
+				<estadioid>802587</estadioid>
+				<estadionombre>san chino</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>181838</ligaid>
+				<liganombre>X.3271</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="491940">
+			<nombre>Pitisianos SAD</nombre>
+			<teamid>491940</teamid>
+			<nombrecorto>Pitisianos</nombrecorto>
+			<estadio id="487829">
+				<estadioid>491940</estadioid>
+				<estadionombre>Pitis Arena</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>198859</ligaid>
+				<liganombre>XI.2869</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1458361">
+			<nombre>Real Servelete de Carfesan</nombre>
+			<teamid>1458361</teamid>
+			<nombrecorto>Servelete</nombrecorto>
+			<estadio id="487829">
+				<estadioid>1454923</estadioid>
+				<estadionombre>Coliseum Abraham Mejide</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>181648</ligaid>
+				<liganombre>X.3081</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1369155">
+			<nombre>ThePiso</nombre>
+			<teamid>1369155</teamid>
+			<nombrecorto>ThePiso</nombrecorto>
+			<estadio id="487829">
+				<estadioid>1365717</estadioid>
+				<estadionombre>Coliseo Alejandro Casona</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>170465</ligaid>
+				<liganombre>X.2138</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="988358">
+			<nombre>Raul Gran Capitan</nombre>
+			<teamid>988358</teamid>
+			<nombrecorto>Capitan</nombrecorto>
+			<estadio id="487829">
+				<estadioid>984920</estadioid>
+				<estadionombre>Pucela arena</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>96146</ligaid>
+				<liganombre>X.63</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1462225">
+			<nombre>Bukakke Team</nombre>
+			<teamid>1462225</teamid>
+			<nombrecorto>Bukakke</nombrecorto>
+			<estadio id="487829">
+				<estadioid>1458787</estadioid>
+				<estadionombre>The Bol Stadium Arena</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>182154</ligaid>
+				<liganombre>X.3587</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="492560">
+			<nombre>ollauris F.C.</nombre>
+			<teamid>492560</teamid>
+			<nombrecorto>ollauris</nombrecorto>
+			<estadio id="487829">
+				<estadioid>492560</estadioid>
+				<estadionombre>Los Movideros</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>176917</ligaid>
+				<liganombre>IX.1422</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="779367">
+			<nombre>Caranza F.C.</nombre>
+			<teamid>779367</teamid>
+			<nombrecorto>Caranza</nombrecorto>
+			<estadio id="487829">
+				<estadioid>782805</estadioid>
+				<estadionombre>El Montón</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>166812</ligaid>
+				<liganombre>X.1557</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1369963">
+			<nombre>Hapiio FC</nombre>
+			<teamid>1369963</teamid>
+			<nombrecorto>Hapiio</nombrecorto>
+			<estadio id="487829">
+				<estadioid>1366525</estadioid>
+				<estadionombre>Agora Stadium</estadionombre>
+			</estadio>
+			<liga id="96596">
+				<ligaid>170885</ligaid>
+				<liganombre>X.2558</liganombre>
+			</liga>
+		</equipo>
+	</equipos>
+</m40>

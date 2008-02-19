@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HattrickData>
+  <FileName>live.xml</FileName>
+  <Version>1.3</Version>
+  <UserID>5609457</UserID>
+  <FetchedDate>2008-02-13 11:54:34</FetchedDate>
+  <MatchList>
+    <Match>
+      <IsYouth>False</IsYouth>
+      <MatchID>158580245</MatchID>
+      <MatchDate>2008-02-13 09:30:00</MatchDate>
+      <HomeTeam>
+        <HomeTeamID>80315</HomeTeamID>
+        <HomeTeamName>FK Germania Gansbach</HomeTeamName>
+      </HomeTeam>
+      <AwayTeam>
+        <AwayTeamID>113311</AwayTeamID>
+        <AwayTeamName>Mpixlan</AwayTeamName>
+      </AwayTeam>
+      <EventList>
+        <Event>
+          <Minute>0</Minute>
+          <SubjectPlayerID>80315</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>7684</ObjectPlayerID>
+          <EventKey>32_4</EventKey>
+          <EventText>El agradable clima hizo concurrir a 7684 ruidosos fanáticos a las gradas del estadio FK Germania Gansbach Arena.</EventText>
+        </Event>
+        <Event>
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>1040402</ObjectPlayerID>
+          <EventKey>20_1</EventKey>
+          <EventText>Germania saltó al terreno de juego con una 4-4-2 como formación.</EventText>
+        </Event>
+        <Event>
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>21_2</EventKey>
+          <EventText>Los siguientes jugadores fueron elegidos por el técnico: Stiller - Fallind, Sansombat, Päivänen, Andracek - Hoskins, Stocher, Bladén, Hu - Paul, Vinterstedt.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event>
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>113311</SubjectTeamID>
+          <ObjectPlayerID>1030403</ObjectPlayerID>
+          <EventKey>20_4</EventKey>
+          <EventText>Mpixlan se decantó por una formación 3-4-3.</EventText>
+        </Event>
+        <Event>
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>113311</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>21_4</EventKey>
+          <EventText>El técnico eligió a estos titulares para que saltaran al césped: Trojanowski - Stasinos, Gerasimidis, Asmanis - Alexandris, Manikas, Tsirlidis, Mpamias - Doxakis, Biben, Mpardis.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event>
+          <Minute>1</Minute>
+          <SubjectPlayerID>29</SubjectPlayerID>
+          <SubjectTeamID>113311</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>331_5</EventKey>
+          <EventText>Presionar fue la táctica elegida por Mpixlan en el día de hoy.</EventText>
+        </Event>
+        <Event>
+          <Minute>20</Minute>
+          <SubjectPlayerID>158377454</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>5504675</ObjectPlayerID>
+          <EventKey>123_3</EventKey>
+          <EventText>Los locales se pusieron en ventaja 1 - 0 en el minuto 20 gracias a la jugada de &lt;a href="/Common/PlayerDetails.asp?PlayerID=158377454" title="Filip Fallind"&gt;Filip Fallind&lt;/a&gt;, quien sin ayuda alguna, penetró por la banda derecha globeando el balón sobre el portero visitante. ¡Increíble jugada individual!</EventText>
+        </Event>
+        <Event>
+          <Minute>24</Minute>
+          <SubjectPlayerID>188240998</SubjectPlayerID>
+          <SubjectTeamID>113311</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>93_3</EventKey>
+          <EventText>En el minuto 24, &lt;a href="/Common/PlayerDetails.asp?PlayerID=188240998" title="Aristotelis Manikas"&gt;Aristotelis Manikas&lt;/a&gt; recibió un fuerte golpe en la cadera lo cual le impidió continuar. Mpixlan ya había realizado todos sus cambios, y se vieron forzados a continuar el partido así.</EventText>
+        </Event>
+        <Event>
+          <Minute>27</Minute>
+          <SubjectPlayerID>26</SubjectPlayerID>
+          <SubjectTeamID>113311</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>68_3</EventKey>
+          <EventText>La presión de Mpixlan  provocó que el partido fuera bastante lento y aburrido en estos instantes del partido.</EventText>
+        </Event>
+        <Event>
+          <Minute>29</Minute>
+          <SubjectPlayerID>172321943</SubjectPlayerID>
+          <SubjectTeamID>113311</SubjectTeamID>
+          <ObjectPlayerID>191228912</ObjectPlayerID>
+          <EventKey>236_1</EventKey>
+          <EventText>Al parecer debido a la falta de experiencia, &lt;a href="/Common/PlayerDetails.asp?PlayerID=191228912" title="Attila Andracek"&gt;Attila Andracek&lt;/a&gt;  hizo una falta innecesaria en el borde del área, pero al final no tuvo consecuencias.</EventText>
+        </Event>
+        <Event>
+          <Minute>33</Minute>
+          <SubjectPlayerID>3493379</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>5504675</ObjectPlayerID>
+          <EventKey>132_4</EventKey>
+          <EventText>Germania aumentó su ventaja a 2 - 0 cuando &lt;a href="/Common/PlayerDetails.asp?PlayerID=3493379" title="Mikael Blad&amp;#233;n"&gt;Mikael Bladén&lt;/a&gt; entró por banda izquierda y soltó un zurdazo que hizo que el portero intentara cubrirse más que atrapar el esférico. Corría el minuto 33.</EventText>
+        </Event>
+        <Event>
+          <Minute>36</Minute>
+          <SubjectPlayerID>4191465</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>5504675</ObjectPlayerID>
+          <EventKey>133_3</EventKey>
+          <EventText>Después de 36 minutos &lt;a href="/Common/PlayerDetails.asp?PlayerID=4191465" title="Christian Vinterstedt"&gt;Christian Vinterstedt&lt;/a&gt; puso a Germania adelante 3 - 0 simplemente peinando el balón hacia atrás después de una llegada por la banda derecha.</EventText>
+        </Event>
+        <Event>
+          <Minute>37</Minute>
+          <SubjectPlayerID>4191465</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>5504675</ObjectPlayerID>
+          <EventKey>131_3</EventKey>
+          <EventText>Una magnífica combinación en media cancha dio como resultado que la ventaja de Germania se ampliara, siendo entonces el marcador de 4 - 0. &lt;a href="/Common/PlayerDetails.asp?PlayerID=4191465" title="Christian Vinterstedt"&gt;Christian Vinterstedt&lt;/a&gt; anotó el tanto para los locales.</EventText>
+        </Event>
+        <Event>
+          <Minute>37</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>62_2</EventKey>
+          <EventText>Parecía que el desarrollo del partido podía cambiar, cuando los jugadores de Germania se echaron atrás y decidieron aguantar el resultado en zona defensiva.</EventText>
+        </Event>
+        <Event>
+          <Minute>41</Minute>
+          <SubjectPlayerID>189077957</SubjectPlayerID>
+          <SubjectTeamID>113311</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>511_2</EventKey>
+          <EventText>&lt;a href="/Common/PlayerDetails.asp?PlayerID=189077957" title="Theodoros Mpamias"&gt;Theodoros Mpamias&lt;/a&gt; de Mpixlan se llevó una amonestación en el minuto 41 por protestar airadamente una decisión del árbitro.</EventText>
+        </Event>
+        <Event>
+          <Minute>45</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>45_3</EventKey>
+          <EventText>Y con el resultado de 4 - 0 se llegó al término de los primeros 45 minutos.</EventText>
+        </Event>
+        <Event>
+          <Minute>45</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>85</ObjectPlayerID>
+          <EventKey>40_3</EventKey>
+          <EventText>Los jugadores de Germania, quienes terminaron con una posesión del 85 por ciento, dominaron esta media parte.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event>
+          <Minute>63</Minute>
+          <SubjectPlayerID>4191465</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>22261902</ObjectPlayerID>
+          <EventKey>119_4</EventKey>
+          <EventText>El córner ejecutado por &lt;a href="/Common/PlayerDetails.asp?PlayerID=22261902" title="Stu Hoskins"&gt;Stu Hoskins&lt;/a&gt; tomó la rosca perfecta para que &lt;a href="/Common/PlayerDetails.asp?PlayerID=4191465" title="Christian Vinterstedt"&gt;Christian Vinterstedt&lt;/a&gt; lo cabeceara a placer, con un soberbio remate que puso el marcador en 5 - 0.</EventText>
+        </Event>
+        <Event>
+          <Minute>64</Minute>
+          <SubjectPlayerID>4191465</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>46_2</EventKey>
+          <EventText>Hasta los aficionados rivales aplaudieron tras este gol, ya que era el tercero en la cuenta particular de &lt;a href="/Common/PlayerDetails.asp?PlayerID=4191465" title="Christian Vinterstedt"&gt;Christian Vinterstedt&lt;/a&gt;, ¡y marcar un hattrick no es algo que se consiga todos los días!</EventText>
+        </Event>
+        <Event>
+          <Minute>70</Minute>
+          <SubjectPlayerID>173833068</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>5504675</ObjectPlayerID>
+          <EventKey>232_5</EventKey>
+          <EventText>&lt;a href="/Common/PlayerDetails.asp?PlayerID=173833068" title="Sakhon Sansombat"&gt;Sakhon Sansombat&lt;/a&gt; pudo haber anotado un gol más para Germania pero su disparo pegó en el lateral de la red tras un avance por la izquierda en el minuto 70.</EventText>
+        </Event>
+        <Event>
+          <Minute>74</Minute>
+          <SubjectPlayerID>191228912</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>5504675</ObjectPlayerID>
+          <EventKey>132_4</EventKey>
+          <EventText>Germania aumentó su ventaja a 6 - 0 cuando &lt;a href="/Common/PlayerDetails.asp?PlayerID=191228912" title="Attila Andracek"&gt;Attila Andracek&lt;/a&gt; entró por banda izquierda y soltó un zurdazo que hizo que el portero intentara cubrirse más que atrapar el esférico. Corría el minuto 74.</EventText>
+        </Event>
+        <Event>
+          <Minute>76</Minute>
+          <SubjectPlayerID>191202037</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>511_3</EventKey>
+          <EventText>En el minuto 76, &lt;a href="/Common/PlayerDetails.asp?PlayerID=191202037" title="Niko P&amp;#228;iv&amp;#228;nen"&gt;Niko Päivänen&lt;/a&gt; de Germania cayó fuera del área, al parecer derribado por un rival. Sin embargo, el árbitro tuvo que amonestarlo por fingir una falta, y la repetición le dio la razón.</EventText>
+        </Event>
+        <Event>
+          <Minute>76</Minute>
+          <SubjectPlayerID>191228912</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>5504675</ObjectPlayerID>
+          <EventKey>131_2</EventKey>
+          <EventText>Tras una gran jugada por el medio a los 76 minutos, los defensas visitantes se quedaron mirando a &lt;a href="/Common/PlayerDetails.asp?PlayerID=191228912" title="Attila Andracek"&gt;Attila Andracek&lt;/a&gt;, quien entró solo en el área, marcando el 7 - 0 para Germania.</EventText>
+        </Event>
+        <Event>
+          <Minute>79</Minute>
+          <SubjectPlayerID>4191465</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>5504675</ObjectPlayerID>
+          <EventKey>131_5</EventKey>
+          <EventText>Germania aseguró la ventaja en el minuto 79, cuando &lt;a href="/Common/PlayerDetails.asp?PlayerID=4191465" title="Christian Vinterstedt"&gt;Christian Vinterstedt&lt;/a&gt; cogió el balón por el centro, hizo un amago y chutó, poniendo el 8 - 0 en el marcador.</EventText>
+        </Event>
+        <Event>
+          <Minute>80</Minute>
+          <SubjectPlayerID>3493379</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>5504675</ObjectPlayerID>
+          <EventKey>131_4</EventKey>
+          <EventText>El estadio se vino abajo en el minuto 80 cuando &lt;a href="/Common/PlayerDetails.asp?PlayerID=3493379" title="Mikael Blad&amp;#233;n"&gt;Mikael Bladén&lt;/a&gt; cogió el balón en la medular, empezó a sortear rivales, hizo una pared y quedó solo ante el portero, a quien batió sin mayor complicación, dejando el marcador en 9 - 0. ¡Gol de Germania!</EventText>
+        </Event>
+        <Event>
+          <Minute>90</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>85</ObjectPlayerID>
+          <EventKey>40_4</EventKey>
+          <EventText>El dueño del esférico en esta mitad fue Germania, con una posesión del 85%.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event>
+          <Minute>90</Minute>
+          <SubjectPlayerID>22791185</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>41_5</EventKey>
+          <EventText>&lt;a href="/Common/PlayerDetails.asp?PlayerID=22791185" title="Georg Paul"&gt;Georg Paul&lt;/a&gt; jugó hoy un rol fundamental en el desempeño de Germania, siendo el jugador más destacado.</EventText>
+        </Event>
+        <Event>
+          <Minute>90</Minute>
+          <SubjectPlayerID>96799558</SubjectPlayerID>
+          <SubjectTeamID>80315</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>42_2</EventKey>
+          <EventText>Por otro lado, &lt;a href="/Common/PlayerDetails.asp?PlayerID=96799558" title="Marko Stiller"&gt;Marko Stiller&lt;/a&gt; tuvo un mal día y jugó por debajo del nivel de su equipo, no pudiendo cumplir como todos esperaban.</EventText>
+        </Event>
+        <Event>
+          <Minute>90</Minute>
+          <SubjectPlayerID>125928550</SubjectPlayerID>
+          <SubjectTeamID>113311</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>41_3</EventKey>
+          <EventText>El jugador más destacado de Mpixlan fue &lt;a href="/Common/PlayerDetails.asp?PlayerID=125928550" title="Christos Tsirlidis"&gt;Christos Tsirlidis&lt;/a&gt;.</EventText>
+        </Event>
+        <Event>
+          <Minute>90</Minute>
+          <SubjectPlayerID>180151044</SubjectPlayerID>
+          <SubjectTeamID>113311</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>42_3</EventKey>
+          <EventText>Sin embargo, &lt;a href="/Common/PlayerDetails.asp?PlayerID=180151044" title="Ioakeim Doxakis"&gt;Ioakeim Doxakis&lt;/a&gt; no cumplió con las expectativas y fue el peor de su equipo.</EventText>
+        </Event>
+        <Event>
+          <Minute>90</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>599_2</EventKey>
+          <EventText>Resultado final: 9 - 0.</EventText>
+        </Event>
+      </EventList>
+      <HomeGoals>9</HomeGoals>
+      <AwayGoals>0</AwayGoals>
+    </Match>
+  </MatchList>
+</HattrickData>
