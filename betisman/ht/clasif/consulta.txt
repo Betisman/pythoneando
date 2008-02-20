@@ -1,0 +1,6 @@
+select * from equipos
+order by ptos desc, avg desc, gf desc
+where grupo = 'A';
+
+
+insert into equipos values(4, 'Madrid', 4, 3, 0, 1, 3, 4, -1, 9, 'A');

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.2.3.js"></script>
+	<script type="text/javascript" src="jquery.ui/ui.tablesorter.js"></script>
+  
+  <script>
+  $(document).ready(function(){
+	$("#sel2").tablesorter({sortList:[[1,0]], widgets: ['zebra']});
+  });
+  $(document).ready(function(){
+	$("#sel").tablesorter({sortList:[[1,0]], widgets: ['zebra']});
+  });
+  </script>
+
+</head>
+<body>
+  <link rel="stylesheet" href="jquery.ui/themes/flora/flora.all.css" type="text/css" media="screen" title="Flora (Default)">
+	<!--<div id="tabla2">-->
+		<table id="sel2" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+		<thead>
+			<tr>
+				<th>Hola</th>
+				<th>Adios</th>
+				<th>Oye!</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>32</td>
+				<td>rbb</td>
+				<td>jquerying</td>
+			</tr>
+			<tr>
+				<td>feo</td>
+				<td>thepiso</td>
+				<td>pythoneando</td>
+			</tr>
+			<tr>
+				<td>loro</td>
+				<td>pitisianos</td>
+				<td>java</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--</div>-->
+	<!--<div id="tabla">-->
+		<table id="example" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+			<thead>
+				<tr>
+					<th>Equipo</th>
+					<th>Liga</th>
+					<th>Estadio</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	<!--</div>-->
+	<script type="text/javascript">
+	$.ajax({
+    url: 'm40.xml',
+    type: 'GET',
+    dataType: 'xml',
+    timeout: 1000,
+    error: function(){
+        alert('Error loading XML document');
+    },
+    success: function(xml){
+    $(xml).find('equipo').each(function(){
+        var nombre = $(this).find('nombre').text();
+		var liga = $(this).find('liganombre').text();
+		var estadio = $(this).find('estadionombre').text();
+		var fila = $('<tr></tr>');
+		$('<td></td>').html(nombre).appendTo(fila);
+		$('<td></td>').html(liga).appendTo(fila);
+		$('<td></td>').html(estadio).appendTo(fila);
+		fila.appendTo('#example tbody');
+    });
+	$("#example").tablesorter({sortList:[[1,1]], widgets: ['zebra']});
+}
+});
+	</script>
+	<div id="message">
+	</div>
+	<table id="sel" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+		<thead>
+			<tr>
+				<th>Hola</th>
+				<th>Adios</th>
+				<th>Oye!</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>32</td>
+				<td>rbb</td>
+				<td>jquerying</td>
+			</tr>
+			<tr>
+				<td>feo</td>
+				<td>thepiso</td>
+				<td>pythoneando</td>
+			</tr>
+			<tr>
+				<td>loro</td>
+				<td>pitisianos</td>
+				<td>java</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

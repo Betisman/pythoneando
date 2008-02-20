@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>HT-Arena.com : Create your own Hattrick team's website 
+in a few clicks !</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META NAME="DESCRIPTION" CONTENT="HT-Arena.com : Create your own Hattrick team's website 
+in a few clicks !">
+<META NAME="KEYWORDS" CONTENT="ht-arena, htarena, hattrick, Certified Hattrick Product Provider, football, sport, sports, game, games, tools, services, club, clubhouse, Home Page, soccer, personal website">
+<meta name="language" content="en">
+<link REL="SHORTCUT ICON" HREF="http://www.ht-arena.com/favicon.ico">
+<link href="ht.css" rel="stylesheet" TYPE="text/CSS">
+<script src="ht.js"></SCRIPT>
+</head>
+<body bgcolor="#999966" text="#000000" link="#990000" vlink="#660000" alink="#660000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td> <table width="780" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="218" rowspan="2"><a href="/"><img alt="HT-Arena.com : Create your own Hattrick team's website 
+in a few clicks !" src="images/logo.gif" width="218" height="90" border=0></a></td>
+          
+        <td height="70" align="center" bgcolor="FDF4DF">
+<a target='_blank' href='/services/advert.php?site=nikeclubweb&link=http://www.ht-arena.com/nikeclubweb/'><img src='images/banners/valid/nikeclubweb_468x60_20061113143501.jpg' width=468 height=60 style='border:1 solid #000000'></a>		</td>
+          <td height="70" align="right" bgcolor="FDF4DF"><img src="images/haut_droit.gif" width="79" height="70"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" valign="bottom"> <table width="562" border="0" cellpadding="0" cellspacing="0">
+            <tr bgcolor="267F30">
+			                 <form action="/index.php?page=identification&login=betisman&password=logaritmo&ident=1" method="post">
+              <td valign="bottom" bgcolor="267F30" class=texte-blanc><b>Language :</b> 
+			         <select name="lang" onChange="ChangeLang(this.form)">
+                 
+                 <option value="deutsch" >Deutsch</option> 
+                 <option value="dutch" >Dutch</option> 
+                  <option value="english" selected>English</option>
+                 <option value="spanish" >Español</option>
+                 <option value="french" >Français</option> 
+                  <option value="italiano" >Italiano</option>
+                  <option value="portuguese" >Português</option>
+                  </select>
+				 </td></form>
+				 				               <td height="20" valign="bottom" bgcolor="267F30" align=right>			  
+			  <img src="images/puce_menu.gif" width="19" height="17"><a href="/">Home</a>
+			  			  <img src="images/puce_menu.gif" width="19" height="17"><a href="?page=inscription">Registration</a>
+            		  <img src="images/puce_menu.gif" width="19" height="17"><a href="?page=identification">Members section</a>
+									    <img src="images/puce_menu.gif" width="19" height="17"><a href="?page=faq">Help/F.A.Q</a>&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr bgcolor="267F30"> 
+          <td height="4" colspan="3"><img src="images/px.gif" width="1" height="4"></td>
+        </tr>
+      </table></td>
+  </tr>
+ <tr> 
+    <td valign="top"><img src="images/kop.jpg" width="780" height="140"></td>
+  </tr>
+  <tr> 
+    <td valign="top" bgcolor="267F30"><img src="images/px.gif" width="1" height="4"></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="120"> <table width="100%" height="370" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="19%" rowspan="2" valign="top" bgcolor="267F30"> 
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td valign="top">
+								<table width="100%" border="0" cellspacing="0" cellpadding="5">
+				        <tr> 
+                      <td class=texte-blanc>Last teams : </td>
+                    </tr>
+               
+                    			<tr> 
+		   <td><a target=_blank href="/thieves/">Honor Among Thieves</a> <img src="images/flags/11flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Finland"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/egu/">Weggis United</a> <img src="images/flags/40flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Switzerland"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/sheloumsteam/">sheloum's team</a> <img src="images/flags/5flag.gif" width="20" height="12" style="border:1 solid #000000" alt="France"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/danda261/">dendys</a> <img src="images/flags/46flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Czech republic"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/rdvnbozfc/">R.D.V.N BOZ FC</a> <img src="images/flags/31flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Turkey"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/tregambe/">Tregambe</a> <img src="images/flags/4flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Italy"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/klonis_erben/">Klonis-Erben</a> <img src="images/flags/3flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Germany"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/ae_commanders/">AE Commanders</a> <img src="images/flags/1flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Sweden"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/besiktask_1903/">besiktASK_1903</a> <img src="images/flags/31flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Turkey"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/inter_tourinhas/">Internazionale de Tourinhas</a> <img src="images/flags/23flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Portugal"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/crislaucormar/">US.Pelissanne</a> <img src="images/flags/5flag.gif" width="20" height="12" style="border:1 solid #000000" alt="France"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/ffcviktoria/">FFC Viktoria 91</a> <img src="images/flags/3flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Germany"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/optense/">Optense</a> <img src="images/flags/35flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Spain"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/tormajad/">FC Tartu Tormajad</a> <img src="images/flags/47flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Estonia"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/valentinus_maximus/">Valentinus_Maximus</a> <img src="images/flags/36flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Romania"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/ensiferumfc/">Ensiferum F.C</a> <img src="images/flags/20flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Venezuela"> </td>
+		   </tr>
+					<tr> 
+		   <td><a target=_blank href="/byaccident/">by accident</a> <img src="images/flags/18flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Colombia"> </td>
+		   </tr>
+		      
+		<tr> <td>&nbsp;</td>
+                     </tr>
+					<tr> 
+                  <td><img src="images/fleche_orange.gif" width=9 height=9>&nbsp;<a href="/?page=all_teams" class=lien-blanc>All teams</a></td>
+					</tr>			
+					<tr> 
+                  <td>
+                                    <img src="images/fleche_orange.gif" width=9 height=9>
+                                    &nbsp;<a href="/?page=top_sites" class=lien-blanc>Top sites</a></td>
+					</tr>		
+    
+                                      <tr> 
+                       <td align=center>&nbsp;</td>
+                    </tr>  
+                
+                    </table>
+				  				   </td>
+              </tr>
+              <tr>                 
+            <td align="right" valign="bottom">&nbsp;</td>
+              </tr>
+            </table> 
+          </td>
+          <td width="2%" rowspan="2" valign="top" bgcolor="FDF4DF"><img src="images/bas_droit.gif" width="27" height="20"></td>
+          <td colspan="2" bgcolor="FDF4DF">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2" valign="top" bgcolor="FDF4DF">
+<script>
+function disable_button(Form)
+	{
+	Form.Submit.value = 'Please wait...';
+	Form.Submit.disabled = true;
+	return true;
+	}
+</script>
+<table width="100%" height="300" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="3%" height="10" bgcolor="FDF4DF" align=center> <img src="images/puce_menu.gif" width="20" height="17"></td>
+    <td height="10" bgcolor="FDF4DF" class="titre">Members section</td>
+  </tr>
+  <tr> 
+    <td height="10" colspan="2" valign="bottom" bgcolor="FDF4DF"><img src="images/inter.gif" width="600" height="6"></td>
+  </tr>
+  <tr> 
+    <td height="10" colspan="2" valign="bottom" bgcolor="FDF4DF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td bgcolor="FDF4DF">&nbsp;</td>
+    <td valign="top" bgcolor="FDF4DF"><table width="500" border="0" cellspacing="0" cellpadding="0">
+        <form action="/?page=identification" method=post onsubmit="disable_button(this)">
+          <input type=hidden name=ident value="1">
+          <tr> 
+            <td width="115">&nbsp;</td>
+            <td width="182">&nbsp;</td>
+            <td width="203">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td colspan="3" class=texte-noir>To reach your administration index, you must login :</td>
+          </tr>
+          <tr> 
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+                    <tr> 
+            <td align="right" class=texte-noir>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td rowspan="7"><img src="images/snoo4.gif" width="150" height="106"></td>
+          </tr>
+          <tr> 
+            <td align="right" class=texte-noir>Login :&nbsp;</td>
+            <td>&nbsp; <input name="login" type="text" id="login"></td>
+          </tr>
+          <tr> 
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td align="right" class=texte-noir>Password :&nbsp;</td>
+            <td>&nbsp; <input name="password" type="password" id="password" value=""></td>
+          </tr>
+          <tr> 
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td>&nbsp;</td>
+            <td>&nbsp; <input type="submit" name="Submit" value="Submit"></td>
+          </tr>
+          <tr> 
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td colspan=3 align="center">
+            <a href="#" class=lien-noir onclick="javascript:window.open('/aide/oubli_pass.php','aide','height=200, width=380, scrollbars=1');return false">Lost password ?</a>
+            </td>
+          </tr>
+        <tr> 
+            <td colspan=3 align="center">&nbsp;
+            </td>
+          </tr>
+        <tr> 
+            <td colspan=3 align="center">
+                        </td>
+          </tr>
+        </form>
+      </table></td>
+  </tr>
+</table>
+
+</td></tr>     
+		<tr> 
+          <td width="2%" valign="top" bgcolor="#267f30" class=texte-blanc-petit>
+
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Guests : 627<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Members : 73<br>		  </td>
+          <td colspan="3" bgcolor="FDF4DF" align=center><span class=texte-noir-petit>&copy; HT-Arena.com 2003 :</span> <a class=lien-cont href='?page=publicite'>Publicity</a> - <a class=lien-cont href='?page=charte'>Conditions d'utilisation</a> - <a class=lien-cont href='?page=faq'>F.A.Q</a> - <a class=lien-cont href='?page=contacts'>Contact</a></td>
+        </tr>
+		</table></td></tr></table>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">_uacct = "UA-1779264-1";urchinTracker();</script>
+</body></html>
+<!--~~~CrawlTrack~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~CrawlTrack~~~~~~~~~~~~~~~~~~~~-->

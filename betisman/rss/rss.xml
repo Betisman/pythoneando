@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0">
+	
+	
+	
+	
+	
+	
+	<channel>
+		
+		
+		
+		
+		
+		
+		<title>
+			
+			
+			El primer feed rss de Betisman
+		
+		
+		</title>
+		
+		
+		
+		
+		
+		
+		<link>
+			
+			
+			http://localhost
+		
+		
+		</link>
+		
+		
+		
+		
+		
+		
+		<description>
+			
+			
+			Esto es una prueba sobre creación de feeds rss
+		
+		
+		</description>
+		
+		
+		
+
+		
+		
+		<item>
+			
+			
+			
+			
+			
+			
+			<title>
+				
+				
+				Molinete es un gayer
+			
+			
+			</title>
+			
+			
+			
+			
+			
+			
+			<link>
+				
+				
+				http://molinete33.blogspot.com
+			
+			
+			</link>
+			
+			
+			
+			
+			
+			
+			<description>
+				
+				
+				¿Qué te parece? He aprendido a crear feeds rss. :)
+			
+			
+			</description>
+			
+			
+			
+		
+		
+		
+		</item>
+		
+		
+		
+		
+		
+		
+		<item>
+			
+			
+			
+			
+			
+			
+			<title>
+				
+				
+				Feed 1
+			
+			
+			</title>
+			
+			
+			
+			
+			
+			
+			<link>
+				
+				
+				http://www.marca.es
+			
+			
+			</link>
+			
+			
+			
+			
+			
+			
+			<description>
+				
+				
+				Mi primer item
+			
+			
+			</description>
+			
+			
+			
+		
+		
+		
+		</item>
+		
+		
+		
+		
+		
+	
+		
+		
+		<item>
+			
+			
+			
+			
+			
+			
+			<title>
+				
+				
+				Feed 2
+			
+			
+			</title>
+			
+			
+			
+			
+			
+			
+			<link>
+				
+				
+				http://www.realbetisbalompie.es
+			
+			
+			</link>
+			
+			
+			
+			
+			
+			
+			<description>
+				
+				
+				Mi segundo item
+			
+			
+			</description>
+			
+			
+		
+		
+		</item>
+		
+		
+	
+		
+		<item>
+			
+			
+			<title>
+				
+				anhadimos item2
+			
+			</title>
+			
+			
+			<date>
+				
+				Mon, 14 Jan 2008 15:21:38
+			
+			</date>
+			
+			
+			<link>
+				
+				http://link2.com
+			
+			</link>
+			
+			
+			<description>
+				
+				esto es una muy breve descripcion2
+			
+			</description>
+			
+		
+		</item>
+		
+	
+		<item>
+			<title>
+				anhadimos item2
+			</title>
+			<date>
+				Mon, 14 Jan 2008 15:22:44
+			</date>
+			<link>
+				http://link2.com
+			</link>
+			<description>
+				esto es una muy breve descripcion2
+			</description>
+		</item>
+	<item><title>anhadimos item2</title><date>Mon, 14 Jan 2008 15:24:41</date><link>http://link2.com</link><description>esto es una muy breve descripcion2</description></item></channel>
+	
+	
+	
+
+
+
+</rss>

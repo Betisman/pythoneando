@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HattrickData>
+  <FileName>matches.xml</FileName>
+  <Version>2.3</Version>
+  <UserID>5609457</UserID>
+  <FetchedDate>2008-02-08 11:51:23</FetchedDate>
+  <IsYouth>False</IsYouth>
+  <Team>
+    <TeamID>491940</TeamID>
+    <TeamName>Pitisianos SAD</TeamName>
+    <MatchList>
+      <Match>
+        <MatchID>150937753</MatchID>
+        <HomeTeam>
+          <HomeTeamID>491940</HomeTeamID>
+          <HomeTeamName>Pitisianos SAD</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>1432272</AwayTeamID>
+          <AwayTeamName>Orce F.C</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-01-12 14:45:00</MatchDate>
+        <MatchType>1</MatchType>
+        <HomeGoals>10</HomeGoals>
+        <AwayGoals>0</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>157491153</MatchID>
+        <HomeTeam>
+          <HomeTeamID>487829</HomeTeamID>
+          <HomeTeamName>Real Betisman Balompie</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>491940</AwayTeamID>
+          <AwayTeamName>Pitisianos SAD</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-01-16 12:05:00</MatchDate>
+        <MatchType>4</MatchType>
+        <HomeGoals>4</HomeGoals>
+        <AwayGoals>4</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>150937761</MatchID>
+        <HomeTeam>
+          <HomeTeamID>1371160</HomeTeamID>
+          <HomeTeamName>con-dones-del-area</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>491940</AwayTeamID>
+          <AwayTeamName>Pitisianos SAD</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-01-19 14:45:00</MatchDate>
+        <MatchType>1</MatchType>
+        <HomeGoals>1</HomeGoals>
+        <AwayGoals>5</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>157892548</MatchID>
+        <HomeTeam>
+          <HomeTeamID>492014</HomeTeamID>
+          <HomeTeamName>Espino F.C</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>491940</AwayTeamID>
+          <AwayTeamName>Pitisianos SAD</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-01-23 12:20:00</MatchDate>
+        <MatchType>5</MatchType>
+        <HomeGoals>4</HomeGoals>
+        <AwayGoals>0</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>150937762</MatchID>
+        <HomeTeam>
+          <HomeTeamID>491940</HomeTeamID>
+          <HomeTeamName>Pitisianos SAD</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>1371334</AwayTeamID>
+          <AwayTeamName>UD La Rioja</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-01-26 14:45:00</MatchDate>
+        <MatchType>1</MatchType>
+        <HomeGoals>5</HomeGoals>
+        <AwayGoals>0</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>158155528</MatchID>
+        <HomeTeam>
+          <HomeTeamID>492565</HomeTeamID>
+          <HomeTeamName>Camandulas FC</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>491940</AwayTeamID>
+          <AwayTeamName>Pitisianos SAD</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-01-30 12:05:00</MatchDate>
+        <MatchType>4</MatchType>
+        <HomeGoals>3</HomeGoals>
+        <AwayGoals>2</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>150937765</MatchID>
+        <HomeTeam>
+          <HomeTeamID>1592520</HomeTeamID>
+          <HomeTeamName>Rayo Cantabria</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>491940</AwayTeamID>
+          <AwayTeamName>Pitisianos SAD</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-02-02 14:45:00</MatchDate>
+        <MatchType>1</MatchType>
+        <HomeGoals>0</HomeGoals>
+        <AwayGoals>5</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>158368134</MatchID>
+        <HomeTeam>
+          <HomeTeamID>1235880</HomeTeamID>
+          <HomeTeamName>Nhublense 2008</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>491940</AwayTeamID>
+          <AwayTeamName>Pitisianos SAD</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-02-06 22:50:00</MatchDate>
+        <MatchType>9</MatchType>
+        <HomeGoals>5</HomeGoals>
+        <AwayGoals>4</AwayGoals>
+        <Status>FINISHED</Status>
+      </Match>
+      <Match>
+        <MatchID>150937772</MatchID>
+        <HomeTeam>
+          <HomeTeamID>491940</HomeTeamID>
+          <HomeTeamName>Pitisianos SAD</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>1578639</AwayTeamID>
+          <AwayTeamName>coches</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-02-09 14:45:00</MatchDate>
+        <MatchType>1</MatchType>
+        <Status>UPCOMING</Status>
+      </Match>
+      <Match>
+        <MatchID>158585828</MatchID>
+        <HomeTeam>
+          <HomeTeamID>491940</HomeTeamID>
+          <HomeTeamName>Pitisianos SAD</HomeTeamName>
+        </HomeTeam>
+        <AwayTeam>
+          <AwayTeamID>182575</AwayTeamID>
+          <AwayTeamName>A.S.U. Politehnica TM</AwayTeamName>
+        </AwayTeam>
+        <MatchDate>2008-02-13 12:25:00</MatchDate>
+        <MatchType>9</MatchType>
+        <Status>UPCOMING</Status>
+      </Match>
+    </MatchList>
+  </Team>
+</HattrickData>

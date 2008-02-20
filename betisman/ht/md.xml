@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HattrickData>
+  <FileName>matchdetails.xml</FileName>
+  <Version>1.5</Version>
+  <UserID>5609457</UserID>
+  <FetchedDate>2008-02-06 14:08:06</FetchedDate>
+  <UserIsSupporter>1</UserIsSupporter>
+  <UserHasClubHouse>0</UserHasClubHouse>
+  <IsYouth>False</IsYouth>
+  <Match>
+    <MatchID>158480060</MatchID>
+    <MatchType>4</MatchType>
+    <MatchDate>2008-02-06 12:05:00</MatchDate>
+    <FinishedDate>2008-02-06 13:50:06</FinishedDate>
+    <HomeTeam>
+      <HomeTeamID>1462225</HomeTeamID>
+      <HomeTeamName>Bukakke Team</HomeTeamName>
+      <Dress>N000000</Dress>
+      <HomeGoals>4</HomeGoals>
+      <TacticType>0</TacticType>
+      <TacticSkill>1</TacticSkill>
+      <RatingMidfield>5</RatingMidfield>
+      <RatingRightDef>8</RatingRightDef>
+      <RatingMidDef>10</RatingMidDef>
+      <RatingLeftDef>8</RatingLeftDef>
+      <RatingRightAtt>7</RatingRightAtt>
+      <RatingMidAtt>7</RatingMidAtt>
+      <RatingLeftAtt>10</RatingLeftAtt>
+    </HomeTeam>
+    <AwayTeam>
+      <AwayTeamID>487829</AwayTeamID>
+      <AwayTeamName>Real Betisman Balompié</AwayTeamName>
+      <Dress>Z000006</Dress>
+      <AwayGoals>4</AwayGoals>
+      <TacticType>7</TacticType>
+      <TacticSkill>1</TacticSkill>
+      <RatingMidfield>7</RatingMidfield>
+      <RatingRightDef>6</RatingRightDef>
+      <RatingMidDef>7</RatingMidDef>
+      <RatingLeftDef>6</RatingLeftDef>
+      <RatingRightAtt>15</RatingRightAtt>
+      <RatingMidAtt>15</RatingMidAtt>
+      <RatingLeftAtt>16</RatingLeftAtt>
+      <TeamAttitude>0</TeamAttitude>
+    </AwayTeam>
+    <Arena>
+      <ArenaID>1458787</ArenaID>
+      <ArenaName>The Bol Stadium Arena</ArenaName>
+      <WeatherID>2</WeatherID>
+      <SoldTotal>125</SoldTotal>
+    </Arena>
+    <Scorers>
+      <Goal Index="0">
+        <ScorerPlayerID>191340085</ScorerPlayerID>
+        <ScorerPlayerName>Lantz Gandiaga</ScorerPlayerName>
+        <ScorerTeamID>1462225</ScorerTeamID>
+        <ScorerHomeGoals>1</ScorerHomeGoals>
+        <ScorerAwayGoals>0</ScorerAwayGoals>
+        <ScorerMinute>9</ScorerMinute>
+      </Goal>
+      <Goal Index="1">
+        <ScorerPlayerID>191340072</ScorerPlayerID>
+        <ScorerPlayerName>José María Urigarri</ScorerPlayerName>
+        <ScorerTeamID>1462225</ScorerTeamID>
+        <ScorerHomeGoals>2</ScorerHomeGoals>
+        <ScorerAwayGoals>0</ScorerAwayGoals>
+        <ScorerMinute>12</ScorerMinute>
+      </Goal>
+      <Goal Index="2">
+        <ScorerPlayerID>189746245</ScorerPlayerID>
+        <ScorerPlayerName>Joan Domènech</ScorerPlayerName>
+        <ScorerTeamID>487829</ScorerTeamID>
+        <ScorerHomeGoals>2</ScorerHomeGoals>
+        <ScorerAwayGoals>1</ScorerAwayGoals>
+        <ScorerMinute>21</ScorerMinute>
+      </Goal>
+      <Goal Index="3">
+        <ScorerPlayerID>174049255</ScorerPlayerID>
+        <ScorerPlayerName>Paolo Calamai</ScorerPlayerName>
+        <ScorerTeamID>1462225</ScorerTeamID>
+        <ScorerHomeGoals>3</ScorerHomeGoals>
+        <ScorerAwayGoals>1</ScorerAwayGoals>
+        <ScorerMinute>30</ScorerMinute>
+      </Goal>
+      <Goal Index="4">
+        <ScorerPlayerID>94703053</ScorerPlayerID>
+        <ScorerPlayerName>Staf Calberson</ScorerPlayerName>
+        <ScorerTeamID>487829</ScorerTeamID>
+        <ScorerHomeGoals>3</ScorerHomeGoals>
+        <ScorerAwayGoals>2</ScorerAwayGoals>
+        <ScorerMinute>67</ScorerMinute>
+      </Goal>
+      <Goal Index="5">
+        <ScorerPlayerID>191340072</ScorerPlayerID>
+        <ScorerPlayerName>José María Urigarri</ScorerPlayerName>
+        <ScorerTeamID>1462225</ScorerTeamID>
+        <ScorerHomeGoals>4</ScorerHomeGoals>
+        <ScorerAwayGoals>2</ScorerAwayGoals>
+        <ScorerMinute>79</ScorerMinute>
+      </Goal>
+      <Goal Index="6">
+        <ScorerPlayerID>189748255</ScorerPlayerID>
+        <ScorerPlayerName>Kalolo Faletau</ScorerPlayerName>
+        <ScorerTeamID>487829</ScorerTeamID>
+        <ScorerHomeGoals>4</ScorerHomeGoals>
+        <ScorerAwayGoals>3</ScorerAwayGoals>
+        <ScorerMinute>80</ScorerMinute>
+      </Goal>
+      <Goal Index="7">
+        <ScorerPlayerID>94703053</ScorerPlayerID>
+        <ScorerPlayerName>Staf Calberson</ScorerPlayerName>
+        <ScorerTeamID>487829</ScorerTeamID>
+        <ScorerHomeGoals>4</ScorerHomeGoals>
+        <ScorerAwayGoals>4</ScorerAwayGoals>
+        <ScorerMinute>82</ScorerMinute>
+      </Goal>
+    </Scorers>
+    <Bookings>
+      <Booking Index="0">
+        <BookingPlayerID>189745786</BookingPlayerID>
+        <BookingPlayerName>István Urbán</BookingPlayerName>
+        <BookingTeamID>487829</BookingTeamID>
+        <BookingType>1</BookingType>
+        <BookingMinute>19</BookingMinute>
+      </Booking>
+      <Booking Index="1">
+        <BookingPlayerID>189748255</BookingPlayerID>
+        <BookingPlayerName>Kalolo Faletau</BookingPlayerName>
+        <BookingTeamID>487829</BookingTeamID>
+        <BookingType>1</BookingType>
+        <BookingMinute>33</BookingMinute>
+      </Booking>
+      <Booking Index="2">
+        <BookingPlayerID>191340085</BookingPlayerID>
+        <BookingPlayerName>Lantz Gandiaga</BookingPlayerName>
+        <BookingTeamID>1462225</BookingTeamID>
+        <BookingType>2</BookingType>
+        <BookingMinute>76</BookingMinute>
+      </Booking>
+    </Bookings>
+    <PossessionFirstHalfHome>44</PossessionFirstHalfHome>
+    <PossessionFirstHalfAway>56</PossessionFirstHalfAway>
+    <PossessionSecondHalfHome>41</PossessionSecondHalfHome>
+    <PossessionSecondHalfAway>59</PossessionSecondHalfAway>
+  </Match>
+</HattrickData>
