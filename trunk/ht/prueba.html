@@ -17,57 +17,93 @@
 </head>
 <body>
 <!--ejemplo autocompletar-->
-	<div id="ejemploAutocompletar">
-		<input size="30" id="inputString" onkeyup="lookup(this.value);" type="text" />
-		<div class="suggestionsBox" id="suggestions" style="display: none;">
-			<img src="upArrow.png" style="position: relative; top: -12px; left: 30px" alt="upArrow" />
-			<div class="suggestionList" id="autoSuggestionsList">
-			</div>
-		</div>
-
-</div>
-	</div>
-	<script type="text/javascript">
+<script type="text/javascript">
 	function lookup(inputString) {
+		$('#autoSuggestionsList').html('');
 		if(inputString.length == 0) {
 			// Hide the suggestion box.
-			$(‘#suggestions’).hide();
+			$('#suggestions').hide();
 		} else {
 			$.ajax({
-				url: 'm40.xml',
-				type: 'GET',
-				dataType: 'xml',
-				timeout: 1000,
-				error: function(){
-					alert('Error loading XML document');
-				},
-				success: function(xml){
-					$(xml).find('equipo').each(function(){
-						var nombre = $(this).find('nombre').text();
-						var liga = $(this).find('liganombre').text();
-						var estadio = $(this).find('estadionombre').text();
-						var fila = $('<tr></tr>');
-						$('<td></td>').html(nombre).appendTo(fila);
-						$('<td></td>').html(liga).appendTo(fila);
-						$('<td></td>').html(estadio).appendTo(fila);
-						fila.appendTo('#example tbody');
-					});
-					$("#example").tablesorter({sortList:[[1,1]], widgets: ['zebra']});
-				}
-			});
-			$.post("rpc.php", {queryString: ""+inputString+""}, function(data){
-				if(data.length >0) {
-					$(‘#suggestions’).show();
-					$(‘#autoSuggestionsList’).html(data);
+			    url: 'm40.xml',
+			    type: 'GET',
+			    dataType: 'xml',
+			    timeout: 1000,
+			    error: function(){
+			        alert('Error loading XML document');
+			    },
+			    success: function(xml){
+				    //$(xml).find("//equipo/nombre[contains(., 'eal')]").each(function(){
+					var inputString = $('#inputString').val();
+					$(xml).find("nombre").each(function(){
+						if ($(this).text().toLowerCase().indexOf(inputString.toLowerCase()) > -1){	
+							$('#autoSuggestionsList').append($('<li onclick="fill(\''+$(this).text()+'\')"></li>').html($(this).text()));
+							//$('#rehola ol').append($('<li></li>').html($(this).text()))
+						}
+				    });
+					//alert($('#autoSuggestionsList ol li').length);
+					if ($('#autoSuggestionsList').length > 0){
+						$('#suggestions').show();
+						//$('#autoSuggestionsList').html($('<ol></ol>').append(data));
+					}
 				}
 			});
 		}
 	} // lookup
 
 	function fill(thisValue) {
-		$(‘#inputString’).val(thisValue);
-	   $(‘#suggestions’).hide();
+		$('#inputString').val(thisValue);
+	   $('#suggestions').hide();
 	}
+	</script>
+	<style type="text/css">
+
+.suggestionsBox {
+    position: relative;
+    left: 30px;
+    margin: 10px 0px 0px 0px;
+    width: 200px;
+    background-color: #212427;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border: 2px solid #000;
+    color: #fff;
+}
+
+.suggestionList {
+    margin: 0px;
+    padding: 0px;
+}
+
+.suggestionList li {
+    margin: 0px 0px 3px 0px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.suggestionList li:hover {
+    background-color: #00CC66;
+}
+</style>
+	<div id="ejemploAutocompletar">
+		<input size="30" id="inputString" onkeyup="lookup(this.value);" type="text" />
+		<div class="suggestionsBox" id="suggestions" style="display: none;">
+			<img src="upArrow.png" style="position: relative; top: -12px; left: 30px" alt="upArrow" />
+			<div class="suggestionList" id="autoSuggestionsList">
+				<ol></ol>
+			</div>
+		</div>
+
+	</div>
+	
+	<div id="hola">
+		<input size="20" id="holainput" onkeyup="hola();" type="text"/>
+		<div id="rehola"><ol></ol></div>
+	</div>
+	<script type="text/javascript">
+		function hola(){
+			$('#rehola').html('<p>HOLA, PEPSICOLA</p>');
+		}
 	</script>
 
   <link rel="stylesheet" href="jquery.ui/themes/flora/flora.all.css" type="text/css" media="screen" title="Flora (Default)">
