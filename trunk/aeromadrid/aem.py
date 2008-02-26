@@ -1,3 +1,4 @@
+# coding=utf-8
 import urllib, httplib2, os
 debug = 0	#debug=1 -> modifica el archivo donde se guarda el last-modified para que siempre crea que hay una nueva version de la programacion
 
@@ -5,9 +6,15 @@ headers = {'Content-type': 'application/x-www-form-urlencoded'}
 http = httplib2.Http()
 url = 'http://www.aeromadrid.com/estatico/vuelos/flight.zip'
 fich = 'aem.txt'
+password = 'VIDA'
 
-response, content = http.request(url, 'POST')
-lastmod = response['last-modified']
+response, content = http.request(url, 'GET')
+try:
+	lastmod = response['last-modified']
+except KeyError, msg:
+	print 'Error, el campo last-modified no aparece en el response!!'
+	print 'Lo ponemos como "error" y continuamos (=>bajará el fichero zip)'
+	lastmod = 'error'
 zipfile = 'flight.zip'
 htmlfile = 'flight.htm'
 
@@ -15,7 +22,7 @@ def downloadZip(url, zipfile):
 	urllib.urlretrieve(url, zipfile)
 
 def descomprimirZip(zipfile):
-	os.system('unzip -xoq ' + zipfile)
+	os.system('unzip -P ' + password + '-oq ' + zipfile)
 
 def estaAna(htmlfile):
 	if open(htmlfile, "r").read().find('BENEITEZ AN') != -1:
