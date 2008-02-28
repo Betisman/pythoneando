@@ -2,10 +2,14 @@
 # coding=ISO-8859-1
 from pysqlite2 import dbapi2 as sqlite
 
-con = sqlite.connect("ht.sqlite")
 
-cur = con.cursor()
-SELECT = "select * from equipos where grupo = 'A' order by ptos desc, avg desc, gf desc"
+class EquipoHandler(Equipo):
+	def __init__(self, equipo):
+		self.equipo = equipo
+		self.con = sqlite.connect("ht.sqlite")
+		self.cur = con.cursor()
+
+#SELECT = "select * from equipos where grupo = 'A' order by ptos desc, avg desc, gf desc"
 
 # 1. Iterate over the rows available from the cursor, unpacking the
 # resulting sequences to yield their elements (name_last, age):
@@ -24,6 +28,10 @@ def printAll():
 	for row in cur:
 	    print row
 
+
+def actualizarEquipo(equipo):
+	actualizarEquipo(equipo.nombre, equipo.pj, equipo.g, equipo.e, equipo.p, equipo.gf, equipo.gc, equipo.avg, equipo.ptos)
+	
 def actualizarEquipo(nombre, pj, g, e, p, gf, gc, avg, ptos):
 	con = sqlite.connect("ht.sqlite")
 	sql = "update equipos set pj = "+str(pj)+", g = "+str(g)+", e = "+str(e)+", p = "+str(p)+", gf = "+str(gf)+", gc = "+str(gc)+", avg = "+str(avg)+", ptos = "+str(ptos)+" where nombre = '"+nombre+"'"
@@ -32,6 +40,9 @@ def actualizarEquipo(nombre, pj, g, e, p, gf, gc, avg, ptos):
 	cur.execute(sql)
 	con.commit()
 
+def actualizarEquipoTemp(equipo):
+	actualizarEquipoTemp(equipo.nombre, equipo.pj, equipo.g, equipo.e, equipo.p, equipo.gf, equipo.gc, equipo.avg, equipo.ptos)
+	
 def actualizarEquipoTemp(nombre, pj, g, e, p, gf, gc, avg, ptos):
 	con = sqlite.connect("ht.sqlite")
 	sql = "update equipostemp set pj = "+str(pj)+", g = "+str(g)+", e = "+str(e)+", p = "+str(p)+", gf = "+str(gf)+", gc = "+str(gc)+", avg = "+str(avg)+", ptos = "+str(ptos)+" where nombre = '"+nombre+"'"
