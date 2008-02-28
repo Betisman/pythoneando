@@ -1,0 +1,18 @@
+RESULTADOS (14:55)
+
+Pitisianos SAD 3 - 2 Real Betisman Balompié (minuto 90)
+ThePiso 6 - 0 Bukakke Team (minuto 90)
+creative_team 2 - 1 Espino F.C (minuto 90)
+Caranza F.C. 1 - 0 A_posta (minuto 90)
+Real Servelete de Carfesan 5 - 1 Chaconcines (minuto 90)
+Jumfrys F.K. 2 - 4 ollauris F.C. (minuto 90)
+R.C.D Celtiña 6 - 1 A.D. Dimitri PITERMAN (minuto 90)
+Hapiio FC 2 - 1 Grunflash (minuto 90)
+milan chupao 2 - 1 losalbertos (minuto 90)
+Inframundo CD Drogadictos anónimos 4 - 0 El puritoReig (minuto 90)
+Raul Gran Capitan 0 - 3 Nanuk (minuto 90)
+JM Cabanellas 0 - 6 Camandulas FC (minuto 90)
+
+
+
+Carrusel automatico v1.1 implementado en carr.py
