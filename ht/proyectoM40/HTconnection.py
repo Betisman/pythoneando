@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding=ISO-8859-1
+# coding=UTF-8
 import xml.dom.minidom as minidom
 import urllib, httplib2
 
@@ -7,7 +7,11 @@ class HtConnManager:
 	def __init__(self):
 		#creamos una conexión HTTP
 		self.http = httplib2.Http()
-		self.recServer = getRecommendedServer
+		self.recServer = None
+		try:
+			self.recServer = self.getRecommendedServer()
+		except Exception, msg:
+			print "Excepción al conectar:", msg
 		self.cookie = None
 		self.headers = None
 	
@@ -19,7 +23,7 @@ class HtConnManager:
 			#urle que Hattrick dice que es la que nos dice qué servidor usar
 			url = 'http://www.hattrick.org/Common/menu.asp?outputType=XML'
 			#realizamos la petición http a la url anterior
-			response, content = http.request(url, 'GET')
+			response, content = self.http.request(url, 'GET')
 			#el content que nos devuelve la respuesta es un xml. Lo parseamos y buscamos la información que indica qué servidor es el que nos recomienda ht usar.
 			dom = minidom.parseString(content)
 			itemlist = dom.getElementsByTagName('RecommendedURL')
@@ -27,8 +31,9 @@ class HtConnManager:
 			
 			print 'Servidor recomendado:', recommendedServer
 			return recommendedServer
-		except Exception:
-			print 'Salto una excepcion en getRecommendedServer()', sys_exc_info()
+		except Exception, msg:
+			#print 'Salto una excepcion en getRecommendedServer()', sys_exc_info()
+			print 'Salto una excepcion en getRecommendedServer():', msg
 			return None
 	
 	def login(self, username, password):
@@ -43,30 +48,32 @@ class HtConnManager:
 			#aquí se indica el nombre y versión de la app #esto se debe actualizar cuando se consiga el CHPP
 			userAgent = 'MyApp/v1.0'
 			#inicializamos la variable que guardará la cookie para mantener la sesión
-			cookie = ''
+			self.cookie = ''
 			#inicializamos la cabecera de la petición http
-			headers = {'Content-type': 'application/x-www-form-urlencoded'}
+			self.headers = {'Content-type': 'application/x-www-form-urlencoded'}
 			#url a la que conectarse para realizar el login
-		#	url = recServer + '/common/default.asp'
+			#	url = recServer + '/common/default.asp'
+			print 'url', self.recServer
 			url = self.recServer + '/common/default.asp'
 			#print url
 			#construimos el boy de la petición http (para saber qué valores enviar, hemos usado el LiveHttpHeaders de Firefox)
 			body = {'loginname':username,'password':password,'actionType':'login','flashVersion':'0','submit.x':'0','submit.y':'0','submit':'Entrar'}
 			#realizamos la conexión y recibimos el contenido de la respuesta y el response
-			response, content = http.request(url, 'POST', headers=headers, body = urllib.urlencode(body))
+			response, content = self.http.request(url, 'POST', headers=self.headers, body = urllib.urlencode(body))
 			try:
 				#capturamos la cookie devuelta para mantener la sesión
-				cookie = response['set-cookie']
-				headers['Cookie'] = cookie
+				self.cookie = response['set-cookie']
+				self.headers['Cookie'] = self.cookie
 			except KeyError:
 				print 'Saltó excepción KeyError', sys.exc_info()
 				return None
 			print 'Login OK'
 			#devolvemos tanto la conexión http como la cabecera de la petición.
-			return http, headers
-		except Exception:
+			return self.http, self.headers
+		except Exception, msg:
 			# print 'Saltó una excepción en login().'
 			# print 'Info:', sys.exc_info()
+			print msg
 			raise HtConnectionException(Exception, 'Excepción en login')
 
 class HtConnectionException(Exception):
