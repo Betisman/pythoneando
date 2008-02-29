@@ -1,4 +1,4 @@
-# coding=ISO-8859-1
+# coding=UTF-8
 
 class Partido:
 	def __init__(self, local, goleslocal, golesvisitante, visitante, minuto):

@@ -4,14 +4,18 @@ import HTconnection
 import handlers
 import model
 import Config
+import datetime
+import xml.dom.minidom as minidom
+import sys
+import traceback
 
 class CarruselHandler:
 	def __init__(self):
 		self.config = Config.Config()
 		#conectamos con Hattrick y nos logueamos
-		htconn = HTconnection.HTConnManager()
-		http = htconn.login(username, password)
-		self.recServer = htconn.recServer
+		self.htconn = HTconnection.HtConnManager()
+		self.http, self.headers = self.htconn.login(self.config.get('hattrick.username'), self.config.get('hattrick.password'))
+		self.recServer = self.htconn.recServer
 	
 	def valorElementoSimple(self, elem, tag):
 		return elem.getElementsByTagName(tag)[0].firstChild.nodeValue
@@ -39,24 +43,22 @@ class CarruselHandler:
 		username = self.config.get('hattrick.username')
 		password = self.config.get('hattrick.password')
 		securitycode = self.config.get('hattrick.securitycode')
+		pathMatchids = self.config.get('file.matches')
 		#hasta aquí, variables globales
 		
 		recServer = self.recServer
-		
-		pathXmls = ".\\xmls\\"
-		pathMatchids = pathXmls + "matchids.xml"
 		now = datetime.datetime.now()
 		strResultados = "RESULTADOS"+ " (" + str(now.hour) + ":" + str(now.minute) + ")\n\n"
 		
 		strClasif = "CLASIFICACION ACTUAL\n"
 
-		matchids = getMatches(pathMatchids);
+		matchids = self.getMatches(pathMatchids);
 		print str(len(matchids)) + ' partidos'
 		for matchid in matchids:
 			url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
 			#print url
 			try:
-				response, content = http.request(url, 'GET', headers=headers)
+				response, content = self.http.request(url, 'GET', headers=self.headers)
 				#afichero(content, pathXmls + 'live'+matchid+'.xml')
 				
 				doc = minidom.parseString(content)
@@ -97,6 +99,7 @@ class CarruselHandler:
 				ch = handlers.ClasifHandler()
 				ch.actualizarClasifPartido(partido)
 			except Exception, message:
+				traceback.print_exc()
 				print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
 				print message
 		

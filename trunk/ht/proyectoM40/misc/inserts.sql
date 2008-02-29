@@ -1,3 +1,4 @@
+--init
 DROP TABLE equipos;
 DROP TABLE equipostemp;
 BEGIN TRANSACTION;
