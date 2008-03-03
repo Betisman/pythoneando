@@ -29,6 +29,7 @@ for sql in sqls:
 		conn.commit()
 	else:
 		cur.execute(sql)
+conn.close()
 
 # sql = "select * from equipos"
 # cur.execute(sql)

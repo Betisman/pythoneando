@@ -1,17 +1,35 @@
-RESULTADOS (14:55)
+RESULTADOS (16:23)
 
-Pitisianos SAD 3 - 2 Real Betisman Balompié (minuto 90)
-ThePiso 6 - 0 Bukakke Team (minuto 90)
-creative_team 2 - 1 Espino F.C (minuto 90)
-Caranza F.C. 1 - 0 A_posta (minuto 90)
-Real Servelete de Carfesan 5 - 1 Chaconcines (minuto 90)
-Jumfrys F.K. 2 - 4 ollauris F.C. (minuto 90)
-R.C.D Celtiña 6 - 1 A.D. Dimitri PITERMAN (minuto 90)
-Hapiio FC 2 - 1 Grunflash (minuto 90)
-milan chupao 2 - 1 losalbertos (minuto 90)
-Inframundo CD Drogadictos anónimos 4 - 0 El puritoReig (minuto 90)
-Raul Gran Capitan 0 - 3 Nanuk (minuto 90)
-JM Cabanellas 0 - 6 Camandulas FC (minuto 90)
+Pitisianos SAD 3 - 2 Real Betisman Balompie (minuto 90)
+CLASIFICACION ACTUAL
+
+Grupo A
+
+pos    Equipo                    pj g  e  p gf gc avg ptos
+-----------------------------------------------------------
+ 1.- Pitisianos SAD              2  2  0  0  6  4   2    6
+ 2.- CONGRIO F.C.                0  0  0  0  0  0   0    0
+ 3.- milan chupao                0  0  0  0  0  0   0    0
+ 4.- Real Servelete de Carfesan  0  0  0  0  0  0   0    0
+ 5.- Raul Gran Capitan           0  0  0  0  0  0   0    0
+ 6.- Bukakke Team                0  0  0  0  0  0   0    0
+ 7.- Hapiio FC                   0  0  0  0  0  0   0    0
+ 8.- Real Betisman Balompie      2  0  0  2  4  6  -2    0
+
+
+
+Grupo B
+
+pos    Equipo                    pj g  e  p gf gc avg ptos
+-----------------------------------------------------------
+ 1.- A.D. Dimitri PITERMAN       0  0  0  0  0  0   0    0
+ 2.- Chaconcines                 0  0  0  0  0  0   0    0
+ 3.- Espino F.C                  0  0  0  0  0  0   0    0
+ 4.- Inframundo CD Drogadictos   0  0  0  0  0  0   0    0
+ 5.- Jumfrys F.K.                0  0  0  0  0  0   0    0
+ 6.- ThePiso                     0  0  0  0  0  0   0    0
+ 7.- ollauris F.C.               0  0  0  0  0  0   0    0
+ 8.- Caranza F.C.                0  0  0  0  0  0   0    0
 
 
 
