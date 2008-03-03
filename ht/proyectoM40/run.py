@@ -24,7 +24,7 @@ def problemaTildes(config):
 
 def main():
 	config = Config.Config()
-	problemaTildes(config);
+	#problemaTildes(config);
 	gmailuser = config.get('gmail.user')
 	gmailpwd = config.get('gmail.password')
 	subject = config.get('gmail.subject')

@@ -23,7 +23,7 @@ def printAll():
 	cur.execute(SELECT)
 	for row in cur:
 	    print row
-
+	
 def actualizarEquipo(nombre, pj, g, e, p, gf, gc, avg, ptos):
 	con = sqlite.connect("ht.sqlite")
 	sql = "update equipos set pj = "+str(pj)+", g = "+str(g)+", e = "+str(e)+", p = "+str(p)+", gf = "+str(gf)+", gc = "+str(gc)+", avg = "+str(avg)+", ptos = "+str(ptos)+" where nombre = '"+nombre+"'"

@@ -5,9 +5,11 @@ import handlers
 import model
 import Config
 import datetime
+import time
 import xml.dom.minidom as minidom
 import sys
 import traceback
+import codecs
 
 class CarruselHandler:
 	def __init__(self):
@@ -38,17 +40,25 @@ class CarruselHandler:
 			ret.append(matchid.firstChild.nodeValue)
 		return ret
 
+	def afichero(self, content, fichero):
+		#f = open(fichero, 'w')
+		f = codecs.open(fichero, encoding='utf-8', mode='w')
+		f.write(content)
+		f.close()
+		return 'Generado fichero ' + fichero
+	
 	def generarFicheroCarrusel(self, fich):
 		#headers = {'Content-type': 'application/x-www-form-urlencoded'}
 		username = self.config.get('hattrick.username')
 		password = self.config.get('hattrick.password')
 		securitycode = self.config.get('hattrick.securitycode')
 		pathMatchids = self.config.get('file.matches')
+		fichCarrusel = self.config.get('file.carrusel')
 		#hasta aquí, variables globales
 		
 		recServer = self.recServer
 		now = datetime.datetime.now()
-		strResultados = "RESULTADOS"+ " (" + str(now.hour) + ":" + str(now.minute) + ")\n\n"
+		strResultados = "RESULTADOS"+ " (%02d:%02d)\n\n" %(now.hour, now.minute)
 		
 		strClasif = "CLASIFICACION ACTUAL\n"
 
@@ -59,18 +69,20 @@ class CarruselHandler:
 			#print url
 			try:
 				response, content = self.http.request(url, 'GET', headers=self.headers)
-				#afichero(content, pathXmls + 'live'+matchid+'.xml')
+				#open('misc\\live'+matchid+'.xml', "w").write(content)
 				
 				doc = minidom.parseString(content)
 				hometeam = doc.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
 				awayteam = doc.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
 				homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
 				awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
+				hometeamid = doc.getElementsByTagName('HomeTeamID')[0].firstChild.nodeValue
+				awayteamid = doc.getElementsByTagName('AwayTeamID')[0].firstChild.nodeValue
 				
 				#obtenemos objetos Equipo para el local y el visitante
 				dbh = handlers.DBHandler()
-				hometeam = dbh.getEquipoIni(hometeam)
-				awayteam = dbh.getEquipoIni(awayteam)
+				hometeam = dbh.getEquipoIni(hometeamid)
+				awayteam = dbh.getEquipoIni(awayteamid)
 				
 				#calculo del minuto actual
 				inicio = doc.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
@@ -110,8 +122,13 @@ class CarruselHandler:
 		strClasif = strClasif + "\nGrupo B\n\n"
 		strClasif = strClasif + ch.getStrClasifTemp('B')
 		
+		print strClasif
+		
 		strPie = '\n\n\nCarrusel automatico v1.1 implementado en carr.py'
 		
 		strCarr = strResultados + strClasif + strPie
 		
-		afichero(unicode(strResultados), fich)
+		self.afichero(unicode(strCarr), fichCarrusel)
+		
+		if (partido.minuto == "90"):
+			ch.setearTempComoPerm()
