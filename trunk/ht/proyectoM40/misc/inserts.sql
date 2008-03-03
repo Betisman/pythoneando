@@ -1,4 +1,4 @@
---init
+ï»¿--init
 DROP TABLE equipos;
 DROP TABLE equipostemp;
 BEGIN TRANSACTION;
@@ -13,12 +13,12 @@ gf integer(3) not null,
 gc integer(3) not null,
 avg integer(3) not null,
 ptos integer(3) not null, grupo varchar(1));
-INSERT INTO "equipos" VALUES(487829,"Real Betisman Balompié",0,0,0,0,0,0,0,0,"A");
+INSERT INTO "equipos" VALUES(487829,"Real Betisman BalompiÃ©",0,0,0,0,0,0,0,0,"A");
 INSERT INTO "equipos" VALUES(1436965,"A.D. Dimitri PITERMAN",0,0,0,0,0,0,0,0,"B");
 INSERT INTO "equipos" VALUES(1581841,"Chaconcines",0,0,0,0,0,0,0,0,"B");
 INSERT INTO "equipos" VALUES(989753,"CONGRIO F.C.",0,0,0,0,0,0,0,0,"A");
 INSERT INTO "equipos" VALUES(492014,"Espino F.C",0,0,0,0,0,0,0,0,"B");
-INSERT INTO "equipos" VALUES(1457502,"Inframundo CD Drogadictos anónimos",0,0,0,0,0,0,0,0,"B");
+INSERT INTO "equipos" VALUES(1457502,"Inframundo CD Drogadictos anÃ³nimos",0,0,0,0,0,0,0,0,"B");
 INSERT INTO "equipos" VALUES(48756,"Jumfrys F.K.",0,0,0,0,0,0,0,0,"B");
 INSERT INTO "equipos" VALUES(799149,"milan chupao",0,0,0,0,0,0,0,0,"A");
 INSERT INTO "equipos" VALUES(491940,"Pitisianos SAD",0,0,0,0,0,0,0,0,"A");
