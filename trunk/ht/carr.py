@@ -81,7 +81,8 @@ def carruselear():
 	pathXmls = ".\\xmls\\"
 	pathMatchids = pathXmls + "matchids.xml"
 	now = datetime.datetime.now()
-	strResultados = "RESULTADOS"+ " (" + str(now.hour) + ":" + str(now.minute) + ")\n\n"
+	strResultados = ""
+	#strResultados = "RESULTADOS"+ " (" + str(now.hour) + ":" + str(now.minute) + ")\n\n"
 
 	recServer = getRecommendedServer(http)
 	http, headers = login(username, password, recServer, http)
@@ -126,5 +127,5 @@ def carruselear():
 			print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
 			print message
 
-	strResultados = strResultados + '\n\n\nCarrusel automatico v1.1 implementado en carr.py'
+	#strResultados = strResultados + '\n\n\nCarrusel automatico v1.1 implementado en carr.py'
 	afichero(unicode(strResultados), pathXmls+'carr.txt')
