@@ -3,7 +3,10 @@ import xml.dom.minidom as minidom
 import urllib, httplib2
 import sys
 import time, datetime
-import BeautifulSoup
+import tools.BeautifulSoup as BeautifulSoup
+from model import Equipo
+from handlers import EquipoHandler
+from pysqlite2 import dbapi2 as sqlite
 #httplib2.debuglevel = 1
 http = httplib2.Http()
 
@@ -107,15 +110,44 @@ def getGrupoFromHtml(grupo):
 		ret.append(fret)
 	return ret
 
-
+def getIdFromXml(nombre):
+	"""
+	devuelve tanto el teamid como el nombrecorto del equipo
+	"""
+	doc = minidom.parse('misc\\m40.xml')
+	equipos = doc.getElementsByTagName('equipo')
+	for equipo in equipos:
+		teamname = equipo.getElementsByTagName('nombre')[0].firstChild.nodeValue
+		if teamname.startswith(nombre[:15]):
+			return equipo.getElementsByTagName('teamid')[0].firstChild.nodeValue, \
+			equipo.getElementsByTagName('nombrecorto')[0].firstChild.nodeValue
+	
 print login()
 html = getHtmlGrupos('84703')
 html = prettyfyHtml(html)
 tables = html.findAll('table', border="0", width="410px", align="center", cellpadding="1", cellspacing="1")
 indices = indicesGrupos(tables)
 
+grupos = []
 for i in indices:
 	grupo = getGrupoFromHtml(grupoHtml(i, tables))
-	print grupo
+	grupos.append(grupo)
+
+conn = sqlite.connect('misc\\ht.sqlite')
+cur = conn.cursor()
+for grupo in grupos:
+	for equipo in grupo:
+		#equipo [0]:nombre, [1]: pj, [2]: g, [3]: e, [4]: p, [5]: gf, [6]: gc, [7]: ptos
+		nombre = equipo[0]
+		id, nombrecorto = getIdFromXml(nombre)
+		sql = "SELECT grupo FROM equipos WHERE id = "+id
+		print sql
+		cur.execute(sql)
+		for row in cur:
+			grupo = row[0]
+		eq = Equipo(id, nombre, nombrecorto, equipo[1], equipo[2], equipo[3], equipo[4], equipo[5], equipo[6], int(equipo[5])-int(equipo[6]), equipo[7], grupo)
+		eqh = EquipoHandler(eq)
+		eqh.actualizarEquipo()
+		eqh.actualizarEquipoTemp()
 	
 
