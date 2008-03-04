@@ -1,0 +1,5 @@
+-----initScript.py
+Sirve para inicializar la BD.
+
+-----matchesScript.py
+Sirve para preparar el archivo de partidos matchids.xml para la jonada correspondiente.
