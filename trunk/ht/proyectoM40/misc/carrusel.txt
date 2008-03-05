@@ -1,20 +1,27 @@
-RESULTADOS (16:23)
+RESULTADOS (13:55)
 
-Pitisianos SAD 3 - 2 Real Betisman Balompie (minuto 90)
+Real Betisman Balompie 8 - 1 CONGRIO F.C. (minuto 90)
+Espino F.C 0 - 7 Chaconcines (minuto 90)
+Jumfrys F.K. 6 - 1 ollauris F.C. (minuto 90)
+milan chupao 1 - 4 Hapiio FC (minuto 90)
+Pitisianos SAD 5 - 0 Raul Gran Capitan (minuto 90)
+Bukakke Team 1 - 3 Real Servelete de Carfesan (minuto 90)
+Caranza F.C. 2 - 1 ThePiso (minuto 90)
+
 CLASIFICACION ACTUAL
 
 Grupo A
 
 pos    Equipo                    pj g  e  p gf gc avg ptos
 -----------------------------------------------------------
- 1.- Pitisianos SAD              2  2  0  0  6  4   2    6
- 2.- CONGRIO F.C.                0  0  0  0  0  0   0    0
- 3.- milan chupao                0  0  0  0  0  0   0    0
- 4.- Real Servelete de Carfesan  0  0  0  0  0  0   0    0
- 5.- Raul Gran Capitan           0  0  0  0  0  0   0    0
- 6.- Bukakke Team                0  0  0  0  0  0   0    0
- 7.- Hapiio FC                   0  0  0  0  0  0   0    0
- 8.- Real Betisman Balompie      2  0  0  2  4  6  -2    0
+ 1.- Real Betisman Balompie      1  1  0  0  8  1   7    3
+ 2.- Pitisianos SAD              1  1  0  0  5  0   5    3
+ 3.- Hapiio FC                   1  1  0  0  4  1   3    3
+ 4.- Real Servelete de Carfesan  1  1  0  0  3  1   2    3
+ 5.- Bukakke Team                1  0  0  1  1  3  -2    0
+ 6.- milan chupao                1  0  0  1  1  4  -3    0
+ 7.- Raul Gran Capitan           1  0  0  1  0  5  -5    0
+ 8.- CONGRIO F.C.                1  0  0  1  1  8  -7    0
 
 
 
@@ -22,15 +29,15 @@ Grupo B
 
 pos    Equipo                    pj g  e  p gf gc avg ptos
 -----------------------------------------------------------
- 1.- A.D. Dimitri PITERMAN       0  0  0  0  0  0   0    0
- 2.- Chaconcines                 0  0  0  0  0  0   0    0
- 3.- Espino F.C                  0  0  0  0  0  0   0    0
- 4.- Inframundo CD Drogadictos   0  0  0  0  0  0   0    0
- 5.- Jumfrys F.K.                0  0  0  0  0  0   0    0
- 6.- ThePiso                     0  0  0  0  0  0   0    0
- 7.- ollauris F.C.               0  0  0  0  0  0   0    0
- 8.- Caranza F.C.                0  0  0  0  0  0   0    0
+ 1.- Chaconcines                 1  1  0  0  7  0   7    3
+ 2.- Jumfrys F.K.                1  1  0  0  6  1   5    3
+ 3.- Inframundo CD Drogadictos   1  1  0  0  5  0   5    3
+ 4.- Caranza F.C.                1  1  0  0  2  1   1    3
+ 5.- ThePiso                     1  0  0  1  1  2  -1    0
+ 6.- ollauris F.C.               1  0  0  1  1  6  -5    0
+ 7.- A.D. Dimitri PITERMAN       1  0  0  1  0  5  -5    0
+ 8.- Espino F.C                  1  0  0  1  0  7  -7    0
 
 
 
-Carrusel automatico v1.1 implementado en carr.py
+Carrusel automatico (rev 15) implementado en carr.py

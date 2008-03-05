@@ -60,7 +60,7 @@ class CarruselHandler:
 		now = datetime.datetime.now()
 		strResultados = "RESULTADOS"+ " (%02d:%02d)\n\n" %(now.hour, now.minute)
 		
-		strClasif = "CLASIFICACION ACTUAL\n"
+		strClasif = "\nCLASIFICACION ACTUAL\n"
 
 		matchids = self.getMatches(pathMatchids);
 		print str(len(matchids)) + ' partidos'
@@ -122,9 +122,9 @@ class CarruselHandler:
 		strClasif = strClasif + "\nGrupo B\n\n"
 		strClasif = strClasif + ch.getStrClasifTemp('B')
 		
-		print strClasif
+		#print strClasif
 		
-		strPie = '\n\n\nCarrusel automatico v1.1 implementado en carr.py'
+		strPie = '\n\n\nCarrusel automatico (rev 15) implementado en carr.py'
 		
 		strCarr = strResultados + strClasif + strPie
 		
