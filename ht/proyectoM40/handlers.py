@@ -201,7 +201,7 @@ class DBHandler:
 		ret = ""
 		sql = "select * from equipostemp where grupo = '"+grupo+"' order by ptos desc, avg desc, gf desc"
 		cur = self.conn.cursor()
-		print sql
+		#print sql
 		cur.execute(sql)
 		self.conn.commit()
 		return cur
