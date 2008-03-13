@@ -199,5 +199,26 @@
 			</tr>
 		</tbody>
 	</table>
+	<script type="text/javascript">
+	function python(value){
+	$.ajax({
+	url: 'p.py?val='+value,
+	type: 'GET',
+	dataType: 'html',
+	timeout: 1000,
+	error: function(){
+		alert('Error loading XML document');
+	},
+	success: function(html){
+	$('#python').html('<p>'+html+'</p>');
+}
+});
+}
+	</script>
+	<div id="prepython">
+		<input size="20" id="holainput" onkeydown="python(this.value);" type="text"/>
+	</div>
+	<div id="python">
+	</div>
 </body>
 </html>
