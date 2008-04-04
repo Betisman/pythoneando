@@ -37,8 +37,9 @@ def main():
 	emails = open(ficheroEmails, 'r').readlines()
 	for to in emails:
 		try:
-			sendgmail.sendGmail(gmailuser, gmailpwd, to, subject, msg, None)
-			print 'Mail enviado correctamente a la direccion ' + to
+			if not to.startswith('#'):
+				sendgmail.sendGmail(gmailuser, gmailpwd, to, subject, msg, None)
+				print 'Mail enviado correctamente a la direccion ' + to
 		except Exception:
 			print 'El mail (creo) no ha sido enviado a la direccion', to
 

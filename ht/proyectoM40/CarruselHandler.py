@@ -123,12 +123,39 @@ class CarruselHandler:
 		strClasif = strClasif + ch.getStrClasifTemp('B')
 		
 		#print strClasif
-		
+				
 		strPie = '\n\n\nCarrusel automatico (rev 15) implementado en carr.py'
 		
-		strCarr = strResultados + strClasif + strPie
+		strCarr = strResultados + strClasif + self.addOctavosString() + strPie
 		
 		self.afichero(unicode(strCarr), fichCarrusel)
 		
 		if (partido.minuto == "90"):
 			ch.setearTempComoPerm()
+
+	def addOctavosString(self):
+		ch = handlers.ClasifHandler()
+		grupoa = ch.getClasifTempNombresDict('A')
+		grupob = ch.getClasifTempNombresDict('B')
+		
+		str = "\n\nSi la liga termina asi, los octavos de final serian asi:\n\n"
+		#1A - 8B
+		str = str + "(1) 1A - 8B: " + grupoa[1] + " - " + grupob[8] + "\n"
+		#4B - 5A
+		str = str + "(2) 4B - 5A: " + grupob[4] + " - " + grupoa[5] + "\n"
+		#7A - 2B
+		str = str + "(3) 7A - 2B: " + grupoa[7] + " - " + grupob[2] + "\n"
+		#6B - 3A
+		str = str + "(4) 6B - 3A: " + grupob[6] + " - " + grupoa[3] + "\n"
+		#2A - 7B
+		str = str + "(5) 2A - 7B: " + grupoa[2] + " - " + grupob[7] + "\n"
+		#3B - 6A
+		str = str + "(6) 3B - 6A: " + grupob[3] + " - " + grupoa[6] + "\n"
+		#8A - 1B
+		str = str + "(7) 8A - 1B: " + grupoa[8] + " - " + grupob[1] + "\n"
+		#5B - 4A
+		str = str + "(8) 5B - 4A: " + grupob[5] + " - " + grupoa[4] + "\n"
+		
+		str = str + "\n\n(ojo, puede ocurrir que, en caso de empate, cupmanager.org resuelva el desempate de forma diferente a este script, por lo que cambiaria la clasificacion y, por ende, los cruces de octavos de final)\nLos cruces de cuartos serian:\n(1) vs (2), (3) vs (4)...\n\n"
+		
+		return str

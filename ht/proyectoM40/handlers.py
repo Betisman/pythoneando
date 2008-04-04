@@ -145,6 +145,21 @@ class ClasifHandler:
 			# eq = dbh.getEquipoFromRowCur(row)
 			# eqh = EquipoHandler(eq)
 			# eqh.actualizarEquipo()
+	
+	def getClasifTempNombresDict(self, grupo):
+		"""
+		Devuelve un diccionario con el nombre de los equipos ordenados según la 
+		clasificacion del grupo. key = puesto, value = nombre del equipo
+		"""
+		dbh = DBHandler()
+		clasif = {}
+		cur = dbh.getClasifTemp(grupo)
+		i = 1
+		for row in cur:
+			nombre, nombrecorto = dbh.getNombres(row[0])
+			clasif[i] = nombre
+			i = i + 1
+		return clasif
 
 class DBHandler:
 	def __init__(self):
