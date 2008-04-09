@@ -6,6 +6,7 @@
 <body>
 	
 	<script type="text/javascript" src="a.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript">
 	function python(value){
 	//a();
@@ -30,6 +31,29 @@
 	</div>
 	<a href="#" onclick="javascript:python('feo')">Ilkka Simonson</a>
 	<div id="python">
+	</div>
+	<style type="text/css">
+	div {	
+		border : 1px solid green;
+		color : red;
+	}
+	</style>
+	<script type="text/javascript">
+	function probando(){
+		$('#feo1').html('<p>perro</p>');
+		$('<div id="barato"><p>BAraaaatOO</p></div>').appendTo($('#feo1'));
+		var feo = $('<div id="tabarato"><p>TaaaaaaaaaaBAraaaatOO</p></div>');
+		feo.appendTo($('#barato'));
+		$('<div id="petardo">Vaya petardada</div>').appendTo(feo);
+		alert("feo: "+feo.html());
+		alert($('#feo1').html());
+		$('#feo1').append('<h1>append sin $</h1>');
+		$('#feo1').append($('<h1>append con $</h1>'));
+	}
+	</script>
+	<div id="feo">
+		<a href="#" onclick="javascript:probando()">FEOOOOOO</a>
+		<div id="feo1"></div>
 	</div>
 </body>
 </html>
