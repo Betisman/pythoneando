@@ -54,6 +54,7 @@ class CarruselHandler:
 		securitycode = self.config.get('hattrick.securitycode')
 		pathMatchids = self.config.get('file.matches')
 		fichCarrusel = self.config.get('file.carrusel')
+		liguilla = self.config.get('cup.liguilla')
 		#hasta aquí, variables globales
 		
 		recServer = self.recServer
@@ -107,31 +108,36 @@ class CarruselHandler:
 				
 				strResultados = strResultados + partido.local.nombre + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante.nombre + " (minuto " + partido.minuto + ")\n"
 				
-				#actualizamos la clasificacion
-				ch = handlers.ClasifHandler()
-				ch.actualizarClasifPartido(partido)
+				if liguilla.lower().startswith('true'):
+					#actualizamos la clasificacion
+					ch = handlers.ClasifHandler()
+					ch.actualizarClasifPartido(partido)
 			except Exception, message:
 				traceback.print_exc()
 				print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
 				print message
 		
-		ch = handlers.ClasifHandler()
-		strClasif = strClasif + "\nGrupo A\n\n"
-		strClasif = strClasif + ch.getStrClasifTemp('A')
-		strClasif = strClasif + "\n\n"
-		strClasif = strClasif + "\nGrupo B\n\n"
-		strClasif = strClasif + ch.getStrClasifTemp('B')
+		if liguilla.lower().startswith('true'):
+			ch = handlers.ClasifHandler()
+			strClasif = strClasif + "\nGrupo A\n\n"
+			strClasif = strClasif + ch.getStrClasifTemp('A')
+			strClasif = strClasif + "\n\n"
+			strClasif = strClasif + "\nGrupo B\n\n"
+			strClasif = strClasif + ch.getStrClasifTemp('B')
+			if (partido.minuto == "90"):
+				ch.setearTempComoPerm()
 		
 		#print strClasif
 				
 		strPie = '\n\n\nCarrusel automatico (rev 15) implementado en carr.py'
-		
-		strCarr = strResultados + strClasif + self.addOctavosString() + strPie
+		if liguilla.lower().startswith('true'):
+			strOcatavos = self.addOctavosString()
+		else:
+			strOctavos = ""
+			
+		strCarr = strResultados + strClasif + strOctavos + strPie
 		
 		self.afichero(unicode(strCarr), fichCarrusel)
-		
-		if (partido.minuto == "90"):
-			ch.setearTempComoPerm()
 
 	def addOctavosString(self):
 		ch = handlers.ClasifHandler()
