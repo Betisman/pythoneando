@@ -1,60 +1,14 @@
-RESULTADOS (13:55)
+RESULTADOS (16:21)
 
-Real Betisman Balompie 3 - 0 Bukakke Team (minuto 90)
-A.D. Dimitri PITERMAN 1 - 1 ThePiso (minuto 90)
-CONGRIO F.C. 2 - 5 Real Servelete de Carfesan (minuto 90)
-Jumfrys F.K. 7 - 0 Espino F.C (minuto 90)
-Inframundo CD Drogadictos anónimos 1 - 4 Caranza F.C. (minuto 90)
-milan chupao 4 - 3 Pitisianos SAD (minuto 90)
-Hapiio FC 6 - 0 Raul Gran Capitan (minuto 90)
+Real Servelete de Carfesan 4 - 6 Real Betisman Balompie (minuto 90)
+Caranza F.C. 2 - 1 A.D. Dimitri PITERMAN (minuto 90)
+Bukakke Team 1 - 5 CONGRIO F.C. (minuto 90)
+Espino F.C 0 - 3 ollauris F.C. (minuto 90)
+ThePiso 2 - 1 Inframundo CD Drogadictos anónimos (minuto 90)
+Raul Gran Capitan 1 - 4 milan chupao (minuto 90)
+Pitisianos SAD 4 - 5 Hapiio FC (minuto 90)
 
 CLASIFICACION ACTUAL
-
-Grupo A
-
-pos    Equipo                    pj g  e  p gf gc avg ptos
------------------------------------------------------------
- 1.- Hapiio FC                   6  6  0  0 26  3  23   18
- 2.- Real Servelete de Carfesan  6  4  1  1 25 10  15   13
- 3.- Real Betisman Balompie      6  4  0  2 31  9  22   12
- 4.- Pitisianos SAD              6  3  1  2 23 16   7   10
- 5.- Bukakke Team                6  2  0  4 11 18  -7    6
- 6.- CONGRIO F.C.                6  2  0  4 17 25  -8    6
- 7.- milan chupao                6  2  0  4 12 20  -8    6
- 8.- Raul Gran Capitan           6  0  0  6  1 45 -44    0
-
-
-
-Grupo B
-
-pos    Equipo                    pj g  e  p gf gc avg ptos
------------------------------------------------------------
- 1.- Jumfrys F.K.                6  6  0  0 27  5  22   18
- 2.- ollauris F.C.               6  5  0  1 20 11   9   15
- 3.- Caranza F.C.                6  4  0  2 16  9   7   12
- 4.- Inframundo CD Drogadictos   6  3  0  3 18 13   5    9
- 5.- ThePiso                     6  2  1  3 15 12   3    7
- 6.- A.D. Dimitri PITERMAN       6  1  1  4 10 17  -7    4
- 7.- Espino F.C                  6  1  0  5  6 24 -18    3
- 8.- Chaconcines                 6  1  0  5  9 30 -21    3
-
-
-Si la liga termina asi, los octavos de final serian asi:
-
-(1) 1A - 8B: Hapiio FC - Chaconcines
-(2) 4B - 5A: Inframundo CD Drogadictos anónimos - Bukakke Team
-(3) 7A - 2B: milan chupao - ollauris F.C.
-(4) 6B - 3A: A.D. Dimitri PITERMAN - Real Betisman Balompie
-(5) 2A - 7B: Real Servelete de Carfesan - Espino F.C
-(6) 3B - 6A: Caranza F.C. - CONGRIO F.C.
-(7) 8A - 1B: Raul Gran Capitan - Jumfrys F.K.
-(8) 5B - 4A: ThePiso - Pitisianos SAD
-
-
-(ojo, puede ocurrir que, en caso de empate, cupmanager.org resuelva el desempate de forma diferente a este script, por lo que cambiaria la clasificacion y, por ende, los cruces de octavos de final)
-Los cruces de cuartos serian:
-(1) vs (2), (3) vs (4)...
-
 
 
 

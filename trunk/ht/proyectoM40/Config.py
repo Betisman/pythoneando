@@ -8,10 +8,11 @@ class Config:
 		self.config = {}
 		lines = open(self.fich, 'r').readlines()
 		for line in lines:
-			spl = line.split('=')
-			key = spl[0].strip()
-			value = spl[1].replace('"', '').strip()
-			self.config[key] = value
+			if not line.startswith('#'):
+				spl = line.split('=')
+				key = spl[0].strip()
+				value = spl[1].replace('"', '').strip()
+				self.config[key] = value
 			
 	def get(self, key):
 		return self.config[key]		
