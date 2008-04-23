@@ -60,7 +60,7 @@ for teamid in teams:
 	try:
 		response, content = http.request(url, 'GET', headers=headers)
 		#open('misc\\live'+matchid+'.xml', "w").write(content)
-		#afichero(content, "misc\\matches.xml")
+		#afichero(content, "misc\\matches"+teamid+".xml")
 		
 		doc = minidom.parseString(content)
 		#para cada partido, recuperamos el MatchID de aquel que cumpla:
@@ -69,7 +69,8 @@ for teamid in teams:
 		partidos = doc.getElementsByTagName('Match')
 		for match in partidos:
 			matchtype = match.getElementsByTagName('MatchType')[0].firstChild.nodeValue
-			if matchtype == "4":
+			#if matchtype == "4": ##solo liguilla
+			if matchtype == "4" or matchtype == "5": #4: reglas normales; 5: reglas de copa
 				status = match.getElementsByTagName('Status')[0].firstChild.nodeValue
 				if status == "UPCOMING":
 					matchid = match.getElementsByTagName('MatchID')[0].firstChild.nodeValue
