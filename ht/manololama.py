@@ -19,10 +19,10 @@ def lama():
 			# print 'Mail enviado correctamente a la direccion ' + to
 		# except Exception:
 			# print 'El mail (creo) no ha sido enviado a la direccion', to
-	msg = msg.replace("Real Betisman Balompi", "RBB")
-	msg = msg.replace("Los filososfos", "lf")
-	msg = msg.replace("ThePiso", "TP")
-	msg = msg.replace("Borrachines Team", "BT")
+	# msg = msg.replace("Real Betisman Balompi", "RBB")
+	# msg = msg.replace("Los filososfos", "lf")
+	# msg = msg.replace("ThePiso", "TP")
+	# msg = msg.replace("Borrachines Team", "BT")
 	mgc = gcalendar.MyGCalendar('betisman@gmail.com', 'logaritmo')
 	mgc.login()
 	mgc.enviarSms(msg)

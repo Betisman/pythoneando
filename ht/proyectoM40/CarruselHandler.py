@@ -61,7 +61,7 @@ class CarruselHandler:
 		now = datetime.datetime.now()
 		strResultados = "RESULTADOS"+ " (%02d:%02d)\n\n" %(now.hour, now.minute)
 		
-		strClasif = "\nCLASIFICACION ACTUAL\n"
+		strClasif = ""
 
 		matchids = self.getMatches(pathMatchids);
 		print str(len(matchids)) + ' partidos'
@@ -82,8 +82,17 @@ class CarruselHandler:
 				
 				#obtenemos objetos Equipo para el local y el visitante
 				dbh = handlers.DBHandler()
-				hometeam = dbh.getEquipoIni(hometeamid)
-				awayteam = dbh.getEquipoIni(awayteamid)
+				partidoliga = True
+				try:
+					hometeam = dbh.getEquipoIni(hometeamid)
+				except Exception:
+					hometeam = model.Equipo(id=hometeamid, nombre=hometeam)
+					partidoliga = False #indica que el partido no se corresponde con la liga (por ejemplo, cuando un equipo juega un amistoso que no le corresponde con el calendario de la liga)
+				try:
+					awayteam = dbh.getEquipoIni(awayteamid)
+				except Exception:
+					awayteam = model.Equipo(id=awayteamid, nombre=awayteam)
+					partidoliga = False
 				
 				#calculo del minuto actual
 				inicio = doc.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
@@ -104,8 +113,8 @@ class CarruselHandler:
 							diferencia = 45
 				minuto = str(diferencia)
 				
-				partido = model.Partido(hometeam, homegoals, awaygoals, awayteam, minuto)
-				
+				partido = model.Partido(hometeam, homegoals, awaygoals, awayteam, minuto, partidoliga)
+
 				strResultados = strResultados + partido.local.nombre + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante.nombre + " (minuto " + partido.minuto + ")\n"
 				
 				if liguilla.lower().startswith('true'):
@@ -119,6 +128,7 @@ class CarruselHandler:
 		
 		if liguilla.lower().startswith('true'):
 			ch = handlers.ClasifHandler()
+			strClasif = strClasif + "\nCLASIFICACION ACTUAL\n"
 			strClasif = strClasif + "\nGrupo A\n\n"
 			strClasif = strClasif + ch.getStrClasifTemp('A')
 			strClasif = strClasif + "\n\n"

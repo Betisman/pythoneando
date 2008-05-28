@@ -1,8 +1,9 @@
 # coding=UTF-8
-import carr
+#import carr
 import sendgmail
 import CarruselHandler
 import Config
+import sys
 from pysqlite2 import dbapi2 as sqlite
 
 def leerFichero(file):
@@ -40,8 +41,8 @@ def main():
 			if not to.startswith('#'):
 				sendgmail.sendGmail(gmailuser, gmailpwd, to, subject, msg, None)
 				print 'Mail enviado correctamente a la direccion ' + to
-		except Exception:
-			print 'El mail (creo) no ha sido enviado a la direccion', to
+		except Exception, msg:
+			print 'El mail (creo) no ha sido enviado a la direccion', to, '(',sys.exc_info(),')'
 
 if __name__ == "__main__":
 	main()
