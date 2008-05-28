@@ -27,19 +27,6 @@
 				<liganombre>X.2186</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="1581841">
-			<nombre>Chaconcines</nombre>
-			<teamid>1581841</teamid>
-			<nombrecorto>Chaconcines</nombrecorto>
-			<estadio id="487829">
-				<estadioid>1578403</estadioid>
-				<estadionombre>Chaconcin´s Stadium</estadionombre>
-			</estadio>
-			<liga id="96596">
-				<ligaid>96357</ligaid>
-				<liganombre>X.274</liganombre>
-			</liga>
-		</equipo>
 		<equipo id="989753">
 			<nombre>CONGRIO F.C.</nombre>
 			<teamid>989753</teamid>

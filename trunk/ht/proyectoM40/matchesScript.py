@@ -13,24 +13,37 @@ def afichero(content, fichero):
 	f.close()
 	return 'Generado fichero ' + fichero
 
-def gestionarMatchId(matchid, matches):
+def gestionarMatchId(partido, matches):
 	try:
-		matches.index(matchid)
+		matches.index(partido)
 	except ValueError:
-		matches.append(matchid)
+		matches.append(partido)
 	return matches
 
 def crearXml(path, matches):
 	doc = minidom.Document()
 	matchids = doc.createElement("matchids")
-	for matchid in matches:
-		print "matches", matchid
+	for partido in matches:
+		print "matches", partido['matchid']
 		elem = doc.createElement("matchid")
-		elem.appendChild(doc.createTextNode(str(matchid)))
+		elem.appendChild(doc.createTextNode(str(partido['matchid'])))
+		elem.appendChild(doc.createComment(partido['matchhomename'] + " - " + partido['matchawayname']))
 		matchids.appendChild(elem)
 	doc.appendChild(matchids)
 	doc.writexml(open(path, "w"), encoding="utf-8")
 	print doc.toprettyxml()
+
+def asciizacion(cadena):
+	tildes = {u'á':'a', u'é':'e', u'í':'i', u'ó':'o', u'ú':'u'}
+	keys = tildes.keys()
+	try:
+		for i in tildes:
+			abuscar = keys.pop()
+			while cadena.find(abuscar) > -1:
+				cadena = cadena.replace(abuscar, tildes[abuscar])
+	except IndexError:
+		pass
+	return cadena
 	
 config = Config.Config()
 #conectamos con Hattrick y nos logueamos
@@ -52,11 +65,14 @@ teams = []
 doc = minidom.parse(fileM40)
 equipos = doc.getElementsByTagName('equipo')
 for equipo in equipos:
-	teams.append(equipo.getElementsByTagName('teamid')[0].firstChild.nodeValue)
+	team = {}
+	team['id'] = equipo.getElementsByTagName('teamid')[0].firstChild.nodeValue
+	team['name'] = equipo.getElementsByTagName('nombre')[0].firstChild.nodeValue
+	teams.append(team)
 
-for teamid in teams:
-	url = recServer + '/Common/chppxml.axd?file=matches&teamid='+teamid
-	print teamid
+for team in teams:
+	url = recServer + '/Common/chppxml.axd?file=matches&teamid='+team['id']
+	print '\n', team['name'], '('+team['id']+')'
 	try:
 		response, content = http.request(url, 'GET', headers=headers)
 		#open('misc\\live'+matchid+'.xml', "w").write(content)
@@ -68,15 +84,23 @@ for teamid in teams:
 		#	y Status = UPCOMING
 		partidos = doc.getElementsByTagName('Match')
 		for match in partidos:
+			partido = {}
 			matchtype = match.getElementsByTagName('MatchType')[0].firstChild.nodeValue
 			#if matchtype == "4": ##solo liguilla
 			if matchtype == "4" or matchtype == "5": #4: reglas normales; 5: reglas de copa
 				status = match.getElementsByTagName('Status')[0].firstChild.nodeValue
 				if status == "UPCOMING":
-					matchid = match.getElementsByTagName('MatchID')[0].firstChild.nodeValue
-					print "\tmatchid", matchid, str(len(matches))
-					matches = gestionarMatchId(matchid, matches)
+					partido['matchid'] = match.getElementsByTagName('MatchID')[0].firstChild.nodeValue
+					partido['matchhomename'] = asciizacion(match.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue)
+					partido['matchawayname'] = asciizacion(match.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue)
+					print "\tmatchid", partido['matchid'], str(len(matches)), partido['matchhomename'], "vs.", partido['matchawayname']
+					matches = gestionarMatchId(partido, matches)
+					nopartido = False
 					break;
+			else:
+				nopartido = True
+		if nopartido:
+			print "\tNo tiene partido!!"
 	except Exception, msg:
 		print "oh, oh", msg
 		traceback.print_exc()

@@ -85,8 +85,11 @@ class ClasifHandler:
 		self.m40 = self.config.get('file.m40')
 	
 	def actualizarClasifPartido(self, partido):
-		ph = PartidoHandler(partido)
-		ph.actualizarClasifTemp()
+		if partido.partidoliga:
+			ph = PartidoHandler(partido)
+			ph.actualizarClasifTemp()
+		else:
+			print "El partido "+partido.local+" - "+partido.visitante+" no pertenece a la liga, asi que no consta para la actualizacion de la clasificacion."
 	
 	def getStrClasifTemp(self, grupo):
 		"""
