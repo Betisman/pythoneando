@@ -25,10 +25,13 @@ conn = sqlite.connect('misc\\ht.sqlite')
 cur = conn.cursor()
 for sql in sqls:
 	print sql
-	if (sql == "COMMIT;"):
-		conn.commit()
-	else:
-		cur.execute(sql)
+	try:
+		if (sql == "COMMIT;"):
+			conn.commit()
+		else:
+			cur.execute(sql)
+	except sqlite.OperationalError, m:
+		print 'Excepcion de pysqlite2 con >', sql, '<'
 conn.close()
 
 # sql = "select * from equipos"
