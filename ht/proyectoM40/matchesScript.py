@@ -24,14 +24,16 @@ def crearXml(path, matches):
 	doc = minidom.Document()
 	matchids = doc.createElement("matchids")
 	for partido in matches:
-		print "matches", partido['matchid']
+		print "matches", partido['matchid'], partido['matchhomename'], "-",partido['matchawayname']
 		elem = doc.createElement("matchid")
 		elem.appendChild(doc.createTextNode(str(partido['matchid'])))
 		elem.appendChild(doc.createComment(partido['matchhomename'] + " - " + partido['matchawayname']))
 		matchids.appendChild(elem)
 	doc.appendChild(matchids)
-	doc.writexml(open(path, "w"), encoding="utf-8")
-	print doc.toprettyxml()
+	#doc.writexml(open(path, "w"), encoding="utf-8")
+	#doc.writexml(open(path, "w"), encoding="ISO-8859-1")
+	afichero(doc.toprettyxml(encoding='utf-8'), path)
+	print doc.toprettyxml(encoding='utf-8')
 
 def asciizacion(cadena):
 	tildes = {u'á':'a', u'é':'e', u'í':'i', u'ó':'o', u'ú':'u'}
@@ -87,7 +89,7 @@ for team in teams:
 			partido = {}
 			matchtype = match.getElementsByTagName('MatchType')[0].firstChild.nodeValue
 			#if matchtype == "4": ##solo liguilla
-			if matchtype == "4" or matchtype == "5": #4: reglas normales; 5: reglas de copa
+			if matchtype == "4" or matchtype == "5" or matchtype=='9': #4: reglas normales; 5: reglas de copa; 5: internacional
 				status = match.getElementsByTagName('Status')[0].firstChild.nodeValue
 				if status == "UPCOMING":
 					partido['matchid'] = match.getElementsByTagName('MatchID')[0].firstChild.nodeValue
