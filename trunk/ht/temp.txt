@@ -21,7 +21,7 @@ in a few clicks !">
 in a few clicks !" src="images/logo.gif" width="218" height="90" border=0></a></td>
           
         <td height="70" align="center" bgcolor="FDF4DF">
-<a target='_blank' href='/services/advert.php?site=nikeclubweb&link=http://www.ht-arena.com/nikeclubweb/'><img src='images/banners/valid/nikeclubweb_468x60_20061113143501.jpg' width=468 height=60 style='border:1 solid #000000'></a>		</td>
+<a target='_blank' href='http://www.ht-arena.com'><img src='/images/ban_htarena_en.gif' width=468 height=60 style='border:1 solid #000000'></a>		</td>
           <td height="70" align="right" bgcolor="FDF4DF"><img src="images/haut_droit.gif" width="79" height="70"></td>
         </tr>
         <tr> 
@@ -72,55 +72,55 @@ in a few clicks !" src="images/logo.gif" width="218" height="90" border=0></a></
                     </tr>
                
                     			<tr> 
-		   <td><a target=_blank href="/thieves/">Honor Among Thieves</a> <img src="images/flags/11flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Finland"> </td>
+		   <td><a target=_blank href="/alemanniaeickel/">TSV Alemannia Eickel 04</a> <img src="images/flags/3flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Germany"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/egu/">Weggis United</a> <img src="images/flags/40flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Switzerland"> </td>
+		   <td><a target=_blank href="/sksslupsk/">S.K.S. S&#322;upsk</a> <img src="images/flags/26flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Poland"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/sheloumsteam/">sheloum's team</a> <img src="images/flags/5flag.gif" width="20" height="12" style="border:1 solid #000000" alt="France"> </td>
+		   <td><a target=_blank href="/sanciopanza/">Sanciopanzese</a> <img src="images/flags/4flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Italy"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/danda261/">dendys</a> <img src="images/flags/46flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Czech republic"> </td>
+		   <td><a target=_blank href="/damnitteam/">damnit team</a> <img src="images/flags/4flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Italy"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/rdvnbozfc/">R.D.V.N BOZ FC</a> <img src="images/flags/31flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Turkey"> </td>
+		   <td><a target=_blank href="/elcentinela/">El Centinela</a> <img src="images/flags/19flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Uruguay"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/tregambe/">Tregambe</a> <img src="images/flags/4flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Italy"> </td>
+		   <td><a target=_blank href="/fcrusher/">FC Rusher</a> <img src="images/flags/17flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Chile"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/klonis_erben/">Klonis-Erben</a> <img src="images/flags/3flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Germany"> </td>
+		   <td><a target=_blank href="/fc_civil/">FC Civl</a> <img src="images/flags/6flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Mexico"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/ae_commanders/">AE Commanders</a> <img src="images/flags/1flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Sweden"> </td>
+		   <td><a target=_blank href="/sin_nombre/">sin nombre 1.0</a> <img src="images/flags/17flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Chile"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/besiktask_1903/">besiktASK_1903</a> <img src="images/flags/31flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Turkey"> </td>
+		   <td><a target=_blank href="/talleres/">talleres de maria juana</a> <img src="images/flags/7flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Argentina"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/inter_tourinhas/">Internazionale de Tourinhas</a> <img src="images/flags/23flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Portugal"> </td>
+		   <td><a target=_blank href="/joaopauloii/">JO&#194;O PAULO II</a> <img src="images/flags/23flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Portugal"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/crislaucormar/">US.Pelissanne</a> <img src="images/flags/5flag.gif" width="20" height="12" style="border:1 solid #000000" alt="France"> </td>
+		   <td><a target=_blank href="/tigreur/">Tigre U.R.</a> <img src="images/flags/19flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Uruguay"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/ffcviktoria/">FFC Viktoria 91</a> <img src="images/flags/3flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Germany"> </td>
+		   <td><a target=_blank href="/elrayomarplatense/">El Rayo MarPlatense</a> <img src="images/flags/7flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Argentina"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/optense/">Optense</a> <img src="images/flags/35flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Spain"> </td>
+		   <td><a target=_blank href="/oseradeebro/">Osera De Ebro</a> <img src="images/flags/35flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Spain"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/tormajad/">FC Tartu Tormajad</a> <img src="images/flags/47flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Estonia"> </td>
+		   <td><a target=_blank href="/venufloide/">Venufloide</a> <img src="images/flags/19flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Uruguay"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/valentinus_maximus/">Valentinus_Maximus</a> <img src="images/flags/36flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Romania"> </td>
+		   <td><a target=_blank href="/guest/">Guest Team</a> <img src="images/flags/23flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Portugal"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/ensiferumfc/">Ensiferum F.C</a> <img src="images/flags/20flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Venezuela"> </td>
+		   <td><a target=_blank href="/1_fctorquay/">1.FC Torquay</a> <img src="images/flags/66flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Slovakia"> </td>
 		   </tr>
 					<tr> 
-		   <td><a target=_blank href="/byaccident/">by accident</a> <img src="images/flags/18flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Colombia"> </td>
+		   <td><a target=_blank href="/fclemind/">FK Lemind</a> <img src="images/flags/43flag.gif" width="20" height="12" style="border:1 solid #000000" alt="Serbia"> </td>
 		   </tr>
 		      
 		<tr> <td>&nbsp;</td>
@@ -244,7 +244,7 @@ function disable_button(Form)
 		<tr> 
           <td width="2%" valign="top" bgcolor="#267f30" class=texte-blanc-petit>
 
-		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Guests : 627<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Members : 73<br>		  </td>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Guests : 739<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Members : 38<br>		  </td>
           <td colspan="3" bgcolor="FDF4DF" align=center><span class=texte-noir-petit>&copy; HT-Arena.com 2003 :</span> <a class=lien-cont href='?page=publicite'>Publicity</a> - <a class=lien-cont href='?page=charte'>Conditions d'utilisation</a> - <a class=lien-cont href='?page=faq'>F.A.Q</a> - <a class=lien-cont href='?page=contacts'>Contact</a></td>
         </tr>
 		</table></td></tr></table>

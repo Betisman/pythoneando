@@ -32,7 +32,8 @@ def crearXml(path, matches):
 	doc.appendChild(matchids)
 	#doc.writexml(open(path, "w"), encoding="utf-8")
 	#doc.writexml(open(path, "w"), encoding="ISO-8859-1")
-	afichero(doc.toprettyxml(encoding='utf-8'), path)
+	# afichero(doc.toprettyxml(encoding='utf-8'), path)
+	afichero(doc.toxml(encoding='utf-8'), path)
 	print doc.toprettyxml(encoding='utf-8')
 
 def asciizacion(cadena):
