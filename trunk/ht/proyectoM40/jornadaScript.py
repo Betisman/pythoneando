@@ -4,6 +4,7 @@ import Config
 import xml.dom.minidom as minidom
 import sys
 import traceback
+from tools.roman import *
 
 
 def afichero(content, fichero):
@@ -47,6 +48,24 @@ def asciizacion(cadena):
 	except IndexError:
 		pass
 	return cadena
+
+def ordenarEquiposPorLiga(teams):
+	aux = {}
+	ret = []
+	for team in teams:
+		rom, numliga = team['liga'].split('.')
+		try:
+			aux[fromRoman(rom)].append(team)
+		except KeyError:
+			nuevo = []
+			nuevo.append(team)
+			aux[fromRoman(rom)] = nuevo
+	#al poner enteros como claves, se autoordena.
+	for i in aux.keys():
+		lig = [{int(t['liga'].split('.')[1]):t} for t in aux[i]]
+		for l in sorted(lig):
+			ret.append(l[l.keys()[0]])
+	return ret
 	
 config = Config.Config()
 #conectamos con Hattrick y nos logueamos
@@ -74,6 +93,8 @@ for equipo in equipos:
 	team['name'] = equipo.getElementsByTagName('nombre')[0].firstChild.nodeValue
 	team['liga'] = equipo.getElementsByTagName('liganombre')[0].firstChild.nodeValue
 	teams.append(team)
+
+teams = ordenarEquiposPorLiga(teams)
 
 for team in teams:
 	partido = {}

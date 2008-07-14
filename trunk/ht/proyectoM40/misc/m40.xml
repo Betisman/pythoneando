@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<m40>
+<?xml version="1.0" encoding="utf-8"?><m40>
 	<equipos>
 		<equipo id="487829">
-			<nombre>Real Betisman Balompie</nombre>
+			<nombre>Real Betisman Balompié</nombre>
 			<teamid>487829</teamid>
 			<nombrecorto>Betisman</nombrecorto>
 			<estadio id="487829">
@@ -10,8 +9,8 @@
 				<estadionombre>Coliseo de la Palmera</estadionombre>
 			</estadio>
 			<liga id="96596">
-				<ligaid>176961</ligaid>
-				<liganombre>IX.1466</liganombre>
+				<ligaid>53970</ligaid>
+				<liganombre>VIII.169</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1436965">
@@ -49,8 +48,8 @@
 				<estadionombre>Monumental Pucelano</estadionombre>
 			</estadio>
 			<liga id="96596">
-				<ligaid>199034</ligaid>
-				<liganombre>XI.3044</liganombre>
+				<ligaid>167176</ligaid>
+				<liganombre>X.1921</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1457502">
@@ -62,8 +61,8 @@
 				<estadionombre>Inframundo CD Arena</estadionombre>
 			</estadio>
 			<liga id="96596">
-				<ligaid>99813</ligaid>
-				<liganombre>XI.958</liganombre>
+				<ligaid>167290</ligaid>
+				<liganombre>X.2035</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="48756">
@@ -179,8 +178,8 @@
 				<estadionombre>El Montón</estadionombre>
 			</estadio>
 			<liga id="96596">
-				<ligaid>177426</ligaid>
-				<liganombre>IX.1931</liganombre>
+				<ligaid>178804</ligaid>
+				<liganombre>VIII.1261</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1369963">
@@ -192,31 +191,44 @@
 				<estadionombre>Agora Stadium</estadionombre>
 			</estadio>
 			<liga id="96596">
-				<ligaid>170885</ligaid>
-				<liganombre>X.2558</liganombre>
+				<ligaid>177094</ligaid>
+				<liganombre>IX.1599</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="992758">
+			<nombre>reguerones</nombre>
+			<teamid>992758</teamid>
+			<nombrecorto>reguerones</nombrecorto>
+			<estadio id="1">
+				<estadioid>989320</estadioid>
+				<estadionombre>Amunike stadium</estadionombre>
+			</estadio>
+			<liga id="1">
+				<ligaid>96245</ligaid>
+				<liganombre>X.162</liganombre>
 			</liga>
 		</equipo>
 	</equipos>
 	<ligam40>
 		<grupo id="A">
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
 		</grupo>
 		<grupo id="B">
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
-			<teamid></teamid>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
+			<teamid/>
 		</grupo>
 	</ligam40>
 </m40>
