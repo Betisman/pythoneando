@@ -75,8 +75,8 @@ def carruselear():
 	#variables globales
 	recServer = ''
 	#headers = {'Content-type': 'application/x-www-form-urlencoded'}
-	username = 'betisman'
-	password = 'logaritmo'
+	username = 'alecasona'
+	password = 'casona'
 	#hasta aquí, variables globales
 	pathXmls = ".\\xmls\\"
 	pathMatchids = pathXmls + "matchids.xml"
@@ -101,6 +101,16 @@ def carruselear():
 			awayteam = doc.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
 			homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
 			awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
+			# parche cutre para el 16.07.2008 ###################
+			if hometeam.startswith('Inframundo'):
+				hometeam = 'inf'
+			hometeam =hometeam.replace('Espino F.C', 'esp')
+			hometeam =hometeam.replace('Real Servelete de Carfesan', 'RSC')
+			if awayteam.find('Betisman') > -1:
+				awayteam = 'RBB'
+			awayteam =awayteam.replace('ThePiso', 'ThP')
+			awayteam =awayteam.replace('Raul Gran Capitan', 'rgc')
+			# fin parche ##############################
 			
 			
 			#calculo del minuto actual
@@ -122,10 +132,11 @@ def carruselear():
 						diferencia = 45
 			minuto = str(diferencia)
 			
-			strResultados = strResultados + hometeam + " " + homegoals + " - " + awaygoals + " " + awayteam + " (minuto " + minuto + ")\n"
+			strResultados = strResultados + hometeam + " " + homegoals + " - " + awaygoals + " " + awayteam + " (" + minuto + "'); "
 		except Exception, message:
 			print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
 			print message
 
+	print strResultados
 	#strResultados = strResultados + '\n\n\nCarrusel automatico v1.1 implementado en carr.py'
 	afichero(unicode(strResultados), pathXmls+'carr.txt')

@@ -1,6 +1,6 @@
 import carr
 import sendgmail
-import gcalendar
+import gcalendar #implica instalar la libreria gdata (de Google)!!!
 
 def leerFichero(file):
 	return open(file, 'r').read()
@@ -23,6 +23,7 @@ def lama():
 	# msg = msg.replace("Los filososfos", "lf")
 	# msg = msg.replace("ThePiso", "TP")
 	# msg = msg.replace("Borrachines Team", "BT")
+	
 	mgc = gcalendar.MyGCalendar('betisman@gmail.com', 'logaritmo')
 	mgc.login()
 	mgc.enviarSms(msg)
