@@ -88,26 +88,27 @@ def getGrupoFromHtml(grupo):
 	#gf-gc -> [6]
 	gr.pop(0) #quitamos la 1ª fila (pos, nombre, pj, g, e, p...)
 	for fila in gr:
-		k = 0
-		fret = []
-		#print fila
-		for celda in fila:
-			if k > 0:
-				if k == 1:
-					# print celda.a.string
-					# celda = celda.a.string
-					fret.append(celda.a.string)
-				else:
-					if k == 6:
-						str = celda.string.split() # '2 - 3' ---> ['2', '-', '3']  === 'gf - gc' ---> ['gf', '-', 'gc']
-						fret.append(str[0]) #gf
-						fret.append(str[2]) #gc
+		if len(fila) > 1: #para cuando no se clasifican todos los del grupo y hay una línea de color entre medias de los clasificados y los no clasificados
+			k = 0
+			fret = []
+			#print fila
+			for celda in fila:
+				if k > 0:
+					if k == 1:
+						# print celda.a.string
+						# celda = celda.a.string
+						fret.append(celda.a.string)
 					else:
-						# print celda.string
-						# celda = celda.string
-						fret.append(celda.string)
-			k = k+1
-		ret.append(fret)
+						if k == 6:
+							str = celda.string.split() # '2 - 3' ---> ['2', '-', '3']  === 'gf - gc' ---> ['gf', '-', 'gc']
+							fret.append(str[0]) #gf
+							fret.append(str[2]) #gc
+						else:
+							# print celda.string
+							# celda = celda.string
+							fret.append(celda.string)
+				k = k+1
+			ret.append(fret)
 	return ret
 
 def getIdFromXml(nombre):
@@ -123,7 +124,7 @@ def getIdFromXml(nombre):
 			equipo.getElementsByTagName('nombrecorto')[0].firstChild.nodeValue
 	
 print login()
-html = getHtmlGrupos('84703')
+html = getHtmlGrupos('90929') #idCopa
 html = prettyfyHtml(html)
 tables = html.findAll('table', border="0", width="410px", align="center", cellpadding="1", cellspacing="1")
 indices = indicesGrupos(tables)
@@ -139,6 +140,7 @@ for grupo in grupos:
 	for equipo in grupo:
 		#equipo [0]:nombre, [1]: pj, [2]: g, [3]: e, [4]: p, [5]: gf, [6]: gc, [7]: ptos
 		nombre = equipo[0]
+		print nombre
 		id, nombrecorto = getIdFromXml(nombre)
 		sql = "SELECT grupo FROM equipos WHERE id = "+id
 		print sql
