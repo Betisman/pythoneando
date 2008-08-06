@@ -89,7 +89,7 @@ class ClasifHandler:
 			ph = PartidoHandler(partido)
 			ph.actualizarClasifTemp()
 		else:
-			print "El partido "+partido.local+" - "+partido.visitante+" no pertenece a la liga, asi que no consta para la actualizacion de la clasificacion."
+			print "El partido ["+partido.local.nombre+" - "+partido.visitante.nombre+"] no pertenece a la liga, asi que no consta para la actualizacion de la clasificacion."
 	
 	def getStrClasifTemp(self, grupo):
 		"""

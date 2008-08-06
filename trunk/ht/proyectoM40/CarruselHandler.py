@@ -123,9 +123,10 @@ class CarruselHandler:
 					ch.actualizarClasifPartido(partido)
 			except Exception, message:
 				traceback.print_exc()
-				print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
+				#print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
+				print 'No se ha podido tratar el partido', matchid, '\n'
 				print message
-		
+
 		if liguilla.lower().startswith('true'):
 			ch = handlers.ClasifHandler()
 			strClasif = strClasif + "\nCLASIFICACION ACTUAL\n"
@@ -138,10 +139,9 @@ class CarruselHandler:
 				ch.setearTempComoPerm()
 		
 		#print strClasif
-				
 		strPie = '\n\n\nCarrusel automatico (rev 15) implementado en carr.py'
 		if liguilla.lower().startswith('true'):
-			strOcatavos = self.addOctavosString()
+			strOctavos = self.addOctavosString()
 		else:
 			strOctavos = ""
 			
@@ -155,22 +155,32 @@ class CarruselHandler:
 		grupob = ch.getClasifTempNombresDict('B')
 		
 		str = "\n\nSi la liga termina asi, los octavos de final serian asi:\n\n"
-		#1A - 8B
-		str = str + "(1) 1A - 8B: " + grupoa[1] + " - " + grupob[8] + "\n"
-		#4B - 5A
-		str = str + "(2) 4B - 5A: " + grupob[4] + " - " + grupoa[5] + "\n"
-		#7A - 2B
-		str = str + "(3) 7A - 2B: " + grupoa[7] + " - " + grupob[2] + "\n"
-		#6B - 3A
-		str = str + "(4) 6B - 3A: " + grupob[6] + " - " + grupoa[3] + "\n"
-		#2A - 7B
-		str = str + "(5) 2A - 7B: " + grupoa[2] + " - " + grupob[7] + "\n"
-		#3B - 6A
-		str = str + "(6) 3B - 6A: " + grupob[3] + " - " + grupoa[6] + "\n"
-		#8A - 1B
-		str = str + "(7) 8A - 1B: " + grupoa[8] + " - " + grupob[1] + "\n"
-		#5B - 4A
-		str = str + "(8) 5B - 4A: " + grupob[5] + " - " + grupoa[4] + "\n"
+		if self.config.get('cup.pasanporgrupo') == '8':
+			#1A - 8B
+			str = str + "(1) 1A - 8B: " + grupoa[1] + " - " + grupob[8] + "\n"
+			#4B - 5A
+			str = str + "(2) 4B - 5A: " + grupob[4] + " - " + grupoa[5] + "\n"
+			#7A - 2B
+			str = str + "(3) 7A - 2B: " + grupoa[7] + " - " + grupob[2] + "\n"
+			#6B - 3A
+			str = str + "(4) 6B - 3A: " + grupob[6] + " - " + grupoa[3] + "\n"
+			#2A - 7B
+			str = str + "(5) 2A - 7B: " + grupoa[2] + " - " + grupob[7] + "\n"
+			#3B - 6A
+			str = str + "(6) 3B - 6A: " + grupob[3] + " - " + grupoa[6] + "\n"
+			#8A - 1B
+			str = str + "(7) 8A - 1B: " + grupoa[8] + " - " + grupob[1] + "\n"
+			#5B - 4A
+			str = str + "(8) 5B - 4A: " + grupob[5] + " - " + grupoa[4] + "\n"
+		elif self.config.get('cup.pasanporgrupo') == '4':
+			#1A - 4B
+			str = str + "(1) 1A - 4B: " + grupoa[1] + " - " + grupob[4] + "\n"
+			#2B - 3A
+			str = str + "(2) 2B - 3A: " + grupob[2] + " - " + grupoa[3] + "\n"
+			#2A - 3B
+			str = str + "(3) 2A - 3B: " + grupoa[2] + " - " + grupob[3] + "\n"
+			#1B - 4A
+			str = str + "(4) 1B - 4A: " + grupob[1] + " - " + grupoa[4] + "\n"
 		
 		str = str + "\n\n(ojo, puede ocurrir que, en caso de empate, cupmanager.org resuelva el desempate de forma diferente a este script, por lo que cambiaria la clasificacion y, por ende, los cruces de octavos de final)\nLos cruces de cuartos serian:\n(1) vs (2), (3) vs (4)...\n\n"
 		
