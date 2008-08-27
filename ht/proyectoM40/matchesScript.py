@@ -90,7 +90,8 @@ for team in teams:
 			partido = {}
 			matchtype = match.getElementsByTagName('MatchType')[0].firstChild.nodeValue
 			#if matchtype == "4": ##solo liguilla
-			if matchtype == "4" or matchtype == "5" or matchtype=='9': #4: reglas normales; 5: reglas de copa; 5: internacional
+			#print "%s - %s ..... matchtype(%s)" % (match.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue, match.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue, matchtype)
+			if matchtype == "4" or matchtype == "5" or matchtype=='9' or matchtype == "8": #4: reglas normales; 5: reglas de copa; 5: internacional
 				status = match.getElementsByTagName('Status')[0].firstChild.nodeValue
 				if status == "UPCOMING":
 					partido['matchid'] = match.getElementsByTagName('MatchID')[0].firstChild.nodeValue
