@@ -23,10 +23,10 @@ def crearFicheroResultados(path, matches):
 			dif = 11 - len(liga)
 			liga = liga + ' '*dif
 		cadena = cadena + partido['carita'] + " "
-		cadena = cadena + liga + "\t"
+		cadena = cadena + liga + "\t" + "[" + partido['posLiga'] + ".]" + "\t"
 		cadena = cadena + partido['matchhomename'] + " " + partido['homegoals']
 		cadena = cadena + " - "
-		cadena = cadena + partido['awaygoals'] + " " +partido['matchawayname'] +"\n"
+		cadena = cadena + partido['awaygoals'] + " " +partido['matchawayname'] + "\n"
 		if partido['carita'].endswith(')'):
 			res['g'] = res['g'] + 1
 		elif partido['carita'].endswith('('):
@@ -67,6 +67,18 @@ def ordenarEquiposPorLiga(teams):
 			ret.append(l[l.keys()[0]])
 	return ret
 	
+def getPosLiga(equipoid, ligaid, headers):
+	url = recServer + '/Common/chppxml.axd?file=leagueDetails&leagueLevelUnitID=%s' % (ligaid)
+	response, content = http.request(url, 'GET', headers=headers)
+	doc = minidom.parseString(content)
+	equipos = doc.getElementsByTagName('Team')
+	for eq in equipos:
+		eqid = eq.getElementsByTagName('TeamID')[0].firstChild.nodeValue
+		if eqid == equipoid:
+			pos = eq.getElementsByTagName('Position')[0].firstChild.nodeValue
+			return pos
+	return '-1'
+	
 config = Config.Config()
 #conectamos con Hattrick y nos logueamos
 htconn = HTconnection.HtConnManager()
@@ -92,6 +104,8 @@ for equipo in equipos:
 	team['id'] = equipo.getElementsByTagName('teamid')[0].firstChild.nodeValue
 	team['name'] = equipo.getElementsByTagName('nombre')[0].firstChild.nodeValue
 	team['liga'] = equipo.getElementsByTagName('liganombre')[0].firstChild.nodeValue
+	team['ligaID'] = equipo.getElementsByTagName('ligaid')[0].firstChild.nodeValue
+	team['posLiga'] = getPosLiga(team['id'], team['ligaID'], headers)
 	teams.append(team)
 
 teams = ordenarEquiposPorLiga(teams)
@@ -127,6 +141,7 @@ for team in teams:
 		partido['homegoals'] = asciizacion(ultPartidoLiga.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue)
 		partido['awaygoals'] = asciizacion(ultPartidoLiga.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue)
 		partido['liga'] = team['liga']
+		partido['posLiga'] = team['posLiga']
 		#carita
 		carita = ''
 		if int(partido['homegoals']) == int(partido['awaygoals']):
