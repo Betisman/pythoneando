@@ -23,6 +23,7 @@ def crearFicheroResultados(path, matches):
 			dif = 11 - len(liga)
 			liga = liga + ' '*dif
 		cadena = cadena + partido['matchid'] + " "
+		cadena = cadena + partido['hora'] + " "
 		cadena = cadena + liga + "\t"
 		cadena = cadena + partido['matchhomename']
 		cadena = cadena + " - "
@@ -117,6 +118,7 @@ for team in teams:
 		partido['matchhomename'] = asciizacion(ultPartidoLiga.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue)
 		partido['matchawayname'] = asciizacion(ultPartidoLiga.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue)
 		partido['liga'] = team['liga']
+		partido['hora'] = (ultPartidoLiga.getElementsByTagName('MatchDate')[0].firstChild.nodeValue).split(' ')[1][:5]
 		#carita
 		matches.append(partido)
 	except Exception, msg:

@@ -37,6 +37,7 @@ def crearXml(path, matches):
 	print doc.toprettyxml(encoding='utf-8')
 
 def asciizacion(cadena):
+	#primero limpiamos las tildes
 	tildes = {u'á':'a', u'é':'e', u'í':'i', u'ó':'o', u'ú':'u'}
 	keys = tildes.keys()
 	try:
@@ -46,7 +47,22 @@ def asciizacion(cadena):
 				cadena = cadena.replace(abuscar, tildes[abuscar])
 	except IndexError:
 		pass
-	return cadena
+	# ahora limpiamos el resto de caracteres no ISO-8859-1
+	charsmalos = []
+	try:
+		cadena.decode('iso-8859-1')
+	except UnicodeEncodeError, message:
+		for i in cadena:
+			try:
+				i.decode('iso-8859-1')
+			except UnicodeEncodeError, message:
+				charsmalos.append(i)
+		if len(charsmalos) > 0:
+			for c in charsmalos:
+				cadena = cadena.replace(c, '?')
+	
+	# return cadena
+	return cadena.encode('utf-8')
 	
 config = Config.Config()
 #conectamos con Hattrick y nos logueamos
@@ -95,6 +111,7 @@ for team in teams:
 				status = match.getElementsByTagName('Status')[0].firstChild.nodeValue
 				if status == "UPCOMING":
 					partido['matchid'] = match.getElementsByTagName('MatchID')[0].firstChild.nodeValue
+					
 					partido['matchhomename'] = asciizacion(match.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue)
 					partido['matchawayname'] = asciizacion(match.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue)
 					print "\tmatchid", partido['matchid'], str(len(matches)), partido['matchhomename'], "vs.", partido['matchawayname']

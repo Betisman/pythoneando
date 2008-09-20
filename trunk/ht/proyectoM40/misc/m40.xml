@@ -195,19 +195,6 @@
 				<liganombre>IX.1599</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="992758">
-			<nombre>reguerones</nombre>
-			<teamid>992758</teamid>
-			<nombrecorto>reguerones</nombrecorto>
-			<estadio id="1">
-				<estadioid>989320</estadioid>
-				<estadionombre>Amunike stadium</estadionombre>
-			</estadio>
-			<liga id="1">
-				<ligaid>96245</ligaid>
-				<liganombre>X.162</liganombre>
-			</liga>
-		</equipo>
 	</equipos>
 	<ligam40>
 		<grupo id="A">
