@@ -1,7 +1,9 @@
 # coding=ISO-8859-1
-import urllib, httplib2, getpass
+import urllib
+import httplib2
+import getpass
 import sys
-import time, datetime
+
 #httplib2.debuglevel = 1
 http = httplib2.Http()
 

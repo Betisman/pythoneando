@@ -8,7 +8,7 @@
 				<estadioid>487829</estadioid>
 				<estadionombre>Coliseo de la Palmera</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="53970">
 				<ligaid>53970</ligaid>
 				<liganombre>VIII.169</liganombre>
 			</liga>
@@ -21,7 +21,7 @@
 				<estadioid>1365717</estadioid>
 				<estadionombre>Coliseo Alejandro Casona</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="54111">
 				<ligaid>54111</ligaid>
 				<liganombre>VIII.310</liganombre>
 			</liga>
@@ -34,7 +34,7 @@
 				<estadioid>1366525</estadioid>
 				<estadionombre>Agora Stadium</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="178996">
 				<ligaid>178996</ligaid>
 				<liganombre>VIII.1453</liganombre>
 			</liga>
@@ -47,7 +47,7 @@
 				<estadioid>48756</estadioid>
 				<estadionombre>Jumfry Bogart</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="179470">
 				<ligaid>179470</ligaid>
 				<liganombre>VIII.1927</liganombre>
 			</liga>
@@ -60,7 +60,7 @@
 				<estadioid>492014</estadioid>
 				<estadionombre>Monumental Pucelano</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="60364">
 				<ligaid>60364</ligaid>
 				<liganombre>IX.93</liganombre>
 			</liga>
@@ -73,7 +73,7 @@
 				<estadioid>782805</estadioid>
 				<estadionombre>El Montón</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="60470">
 				<ligaid>60470</ligaid>
 				<liganombre>IX.199</liganombre>
 			</liga>
@@ -86,7 +86,7 @@
 				<estadioid>1454923</estadioid>
 				<estadionombre>Coliseum Abraham Mejide</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="176533">
 				<ligaid>176533</ligaid>
 				<liganombre>IX.1038</liganombre>
 			</liga>
@@ -99,7 +99,7 @@
 				<estadioid>491940</estadioid>
 				<estadionombre>Pitis Arena</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="176865">
 				<ligaid>176865</ligaid>
 				<liganombre>IX.1370</liganombre>
 			</liga>
@@ -112,7 +112,7 @@
 				<estadioid>492560</estadioid>
 				<estadionombre>Los Movideros</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="176917">
 				<ligaid>176917</ligaid>
 				<liganombre>IX.1422</liganombre>
 			</liga>
@@ -125,7 +125,7 @@
 				<estadioid>984920</estadioid>
 				<estadionombre>Pucela arena</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="96146">
 				<ligaid>96146</ligaid>
 				<liganombre>X.63</liganombre>
 			</liga>
@@ -138,7 +138,7 @@
 				<estadioid>1458787</estadioid>
 				<estadionombre>The Bol Stadium Arena</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="166464">
 				<ligaid>166464</ligaid>
 				<liganombre>X.1209</liganombre>
 			</liga>
@@ -151,7 +151,7 @@
 				<estadioid>1454064</estadioid>
 				<estadionombre>Inframundo CD Arena</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="167290">
 				<ligaid>167290</ligaid>
 				<liganombre>X.2035</liganombre>
 			</liga>
@@ -164,7 +164,7 @@
 				<estadioid>1433527</estadioid>
 				<estadionombre>CANTARRANAS Arena</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="170513">
 				<ligaid>170513</ligaid>
 				<liganombre>X.2186</liganombre>
 			</liga>
@@ -177,7 +177,7 @@
 				<estadioid>802587</estadioid>
 				<estadionombre>san chino</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="181838">
 				<ligaid>181838</ligaid>
 				<liganombre>X.3271</liganombre>
 			</liga>
@@ -190,9 +190,22 @@
 				<estadioid>986315</estadioid>
 				<estadionombre>Estadio Cocomo</estadionombre>
 			</estadio>
-			<liga id="96596">
+			<liga id="181891">
 				<ligaid>181891</ligaid>
 				<liganombre>X.3324</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="771867">
+			<nombre>Cordoba S.A.D</nombre>
+			<teamid>771867</teamid>
+			<nombrecorto>Cordoba</nombrecorto>
+			<estadio id="487829">
+				<estadioid>775305</estadioid>
+				<estadionombre>Fontanar</estadionombre>
+			</estadio>
+			<liga id="199090">
+				<ligaid>199090</ligaid>
+				<liganombre>XI.3100</liganombre>
 			</liga>
 		</equipo>
 	</equipos>
