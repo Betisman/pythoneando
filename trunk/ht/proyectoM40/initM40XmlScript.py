@@ -91,8 +91,9 @@ for equipo in equipos:
 		print '-----------------------' + teamid
 	if(equipo.getElementsByTagName('estadio')[0].getAttribute('id') == ''):
 		equipo.getElementsByTagName('estadio')[0].getAttributeNode('id').nodeValue = arenaid
-	if(equipo.getElementsByTagName('liga')[0].getAttribute('id') == ''):
-		equipo.getElementsByTagName('liga')[0].getAttributeNode('id').nodeValue = leagueid
+	# if(equipo.getElementsByTagName('liga')[0].getAttribute('id') == ''):
+		# equipo.getElementsByTagName('liga')[0].getAttributeNode('id').nodeValue = leagueid
+	equipo.getElementsByTagName('liga')[0].getAttributeNode('id').nodeValue = leagueid
 
 afichero(doc.toxml(encoding="utf-8"), fileM40)
 	
