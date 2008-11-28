@@ -31,6 +31,8 @@ def main():
 	subject = config.get('gmail.subject')
 	ficheroCarrusel = config.get('file.carrusel')
 	ficheroEmails = config.get('file.emails')
+	# ficheroMarcadorXml = config.get('file.marcadorXml')
+	# ftpASubir = config.get('ftp.molinete')
 
 	ch = CarruselHandler.CarruselHandler()
 	ch.generarFicheroCarrusel(ficheroCarrusel)
@@ -43,6 +45,7 @@ def main():
 				print 'Mail enviado correctamente a la direccion ' + to
 		except Exception, msg:
 			print 'El mail (creo) no ha sido enviado a la direccion', to, '(',sys.exc_info(),')'
+	# subirFicheroAFtp(ficheroMarcadorXml, ftpASubir)
 
 if __name__ == "__main__":
 	main()

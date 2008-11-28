@@ -79,7 +79,7 @@ def carruselear():
 	password = 'casona'
 	#hasta aquí, variables globales
 	pathXmls = ".\\xmls\\"
-	pathMatchids = pathXmls + "matchids.xml"
+	pathMatchids = pathXmls + "matchids2.xml"
 	now = datetime.datetime.now()
 	strResultados = ""
 	#strResultados = "RESULTADOS"+ " (" + str(now.hour) + ":" + str(now.minute) + ")\n\n"
@@ -101,19 +101,13 @@ def carruselear():
 			awayteam = doc.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
 			homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
 			awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
-			# parche cutre para el 26.07.2008 ###################
-			# if awayteam.startswith('patxy'):
-				# awayteam = 'ptx'
-			# hometeam =hometeam.replace('ThePiso', 'ThP')
-			# if hometeam.find('Betisman') > -1:
-				# hometeam = 'RBB'
-			# awayteam =awayteam.replace('Raul Gran Capitan', 'RGC')
-			if hometeam.startswith('Anto'):
-				hometeam = 'Ant'
-			awayteam = awayteam.replace('ThePiso', 'ThP')
-			if awayteam.find('Betisman') > -1:
-				awayteam = 'RBB'
-			hometeam =hometeam.replace('Mejorada', 'mej')
+			# parche cutre para el 25.10.2008 ###################
+			if awayteam.startswith('Pitisianos'):
+				awayteam = 'Pit'
+			hometeam =hometeam.replace('Calzada F.C.', 'Cal')
+			if hometeam.find('cebolla') > -1:
+				hometeam = 'pyc'
+			awayteam =awayteam.replace('Espino F.C', 'Esp')
 			# fin parche ##############################
 			
 			

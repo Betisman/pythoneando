@@ -26,11 +26,11 @@ class CarruselHandler:
 	def setValorElementoSimple(self, elem, tag, valor):
 		elem.getElementsByTagName(tag)[0].firstChild.nodeValue = valor
 	
-	def afichero(self, content, fichero):
-		f = open(fichero, 'w')
-		f.write(content.encode("utf-8"))
-		f.close()
-		return 'Generado fichero ' + fichero
+	# def afichero(self, content, fichero):
+		# f = open(fichero, 'w')
+		# f.write(content.encode("utf-8"))
+		# f.close()
+		# return 'Generado fichero ' + fichero
 
 	def getMatches(self, path):
 		doc = minidom.parse(path)
@@ -55,6 +55,7 @@ class CarruselHandler:
 		pathMatchids = self.config.get('file.matches')
 		fichCarrusel = self.config.get('file.carrusel')
 		liguilla = self.config.get('cup.liguilla')
+		fichMarcadorXml = self.config.get('file.marcadorXml')
 		#hasta aquí, variables globales
 		
 		recServer = self.recServer
@@ -65,6 +66,10 @@ class CarruselHandler:
 
 		matchids = self.getMatches(pathMatchids);
 		print str(len(matchids)) + ' partidos'
+		#MOLINORR
+		# marcador  = minidom.Document()
+		# partidos = marcador.createElement("partidos")
+		# ######
 		for matchid in matchids:
 			url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
 			#print url
@@ -79,6 +84,26 @@ class CarruselHandler:
 				awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
 				hometeamid = doc.getElementsByTagName('HomeTeamID')[0].firstChild.nodeValue
 				awayteamid = doc.getElementsByTagName('AwayTeamID')[0].firstChild.nodeValue
+				
+				#MOLINORR
+				# cadapartido = marcador.createElement("partido")
+				# local = marcador.createElement("equipolocal")
+				# local.appendChild(marcador.createTextNode(hometeam))
+				# visitante = marcador.createElement("equipovisitante")
+				# visitante.appendChild(marcador.createTextNode(awayteam))
+				# goleslocal = marcador.createElement("goleslocal")
+				# goleslocal.appendChild(marcador.createTextNode(homegoals))
+				# golesvisitante = marcador.createElement("golesvisitante")
+				# golesvisitante.appendChild(marcador.createTextNode(awaygoals))
+				
+				# cadapartido.appendChild(local)
+				# cadapartido.appendChild(goleslocal)
+				# cadapartido.appendChild(visitante)
+				# cadapartido.appendChild(golesvisitante)
+				
+				# partidos.appendChild(cadapartido)
+				# ######
+				
 				
 				#obtenemos objetos Equipo para el local y el visitante
 				dbh = handlers.DBHandler()
@@ -127,6 +152,14 @@ class CarruselHandler:
 				print 'No se ha podido tratar el partido', matchid, '\n'
 				print message
 
+				
+		#MOLINORR
+		# marcador.appendChild(partidos)
+		# print marcador.toprettyxml(encoding="utf-8")
+		# print "-----"+str(marcador.toprettyxml(encoding="utf-8"))[90:102]
+		# self.afichero(unicode(marcador.toprettyxml(encoding="utf-8")), fichMarcadorXml)
+		# ######
+		
 		if liguilla.lower().startswith('true'):
 			ch = handlers.ClasifHandler()
 			strClasif = strClasif + "\nCLASIFICACION ACTUAL\n"

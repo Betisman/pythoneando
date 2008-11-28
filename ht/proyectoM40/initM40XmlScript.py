@@ -86,10 +86,10 @@ for equipo in equipos:
 	if (valorElementoSimple(equipo, 'liganombre') != leaguename):
 		setValorElementoSimple(equipo, 'liganombre', leaguename)
 	
-	if(equipo.getAttribute('id') == ''):
+	if(equipo.getAttribute('id') != teamid):
 		equipo.getAttributeNode('id').nodeValue = teamid
 		print '-----------------------' + teamid
-	if(equipo.getElementsByTagName('estadio')[0].getAttribute('id') == ''):
+	if(equipo.getElementsByTagName('estadio')[0].getAttribute('id') != arenaid):
 		equipo.getElementsByTagName('estadio')[0].getAttributeNode('id').nodeValue = arenaid
 	# if(equipo.getElementsByTagName('liga')[0].getAttribute('id') == ''):
 		# equipo.getElementsByTagName('liga')[0].getAttributeNode('id').nodeValue = leagueid

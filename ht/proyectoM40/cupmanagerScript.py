@@ -124,11 +124,10 @@ def getIdFromXml(nombre):
 			equipo.getElementsByTagName('nombrecorto')[0].firstChild.nodeValue
 	
 print login()
-html = getHtmlGrupos('90929') #idCopa
+html = getHtmlGrupos('94992') #idCopa
 html = prettyfyHtml(html)
 tables = html.findAll('table', border="0", width="410px", align="center", cellpadding="1", cellspacing="1")
 indices = indicesGrupos(tables)
-
 grupos = []
 for i in indices:
 	grupo = getGrupoFromHtml(grupoHtml(i, tables))
@@ -141,15 +140,20 @@ for grupo in grupos:
 		#equipo [0]:nombre, [1]: pj, [2]: g, [3]: e, [4]: p, [5]: gf, [6]: gc, [7]: ptos
 		nombre = equipo[0]
 		print nombre
-		id, nombrecorto = getIdFromXml(nombre)
+		try:
+			id, nombrecorto = getIdFromXml(nombre)
+		except TypeError:
+			id = "0"
+			nombrecorto = "-"
 		sql = "SELECT grupo FROM equipos WHERE id = "+id
-		print sql
+		#print sql
 		cur.execute(sql)
 		for row in cur:
 			grupo = row[0]
-		eq = Equipo(id, nombre, nombrecorto, equipo[1], equipo[2], equipo[3], equipo[4], equipo[5], equipo[6], int(equipo[5])-int(equipo[6]), equipo[7], grupo)
+		eq = Equipo(id, nombre, nombrecorto, equipo[1], equipo[2], equipo[3], equipo[4], equipo[5], equipo[6], int(equipo[5])-int(equipo[6]), equipo[7])
 		eqh = EquipoHandler(eq)
 		eqh.actualizarEquipo()
 		eqh.actualizarEquipoTemp()
+	
 	
 
