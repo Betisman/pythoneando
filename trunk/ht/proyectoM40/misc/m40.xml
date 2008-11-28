@@ -17,7 +17,7 @@
 			<nombre>ThePiso</nombre>
 			<teamid>1369155</teamid>
 			<nombrecorto>ThePiso</nombrecorto>
-			<estadio id="487829">
+			<estadio id="1365717">
 				<estadioid>1365717</estadioid>
 				<estadionombre>Coliseo Alejandro Casona</estadionombre>
 			</estadio>
@@ -30,7 +30,7 @@
 			<nombre>Hapiio FC</nombre>
 			<teamid>1369963</teamid>
 			<nombrecorto>Hapiio</nombrecorto>
-			<estadio id="487829">
+			<estadio id="1366525">
 				<estadioid>1366525</estadioid>
 				<estadionombre>Agora Stadium</estadionombre>
 			</estadio>
@@ -43,7 +43,7 @@
 			<nombre>Jumfrys F.K.</nombre>
 			<teamid>48756</teamid>
 			<nombrecorto>Jumfrys</nombrecorto>
-			<estadio id="487829">
+			<estadio id="48756">
 				<estadioid>48756</estadioid>
 				<estadionombre>Jumfry Bogart</estadionombre>
 			</estadio>
@@ -56,7 +56,7 @@
 			<nombre>Espino F.C</nombre>
 			<teamid>492014</teamid>
 			<nombrecorto>Espino</nombrecorto>
-			<estadio id="487829">
+			<estadio id="492014">
 				<estadioid>492014</estadioid>
 				<estadionombre>Monumental Pucelano</estadionombre>
 			</estadio>
@@ -69,7 +69,7 @@
 			<nombre>Caranza F.C.</nombre>
 			<teamid>779367</teamid>
 			<nombrecorto>Caranza</nombrecorto>
-			<estadio id="487829">
+			<estadio id="782805">
 				<estadioid>782805</estadioid>
 				<estadionombre>El Montón</estadionombre>
 			</estadio>
@@ -82,9 +82,9 @@
 			<nombre>Real Servelete de Carfesan</nombre>
 			<teamid>1458361</teamid>
 			<nombrecorto>Servelete</nombrecorto>
-			<estadio id="487829">
+			<estadio id="1454923">
 				<estadioid>1454923</estadioid>
-				<estadionombre>Coliseum Abraham Mejide</estadionombre>
+				<estadionombre>Nuevo Vallehermoso</estadionombre>
 			</estadio>
 			<liga id="176533">
 				<ligaid>176533</ligaid>
@@ -95,7 +95,7 @@
 			<nombre>Pitisianos SAD</nombre>
 			<teamid>491940</teamid>
 			<nombrecorto>Pitisianos</nombrecorto>
-			<estadio id="487829">
+			<estadio id="491940">
 				<estadioid>491940</estadioid>
 				<estadionombre>Pitis Arena</estadionombre>
 			</estadio>
@@ -104,11 +104,24 @@
 				<liganombre>IX.1370</liganombre>
 			</liga>
 		</equipo>
+		<equipo id="1370899">
+			<nombre>patxy`s TEAM</nombre>
+			<teamid>1370899</teamid>
+			<nombrecorto>patxy`s</nombrecorto>
+			<estadio id="1367461">
+				<estadioid>1367461</estadioid>
+				<estadionombre>Valhalla Stadium</estadionombre>
+			</estadio>
+			<liga id="176896">
+				<ligaid>176896</ligaid>
+				<liganombre>IX.1401</liganombre>
+			</liga>
+		</equipo>
 		<equipo id="492560">
 			<nombre>ollauris F.C.</nombre>
 			<teamid>492560</teamid>
 			<nombrecorto>ollauris</nombrecorto>
-			<estadio id="487829">
+			<estadio id="492560">
 				<estadioid>492560</estadioid>
 				<estadionombre>Los Movideros</estadionombre>
 			</estadio>
@@ -121,7 +134,7 @@
 			<nombre>Raul Gran Capitan</nombre>
 			<teamid>988358</teamid>
 			<nombrecorto>Capitan</nombrecorto>
-			<estadio id="487829">
+			<estadio id="984920">
 				<estadioid>984920</estadioid>
 				<estadionombre>Pucela arena</estadionombre>
 			</estadio>
@@ -134,7 +147,7 @@
 			<nombre>Bukakke Team</nombre>
 			<teamid>1462225</teamid>
 			<nombrecorto>Bukakke</nombrecorto>
-			<estadio id="487829">
+			<estadio id="1458787">
 				<estadioid>1458787</estadioid>
 				<estadionombre>The Bol Stadium Arena</estadionombre>
 			</estadio>
@@ -147,7 +160,7 @@
 			<nombre>Inframundo CD Drogadictos anónimos</nombre>
 			<teamid>1457502</teamid>
 			<nombrecorto>Drogadictos</nombrecorto>
-			<estadio id="487829">
+			<estadio id="1454064">
 				<estadioid>1454064</estadioid>
 				<estadionombre>Inframundo CD Arena</estadionombre>
 			</estadio>
@@ -160,7 +173,7 @@
 			<nombre>A.D. Dimitri PITERMAN</nombre>
 			<teamid>1436965</teamid>
 			<nombrecorto>PITERMAN</nombrecorto>
-			<estadio id="487829">
+			<estadio id="1433527">
 				<estadioid>1433527</estadioid>
 				<estadionombre>CANTARRANAS Arena</estadionombre>
 			</estadio>
@@ -173,7 +186,7 @@
 			<nombre>milan chupao</nombre>
 			<teamid>799149</teamid>
 			<nombrecorto>chupao</nombrecorto>
-			<estadio id="487829">
+			<estadio id="802587">
 				<estadioid>802587</estadioid>
 				<estadionombre>san chino</estadionombre>
 			</estadio>
@@ -186,7 +199,7 @@
 			<nombre>CONGRIO F.C.</nombre>
 			<teamid>989753</teamid>
 			<nombrecorto>CONGRIO</nombrecorto>
-			<estadio id="487829">
+			<estadio id="986315">
 				<estadioid>986315</estadioid>
 				<estadionombre>Estadio Cocomo</estadionombre>
 			</estadio>
@@ -199,9 +212,9 @@
 			<nombre>Cordoba S.A.D</nombre>
 			<teamid>771867</teamid>
 			<nombrecorto>Cordoba</nombrecorto>
-			<estadio id="487829">
+			<estadio id="775305">
 				<estadioid>775305</estadioid>
-				<estadionombre>Fontanar</estadionombre>
+				<estadionombre>El Fontanar</estadionombre>
 			</estadio>
 			<liga id="199090">
 				<ligaid>199090</ligaid>

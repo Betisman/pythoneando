@@ -32,6 +32,16 @@ class EquipoHandler:
 		cur.execute(sql)
 		self.conn.commit()
 
+	def insertarEquipo(self):
+		equipo = self.equipo
+		self.insertarEquipo2(equipo.id, equipo.pj, equipo.g, equipo.e, equipo.p, equipo.gf, equipo.gc, equipo.avg, equipo.ptos, equipo.grupo)
+	
+	def insertarEquipo2(self, id, pj, g, e, p, gf, gc, avg, ptos, grupo):
+		sql = "insert into 'equipos' values ("+str(id)+","+str(pj)+","+str(g)+","+str(e)+","+str(p)+","+str(gf)+","+str(gc)+","+str(avg)+","+str(ptos)+",'"+str(grupo)+"')"
+		print sql
+		cur = self.conn.cursor()
+		cur.execute(sql)
+		self.conn.commit()
 class PartidoHandler:
 	def __init__(self, partido):
 		self.partido = partido
