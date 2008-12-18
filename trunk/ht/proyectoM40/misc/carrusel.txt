@@ -1,63 +1,16 @@
-RESULTADOS (14:05)
+RESULTADOS (17:09)
 
-Raul Gran Capitan 0 - 6 Real Betisman Balompié (minuto 90)
-patxy`s TEAM 1 - 3 ThePiso (minuto 90)
-Cordoba S.A.D 1 - 2 Hapiio FC (minuto 90)
-milan chupao 1 - 3 Jumfrys F.K. (minuto 90)
-Bukakke Team 1 - 3 Espino F.C (minuto 90)
-union charros team 1 - 3 Caranza F.C. (minuto 90)
-A.D. Dimitri PITERMAN 1 - 6 Real Servelete de Carfesan (minuto 90)
-CONGRIO F.C. 2 - 6 Pitisianos SAD (minuto 90)
-PUSH FOR HELP 0 - 0 ollauris F.C. (minuto 0)
-ITALIAN TIGERS 0 - 0 Inframundo CD Drogadictos anónimos (minuto 0)
-
-CLASIFICACION ACTUAL
-
-Grupo A
-
-pos    Equipo                    pj g  e  p gf gc avg ptos
------------------------------------------------------------
- 1.- Real Betisman Balompié      7  6  0  1 30 13  17   18
- 2.- Pitisianos SAD              7  5  0  2 34 10  24   15
- 3.- ThePiso                     7  5  0  2 25 12  13   15
- 4.- Espino F.C                  7  4  0  3 19 15   4   12
- 5.- Bukakke Team                7  4  0  3 18 16   2   12
- 6.- CONGRIO F.C.                7  2  0  5 22 28  -6    6
- 7.- patxy`s TEAM                3  1  0  2  6  9  -3    3
- 8.- Raul Gran Capitan           7  1  0  6  8 39 -31    3
-
-
-
-Grupo B
-
-pos    Equipo                    pj g  e  p gf gc avg ptos
------------------------------------------------------------
- 1.- Real Servelete de Carfesan  7  7  0  0 44  9  35   21
- 2.- Hapiio FC                   7  5  0  2 17 10   7   15
- 3.- Jumfrys F.K.                7  4  0  3 27 17  10   12
- 4.- Inframundo CD Drogadictos   7  4  0  3 21 20   1   12
- 5.- Cordoba S.A.D               7  3  1  3 19 25  -6   10
- 6.- Caranza F.C.                7  2  0  5 14 24 -10    6
- 7.- milan chupao                7  1  1  5 12 34 -22    4
- 8.- A.D. Dimitri PITERMAN       7  1  0  6 13 28 -15    3
-
-
-Si la liga termina asi, los octavos de final serian asi:
-
-(1) 1A - 8B: Real Betisman Balompié - A.D. Dimitri PITERMAN
-(2) 4B - 5A: Inframundo CD Drogadictos anónimos - Bukakke Team
-(3) 7A - 2B: patxy`s TEAM - Hapiio FC
-(4) 6B - 3A: Caranza F.C. - ThePiso
-(5) 2A - 7B: Pitisianos SAD - milan chupao
-(6) 3B - 6A: Jumfrys F.K. - CONGRIO F.C.
-(7) 8A - 1B: Raul Gran Capitan - Real Servelete de Carfesan
-(8) 5B - 4A: Cordoba S.A.D - Espino F.C
-
-
-(ojo, puede ocurrir que, en caso de empate, cupmanager.org resuelva el desempate de forma diferente a este script, por lo que cambiaria la clasificacion y, por ende, los cruces de octavos de final)
-Los cruces de cuartos serian:
-(1) vs (2), (3) vs (4)...
-
+Real Betisman Balompié 1 - 4 ThePiso (minuto 90)
+Hapiio FC 0 - 7 Lila München (minuto 90)
+X1_ProTeam 3 - 0 Jumfrys F.K. (minuto 90)
+Espino F.C 2 - 3 CONGRIO F.C. (minuto 90)
+Caranza F.C. 3 - 0 Nebadon (minuto 90)
+Real Servelete de Carfesan 2 - 8 Pitisianos SAD (minuto 90)
+patxy`s TEAM 0 - 4 El Rayito Numantino (minuto 90)
+Raul Gran Capitan 1 - 2 Spitsvondig (minuto 90)
+Inframundo CD Drogadictos anónimos 2 - 1 Bukakke Team (minuto 90)
+A.D. Dimitri PITERMAN 4 - 2 milan chupao (minuto 90)
+Cordoba S.A.D 3 - 1 Roscuro Team (minuto 90)
 
 
 

@@ -6,44 +6,79 @@ import time, datetime
 #httplib2.debuglevel = 1
 
 def getRecommendedServer(http):
+	"""
+	Método que obtiene el servidor recomendado por Ht para realizar las conexiones.
+	"""
 	try:
-		url = 'http://www.hattrick.org/Common/menu.asp?outputType=XML'
-		#body = {'u_name':username,'p_word':password}
-		#response, content = http.request(url, 'POST', headers=headers, body = urllib.urlencode(body))
+		#urle que Hattrick dice que es la que nos dice qué servidor usar
+		url = 'http://www.hattrick.org/common/chppxml.axd?file=servers'
+		#realizamos la petición http a la url anterior
 		response, content = http.request(url, 'GET')
-		
+		#el content que nos devuelve la respuesta es un xml. Lo parseamos y buscamos la información que indica qué servidor es el que nos recomienda ht usar.
 		dom = minidom.parseString(content)
 		itemlist = dom.getElementsByTagName('RecommendedURL')
 		recommendedServer = itemlist[0].firstChild.nodeValue
+		
 		print 'Servidor recomendado:', recommendedServer
 		return recommendedServer
-		#recServer = recommendedServer
-		#return 1
-	except Exception:
-		print 'Salto una excepcion en getRecommendedServer()'
+	except Exception, msg:
+		#print 'Salto una excepcion en getRecommendedServer()', sys_exc_info()
+		print 'Salto una excepcion en getRecommendedServer():', msg
 		return None
 
 def login(username, password, recServer, http):
+	"""
+	Realiza el login a ht.
+	El problema es que lo hacemos con el password, cuando deberíamos hacerlo con el securitycode.
+	"""
 	try:
-		userAgent = 'MyApp/v1.0'
 		cookie = ''
-		headers = {'Content-type': 'application/x-www-form-urlencoded'}
-		url = recServer + '/common/default.asp'
-		print url
-		body = {'loginname':username,'password':password,'actionType':'login','flashVersion':'0','submit.x':'0','submit.y':'0','submit':'Entrar'}
-		response, content = http.request(url, 'POST', headers=headers, body = urllib.urlencode(body))
+		#inicializamos la cabecera de la petición http
+		#self.headers = {'Content-type': 'application/x-www-form-urlencoded'}
+		headers = {}
+		print 'url', recServer
+		url = recServer + '/common/chppxml.axd?file=login&readonlypassword=elpiso&loginname=alecasona&actionType=login&chppID=3501&chppKey=BE421657-81E6-4AEE-8BF5-CB2E36BB3D6A'
+		#print url
+		#construimos el boy de la petición http (para saber qué valores enviar, hemos usado el LiveHttpHeaders de Firefox)
+		body = {'actionType':'login','loginname':username, 'readonlypassword':'elpiso', 'chppID':'3501', 'chppKey':'BE421657-81E6-4AEE-8BF5-CB2E36BB3D6A'}
+		#realizamos la conexión y recibimos el contenido de la respuesta y el response
+		#response, content = self.http.request(url, 'GET', headers=self.headers, body = urllib.urlencode(body))
+		response, content = http.request(url, 'GET', headers=headers)
+		#print "requesting url:", url, urllib.urlencode(body)
 		try:
+			#capturamos la cookie devuelta para mantener la sesión
 			cookie = response['set-cookie']
 			headers['Cookie'] = cookie
 		except KeyError:
-			print 'Saltó excepción KeyError'
-			return None
-		print 'Login OK'
+			print 'Saltó excepción KeyError', sys.exc_info()
+			#return None
+		print 'se fue el try'
+		
+		doc = minidom.parseString(content)
+		isAuth = doc.getElementsByTagName('IsAuthenticated')[0].firstChild.nodeValue
+		loginResult = doc.getElementsByTagName('LoginResult')[0].firstChild.nodeValue
+		userID = doc.getElementsByTagName('UserID')[0].firstChild.nodeValue
+		
+		response, content = http.request(url, 'GET', headers=headers)
+		#print "requesting url:", url, urllib.urlencode(body)
+		try:
+			#capturamos la cookie devuelta para mantener la sesión
+			cookie = response['set-cookie']
+			headers['Cookie'] = cookie
+		except KeyError:
+			print 'Saltó excepción KeyError', sys.exc_info()
+			#return None
+		
+		doc = minidom.parseString(content)
+		isAuth = doc.getElementsByTagName('IsAuthenticated')[0].firstChild.nodeValue
+		loginResult = doc.getElementsByTagName('LoginResult')[0].firstChild.nodeValue
+		userID = doc.getElementsByTagName('UserID')[0].firstChild.nodeValue
+		
 		return http, headers
-	except Exception:
-		print 'Saltó una excepción en login().'
-		print 'Info: '
-		print sys.exc_info()
+	except Exception, msg:
+		# print 'Saltó una excepción en login().'
+		# print 'Info:', sys.exc_info()
+		print msg
 		return None
 
 def setRecServer():
@@ -77,6 +112,7 @@ def carruselear():
 	#headers = {'Content-type': 'application/x-www-form-urlencoded'}
 	username = 'alecasona'
 	password = 'casona'
+	seccode = 'odonkor'
 	#hasta aquí, variables globales
 	pathXmls = ".\\xmls\\"
 	pathMatchids = pathXmls + "matchids.xml"
@@ -108,12 +144,16 @@ def carruselear():
 			# if hometeam.find('Betisman') > -1:
 				# hometeam = 'RBB'
 			# awayteam =awayteam.replace('Raul Gran Capitan', 'RGC')
-			if hometeam.startswith('Anto'):
-				hometeam = 'Ant'
+			#if hometeam.startswith('Anto'):
+			#	hometeam = 'Ant'
 			awayteam = awayteam.replace('ThePiso', 'ThP')
-			if awayteam.find('Betisman') > -1:
-				awayteam = 'RBB'
-			hometeam =hometeam.replace('Mejorada', 'mej')
+			if hometeam.find('Betisman') > -1:
+				hometeam = 'RBB'
+			if hometeam.find('Servelete') > -1:
+				hometeam = 'RSC'
+			if awayteam.find('Pitis') > -1:
+				awayteam = 'Pit'
+			#hometeam =hometeam.replace('Mejorada', 'mej')
 			# fin parche ##############################
 			
 			
@@ -137,6 +177,8 @@ def carruselear():
 			minuto = str(diferencia)
 			
 			strResultados = strResultados + hometeam + " " + homegoals + " - " + awaygoals + " " + awayteam + " (" + minuto + "'); "
+			url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
+			response, content = http.request(url, 'GET', headers=headers)
 		except Exception, message:
 			print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
 			print message

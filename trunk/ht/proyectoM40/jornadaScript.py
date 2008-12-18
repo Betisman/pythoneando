@@ -116,8 +116,14 @@ for team in teams:
 	try:
 		response, content = http.request(url, 'GET', headers=headers)
 		#open('misc\\live'+matchid+'.xml', "w").write(content)
-		#afichero(content, "misc\\matches"+teamid+".xml")
-		
+		#afichero(content, "misc\\matches"+team['id']+".xml")
+		#-----------------------------------temporal para pruebas nuevo login
+		if team == teams[0]:
+			f = open('temp.txt', 'a')
+			#f = codecs.open(fichero, encoding='utf-8', mode='w')
+			f.write(content +'\n' + '*******************' + str(response))
+			f.close()
+		#------------------------------------------------------------------------
 		doc = minidom.parseString(content)
 		#para cada partido, recuperamos el MatchID de aquel que cumpla:
 		#	MatchType = 4
