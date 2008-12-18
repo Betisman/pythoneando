@@ -37,15 +37,21 @@ def main():
 	ch = CarruselHandler.CarruselHandler()
 	ch.generarFicheroCarrusel(ficheroCarrusel)
 	msg = leerFichero(ficheroCarrusel)
-	emails = open(ficheroEmails, 'r').readlines()
-	for to in emails:
-		try:
-			if not to.startswith('#'):
-				sendgmail.sendGmail(gmailuser, gmailpwd, to, subject, msg, None)
-				print 'Mail enviado correctamente a la direccion ' + to
-		except Exception, msg:
-			print 'El mail (creo) no ha sido enviado a la direccion', to, '(',sys.exc_info(),')'
-	# subirFicheroAFtp(ficheroMarcadorXml, ftpASubir)
+	try:
+		if sys.argv[1] == 'debug':
+			print msg
+	except Exception:
+	#no hay sys.argv[]
+		print msg
+		emails = open(ficheroEmails, 'r').readlines()
+		for to in emails:
+			try:
+				if not to.startswith('#'):
+					sendgmail.sendGmail(gmailuser, gmailpwd, to, subject, msg, None)
+					print 'Mail enviado correctamente a la direccion ' + to
+			except Exception, msg:
+				print 'El mail (creo) no ha sido enviado a la direccion', to, '(',sys.exc_info(),')'
+		# subirFicheroAFtp(ficheroMarcadorXml, ftpASubir)
 
 if __name__ == "__main__":
 	main()

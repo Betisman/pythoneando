@@ -146,19 +146,24 @@ class CarruselHandler:
 					#actualizamos la clasificacion
 					ch = handlers.ClasifHandler()
 					ch.actualizarClasifPartido(partido)
+					
+				#quitamos el partido del htlive
+				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
+				response, content = self.http.request(url, 'GET', headers=self.headers)
 			except Exception, message:
 				traceback.print_exc()
 				#print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
 				print 'No se ha podido tratar el partido', matchid, '\n'
-				print message
-
-				
+				print message		
+		
 		#MOLINORR
 		# marcador.appendChild(partidos)
 		# print marcador.toprettyxml(encoding="utf-8")
 		# print "-----"+str(marcador.toprettyxml(encoding="utf-8"))[90:102]
 		# self.afichero(unicode(marcador.toprettyxml(encoding="utf-8")), fichMarcadorXml)
 		# ######
+		
+		
 		
 		if liguilla.lower().startswith('true'):
 			ch = handlers.ClasifHandler()
@@ -179,7 +184,6 @@ class CarruselHandler:
 			strOctavos = ""
 			
 		strCarr = strResultados + strClasif + strOctavos + strPie
-		
 		self.afichero(unicode(strCarr), fichCarrusel)
 
 	def addOctavosString(self):

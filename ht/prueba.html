@@ -4,7 +4,40 @@
 <head>
 <script type="text/javascript" src="jquery-1.2.3.js"></script>
 	<script type="text/javascript" src="jquery.ui/ui.tablesorter.js"></script>
-  
+  <script type="text/javascript">
+$(document).ready(function() {
+alert('hola');
+	//$.get('http://www.betisman.es/betisman/pruebaranking.xml', function(xml){
+	$.get('pruebaranking.xml', function(xml){
+		alert('xml');
+	});
+	alert('adios');
+
+	$.ajax({
+    //url: 'www.betisman.es/betisman/pruebaranking.xml',
+	url: 'pruebaranking.xml',
+    type: 'GET',
+    dataType: 'xml',
+    timeout: 1000,
+    error: function(){
+        alert('Error loading XML document');
+    },
+    success: function(xml){
+    $(xml).find('equipo').each(function(){
+        var nombre = $(this).find('nombre').text();
+		var nombreCorto = $(this).attr('nombreCorto')
+		var id = $(this).attr('id')
+		var puntos = $(this).attr('puntos')
+		var fila = $('<tr></tr>');
+		$('<td></td>').html(nombreCorto).appendTo(fila);
+		$('<td></td>').html(puntos).appendTo(fila);
+		fila.appendTo('#ranking tbody');
+    });
+	$("#ranking").tablesorter({sortList:[[1,1]], widgets: ['zebra']});
+}
+});
+});
+	</script>
   <script>
   $(document).ready(function(){
 	$("#sel2").tablesorter({sortList:[[1,0]], widgets: ['zebra']});
@@ -220,5 +253,37 @@
 	</div>
 	<div id="python">
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<table id="ranking" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+			<thead>
+				<tr>
+					<!--<th>Puesto</th>-->
+					<th>Equipo</th>
+					<th>Puntos</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	<!--</div>-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 </html>
