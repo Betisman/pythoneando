@@ -17,6 +17,16 @@ def getHtFileString(file, body):
 		print 'Saltó execpción en getHtFileString(' + file + ') : ' #+ sys.exc_info()[]
 		return None
 
+def getTeamHtml(idteam):
+	#body = {'outputType':'XML','actionType':'view'}
+	url = recServer + '/Common/chppxml.axd?file=teamdetails&teamid='+idteam
+	try:
+		response, content = http.request(url, 'GET', headers=headers)
+		return content
+	except Exception, message:
+		print 'Saltó execpción en getHtFileString(' + file + ') : ' #+ sys.exc_info()[]
+		return None
+		
 def valorElementoSimple(elem, tag):
 	return elem.getElementsByTagName(tag)[0].firstChild.nodeValue
 	# equipo.getElementsByTagName('teamid')[0].firstChild.nodeValue
@@ -50,7 +60,7 @@ for equipo in equipos:
 	print equipo.getElementsByTagName('teamid')[0].firstChild.nodeValue
 	#cogemos el xml de cada equipo desde hattrick
 	body = body = {'outputType':'XML','actionType':'view','TeamID':teamid}
-	equipostr = getHtFileString('TeamDetails.asp', body = body)
+	equipostr = getTeamHtml(teamid)
 	htdoc = minidom.parseString(equipostr)
 	
 	id = valorElementoSimple(htdoc, 'TeamID')

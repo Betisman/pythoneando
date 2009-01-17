@@ -221,6 +221,32 @@
 				<liganombre>XI.3100</liganombre>
 			</liga>
 		</equipo>
+		<equipo id="1332838">
+			<nombre>El yogur mecánico</nombre>
+			<teamid>1332838</teamid>
+			<nombrecorto>mecánico</nombrecorto>
+			<estadio id="1329400">
+				<estadioid>1329400</estadioid>
+				<estadionombre>La yogurtera infecta</estadionombre>
+			</estadio>
+			<liga id="181891">
+				<ligaid>181891</ligaid>
+				<liganombre>X.3324</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1367075">
+			<nombre>Roscuro Team</nombre>
+			<teamid>1367075</teamid>
+			<nombrecorto>Roscuro</nombrecorto>
+			<estadio id="1363637">
+				<estadioid>1363637</estadioid>
+				<estadionombre>Fuensanta Estadio</estadionombre>
+			</estadio>
+			<liga id="98970">
+				<ligaid>98970</ligaid>
+				<liganombre>XI.115</liganombre>
+			</liga>
+		</equipo>
 	</equipos>
 	<ligam40>
 		<grupo id="A">
