@@ -146,13 +146,13 @@ def carruselear():
 			# awayteam =awayteam.replace('Raul Gran Capitan', 'RGC')
 			#if hometeam.startswith('Anto'):
 			#	hometeam = 'Ant'
-			awayteam = awayteam.replace('ThePiso', 'ThP')
-			if hometeam.find('Betisman') > -1:
-				hometeam = 'RBB'
-			if hometeam.find('Servelete') > -1:
-				hometeam = 'RSC'
-			if awayteam.find('Pitis') > -1:
-				awayteam = 'Pit'
+			hometeam = hometeam.replace('FC Waltersdorf', 'FCW')
+			if awayteam.find('Betisman') > -1:
+				awayteam = 'RBB'
+			# if hometeam.find('Servelete') > -1:
+				# hometeam = 'RSC'
+			# if awayteam.find('Pitis') > -1:
+				# awayteam = 'Pit'
 			#hometeam =hometeam.replace('Mejorada', 'mej')
 			# fin parche ##############################
 			
