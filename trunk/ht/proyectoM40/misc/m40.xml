@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?><m40>
 	<equipos>
+		<equipo id="1369155">
+			<nombre>ThePiso</nombre>
+			<teamid>1369155</teamid>
+			<nombrecorto>ThePiso</nombrecorto>
+			<estadio id="1365717">
+				<estadioid>1365717</estadioid>
+				<estadionombre>Coliseo Alejandro Casona</estadionombre>
+			</estadio>
+			<liga id="38591">
+				<ligaid>38591</ligaid>
+				<liganombre>VII.555</liganombre>
+			</liga>
+		</equipo>
 		<equipo id="487829">
 			<nombre>Real Betisman Balompié</nombre>
 			<teamid>487829</teamid>
@@ -11,19 +24,6 @@
 			<liga id="53970">
 				<ligaid>53970</ligaid>
 				<liganombre>VIII.169</liganombre>
-			</liga>
-		</equipo>
-		<equipo id="1369155">
-			<nombre>ThePiso</nombre>
-			<teamid>1369155</teamid>
-			<nombrecorto>ThePiso</nombrecorto>
-			<estadio id="1365717">
-				<estadioid>1365717</estadioid>
-				<estadionombre>Coliseo Alejandro Casona</estadionombre>
-			</estadio>
-			<liga id="54111">
-				<ligaid>54111</ligaid>
-				<liganombre>VIII.310</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1369963">
@@ -39,6 +39,19 @@
 				<liganombre>VIII.1453</liganombre>
 			</liga>
 		</equipo>
+		<equipo id="491940">
+			<nombre>Pitisianos SAD</nombre>
+			<teamid>491940</teamid>
+			<nombrecorto>Pitisianos</nombrecorto>
+			<estadio id="491940">
+				<estadioid>491940</estadioid>
+				<estadionombre>Pitis Arena</estadionombre>
+			</estadio>
+			<liga id="179190">
+				<ligaid>179190</ligaid>
+				<liganombre>VIII.1647</liganombre>
+			</liga>
+		</equipo>
 		<equipo id="48756">
 			<nombre>Jumfrys F.K.</nombre>
 			<teamid>48756</teamid>
@@ -50,6 +63,19 @@
 			<liga id="179470">
 				<ligaid>179470</ligaid>
 				<liganombre>VIII.1927</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1458361">
+			<nombre>Real Servelete de Carfesan</nombre>
+			<teamid>1458361</teamid>
+			<nombrecorto>Servelete</nombrecorto>
+			<estadio id="1454923">
+				<estadioid>1454923</estadioid>
+				<estadionombre>Nuevo Vallehermoso</estadionombre>
+			</estadio>
+			<liga id="179564">
+				<ligaid>179564</ligaid>
+				<liganombre>VIII.2021</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="492014">
@@ -66,42 +92,16 @@
 			</liga>
 		</equipo>
 		<equipo id="779367">
-			<nombre>Caranza F.C.</nombre>
+			<nombre>LittleBlueCow United</nombre>
 			<teamid>779367</teamid>
-			<nombrecorto>Caranza</nombrecorto>
+			<nombrecorto>TLBC</nombrecorto>
 			<estadio id="782805">
 				<estadioid>782805</estadioid>
-				<estadionombre>El Montón</estadionombre>
+				<estadionombre>Facebook Arena</estadionombre>
 			</estadio>
 			<liga id="60470">
 				<ligaid>60470</ligaid>
 				<liganombre>IX.199</liganombre>
-			</liga>
-		</equipo>
-		<equipo id="1458361">
-			<nombre>Real Servelete de Carfesan</nombre>
-			<teamid>1458361</teamid>
-			<nombrecorto>Servelete</nombrecorto>
-			<estadio id="1454923">
-				<estadioid>1454923</estadioid>
-				<estadionombre>Nuevo Vallehermoso</estadionombre>
-			</estadio>
-			<liga id="176533">
-				<ligaid>176533</ligaid>
-				<liganombre>IX.1038</liganombre>
-			</liga>
-		</equipo>
-		<equipo id="491940">
-			<nombre>Pitisianos SAD</nombre>
-			<teamid>491940</teamid>
-			<nombrecorto>Pitisianos</nombrecorto>
-			<estadio id="491940">
-				<estadioid>491940</estadioid>
-				<estadionombre>Pitis Arena</estadionombre>
-			</estadio>
-			<liga id="176865">
-				<ligaid>176865</ligaid>
-				<liganombre>IX.1370</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1370899">
@@ -138,9 +138,9 @@
 				<estadioid>984920</estadioid>
 				<estadionombre>Pucela arena</estadionombre>
 			</estadio>
-			<liga id="96146">
-				<ligaid>96146</ligaid>
-				<liganombre>X.63</liganombre>
+			<liga id="177246">
+				<ligaid>177246</ligaid>
+				<liganombre>IX.1751</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1462225">
@@ -151,9 +151,9 @@
 				<estadioid>1458787</estadioid>
 				<estadionombre>The Bol Stadium Arena</estadionombre>
 			</estadio>
-			<liga id="166464">
-				<ligaid>166464</ligaid>
-				<liganombre>X.1209</liganombre>
+			<liga id="177260">
+				<ligaid>177260</ligaid>
+				<liganombre>IX.1765</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1457502">
@@ -208,19 +208,6 @@
 				<liganombre>X.3324</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="771867">
-			<nombre>Cordoba S.A.D</nombre>
-			<teamid>771867</teamid>
-			<nombrecorto>Cordoba</nombrecorto>
-			<estadio id="775305">
-				<estadioid>775305</estadioid>
-				<estadionombre>El Fontanar</estadionombre>
-			</estadio>
-			<liga id="199090">
-				<ligaid>199090</ligaid>
-				<liganombre>XI.3100</liganombre>
-			</liga>
-		</equipo>
 		<equipo id="1332838">
 			<nombre>El yogur mecánico</nombre>
 			<teamid>1332838</teamid>
@@ -245,6 +232,19 @@
 			<liga id="98970">
 				<ligaid>98970</ligaid>
 				<liganombre>XI.115</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="771867">
+			<nombre>Cordoba S.A.D</nombre>
+			<teamid>771867</teamid>
+			<nombrecorto>Cordoba</nombrecorto>
+			<estadio id="775305">
+				<estadioid>775305</estadioid>
+				<estadionombre>El Fontanar</estadionombre>
+			</estadio>
+			<liga id="199090">
+				<ligaid>199090</ligaid>
+				<liganombre>XI.3100</liganombre>
 			</liga>
 		</equipo>
 	</equipos>
