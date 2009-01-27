@@ -11,8 +11,8 @@ def lama():
 	subject = 'Carrusel'
 
 	carr.carruselear()
-	msg = leerFichero('.\\xmls\\carr.txt')
-	emails = open('.\\xmls\\emails.txt', 'r').readlines()
+	msg = leerFichero('./xmls/carr.txt')
+	emails = open('./xmls/emails.txt', 'r').readlines()
 	# for to in emails:
 		# try:
 			# sendgmail.sendGmail(gmailuser, gmailpwd, to, subject, msg, None)
