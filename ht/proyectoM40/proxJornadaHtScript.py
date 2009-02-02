@@ -55,7 +55,7 @@ def ordenarEquiposPorLiga(teams):
 			nuevo.append(team)
 			aux[fromRoman(rom)] = nuevo
 	#al poner enteros como claves, se autoordena.
-	for i in aux.keys():
+	for i in sorted(aux.keys()):
 		lig = [{int(t['liga'].split('.')[1]):t} for t in aux[i]]
 		for l in sorted(lig):
 			ret.append(l[l.keys()[0]])
