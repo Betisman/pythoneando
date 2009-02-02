@@ -26,6 +26,19 @@
 				<liganombre>VIII.169</liganombre>
 			</liga>
 		</equipo>
+		<equipo id="830339">
+			<nombre>Dogt</nombre>
+			<teamid>830339</teamid>
+			<nombrecorto>Dogt</nombrecorto>
+			<estadio id="833777">
+				<estadioid>833777</estadioid>
+				<estadionombre>Entras y no salis</estadionombre>
+			</estadio>
+			<liga id="151162">
+				<ligaid>151162</ligaid>
+				<liganombre>VIII.1267</liganombre>
+			</liga>
+		</equipo>
 		<equipo id="1369963">
 			<nombre>Hapiio FC</nombre>
 			<teamid>1369963</teamid>
@@ -215,6 +228,19 @@
 			<estadio id="1329400">
 				<estadioid>1329400</estadioid>
 				<estadionombre>La yogurtera infecta</estadionombre>
+			</estadio>
+			<liga id="181891">
+				<ligaid>181891</ligaid>
+				<liganombre>X.3324</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="489609">
+			<nombre>el uno y sus pipas FC</nombre>
+			<teamid>489609</teamid>
+			<nombrecorto>pipas</nombrecorto>
+			<estadio id="489609">
+				<estadioid>489609</estadioid>
+				<estadionombre>el uno y sus pipas F Arena</estadionombre>
 			</estadio>
 			<liga id="181891">
 				<ligaid>181891</ligaid>
