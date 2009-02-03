@@ -114,7 +114,7 @@ def carruselear():
 	password = 'casona'
 	seccode = 'odonkor'
 	#hasta aquí, variables globales
-	pathXmls = ".\\xmls\\"
+	pathXmls = "./xmls/"
 	pathMatchids = pathXmls + "matchids.xml"
 	now = datetime.datetime.now()
 	strResultados = ""
@@ -138,8 +138,8 @@ def carruselear():
 			homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
 			awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
 			# parche cutre para el 26.07.2008 ###################
-			if awayteam.startswith('Persi'):
-				awayteam = 'PeF'
+			if awayteam.startswith('Pitis'):
+				awayteam = 'Pit'
 			hometeam =hometeam.replace('ThePiso', 'ThP')
 			if hometeam.find('Betisman') > -1:
 				hometeam = 'RBB'
@@ -147,8 +147,8 @@ def carruselear():
 			#if hometeam.startswith('Anto'):
 			#	hometeam = 'Ant'
 			# hometeam = hometeam.replace('FC Waltersdorf', 'FCW')
-			if awayteam.find('Ratones') > -1:
-				awayteam = 'LRC'
+			if awayteam.find('Carfe') > -1:
+				awayteam = 'RSC'
 			# if hometeam.find('Servelete') > -1:
 				# hometeam = 'RSC'
 			# if awayteam.find('Pitis') > -1:
