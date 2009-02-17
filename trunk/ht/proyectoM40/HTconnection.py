@@ -100,6 +100,7 @@ class HtConnManager:
 	
 	def getFicheroXmlHt(self, ruta, body):
 		response, content = self.http.request(ruta, headers=self.headers, body)
+		print 'ruta', ruta, '\nheaders', '\nbody', body
 		return content
 
 class HtConnectionException(Exception):
