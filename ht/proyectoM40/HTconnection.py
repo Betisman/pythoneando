@@ -98,10 +98,10 @@ class HtConnManager:
 			print msg
 			raise HtConnectionException(Exception, 'Excepción en login')
 	
-	def getFicheroXmlHt(self, ruta, body):
-		print 'ruta', ruta, '\nheaders', '\nbody', body
-		response, content = self.http.request(ruta, headers=self.headers, body)
-		return content
+	# def getFicheroXmlHt(self, ruta, body):
+		# print 'ruta', ruta, '\nheaders', '\nbody', body
+		# response, content = self.http.request(ruta, headers=self.headers, body)
+		# return content
 
 class HtConnectionException(Exception):
 	def __init__(self, exception, message):
