@@ -39,7 +39,7 @@
 				<liganombre>VIII.1267</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="1369963">
+		<!--<equipo id="1369963">
 			<nombre>Hapiio FC</nombre>
 			<teamid>1369963</teamid>
 			<nombrecorto>Hapiio</nombrecorto>
@@ -51,7 +51,7 @@
 				<ligaid>178996</ligaid>
 				<liganombre>VIII.1453</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 		<equipo id="491940">
 			<nombre>Pitisianos SAD</nombre>
 			<teamid>491940</teamid>
@@ -104,7 +104,7 @@
 				<liganombre>IX.93</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="779367">
+		<!--<equipo id="779367">
 			<nombre>LittleBlueCow United</nombre>
 			<teamid>779367</teamid>
 			<nombrecorto>TLBC</nombrecorto>
@@ -116,7 +116,7 @@
 				<ligaid>60470</ligaid>
 				<liganombre>IX.199</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 		<equipo id="1370899">
 			<nombre>patxy`s TEAM</nombre>
 			<teamid>1370899</teamid>
@@ -130,7 +130,7 @@
 				<liganombre>IX.1401</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="492560">
+		<!--<equipo id="492560">
 			<nombre>ollauris F.C.</nombre>
 			<teamid>492560</teamid>
 			<nombrecorto>ollauris</nombrecorto>
@@ -142,7 +142,7 @@
 				<ligaid>176917</ligaid>
 				<liganombre>IX.1422</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 		<equipo id="988358">
 			<nombre>Raul Gran Capitan</nombre>
 			<teamid>988358</teamid>
