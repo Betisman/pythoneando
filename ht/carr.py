@@ -138,8 +138,8 @@ def carruselear():
 			homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
 			awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
 			# parche cutre para el 26.07.2008 ###################
-			if awayteam.startswith('Pitis'):
-				awayteam = 'Pit'
+			if awayteam.startswith('Dogt'):
+				awayteam = 'Dogt'
 			hometeam =hometeam.replace('ThePiso', 'ThP')
 			if hometeam.find('Betisman') > -1:
 				hometeam = 'RBB'
@@ -147,8 +147,8 @@ def carruselear():
 			#if hometeam.startswith('Anto'):
 			#	hometeam = 'Ant'
 			# hometeam = hometeam.replace('FC Waltersdorf', 'FCW')
-			if awayteam.find('Carfe') > -1:
-				awayteam = 'RSC'
+			if awayteam.find('Infram') > -1:
+				awayteam = 'Inf'
 			# if hometeam.find('Servelete') > -1:
 				# hometeam = 'RSC'
 			# if awayteam.find('Pitis') > -1:
