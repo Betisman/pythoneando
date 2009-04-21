@@ -91,7 +91,7 @@ for equipo in equipos:
 
 for team in teams:
 	url = recServer + '/Common/chppxml.axd?file=matches&teamid='+team['id']
-	print '\n', team['name'], '('+team['id']+')'
+	print '\n', asciizacion(team['name']), '('+team['id']+')'
 	try:
 		response, content = http.request(url, 'GET', headers=headers)
 		#open('misc\\live'+matchid+'.xml', "w").write(content)
