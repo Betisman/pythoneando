@@ -1,7 +1,7 @@
 # coding=ISO-8859-1
 import sendgmail
 import HTconnection
-import handlers
+#import handlers
 import model
 import Config
 import datetime
@@ -106,18 +106,18 @@ class CarruselHandler:
 				
 				
 				#obtenemos objetos Equipo para el local y el visitante
-				dbh = handlers.DBHandler()
-				partidoliga = True
-				try:
-					hometeam = dbh.getEquipoIni(hometeamid)
-				except Exception:
-					hometeam = model.Equipo(id=hometeamid, nombre=hometeam)
-					partidoliga = False #indica que el partido no se corresponde con la liga (por ejemplo, cuando un equipo juega un amistoso que no le corresponde con el calendario de la liga)
-				try:
-					awayteam = dbh.getEquipoIni(awayteamid)
-				except Exception:
-					awayteam = model.Equipo(id=awayteamid, nombre=awayteam)
-					partidoliga = False
+				# dbh = handlers.DBHandler()
+				# partidoliga = True
+				# try:
+					# hometeam = dbh.getEquipoIni(hometeamid)
+				# except Exception:
+					# hometeam = model.Equipo(id=hometeamid, nombre=hometeam)
+					# partidoliga = False #indica que el partido no se corresponde con la liga (por ejemplo, cuando un equipo juega un amistoso que no le corresponde con el calendario de la liga)
+				# try:
+					# awayteam = dbh.getEquipoIni(awayteamid)
+				# except Exception:
+					# awayteam = model.Equipo(id=awayteamid, nombre=awayteam)
+					# partidoliga = False
 				
 				#calculo del minuto actual
 				inicio = doc.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
