@@ -107,7 +107,7 @@ class CarruselHandler:
 				
 				#obtenemos objetos Equipo para el local y el visitante
 				# dbh = handlers.DBHandler()
-				 partidoliga = True
+				partidoliga = True
 				# try:
 					# hometeam = dbh.getEquipoIni(hometeamid)
 				# except Exception:
