@@ -140,7 +140,8 @@ class CarruselHandler:
 				
 				partido = model.Partido(hometeam, homegoals, awaygoals, awayteam, minuto, partidoliga)
 
-				strResultados = strResultados + partido.local.nombre + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante.nombre + " (minuto " + partido.minuto + ")\n"
+				#strResultados = strResultados + partido.local.nombre + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante.nombre + " (minuto " + partido.minuto + ")\n"
+				strResultados = strResultados + partido.local + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante + " (minuto " + partido.minuto + ")\n"
 				
 				# if liguilla.lower().startswith('true'):
 					#ctualizamos la clasificacion
