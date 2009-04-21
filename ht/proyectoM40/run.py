@@ -4,23 +4,23 @@ import sendgmail
 import CarruselHandler
 import Config
 import sys
-from pysqlite2 import dbapi2 as sqlite
+#from pysqlite2 import dbapi2 as sqlite
 
 def leerFichero(file):
 	return open(file, 'r').read()
 
-def problemaTildes(config):
-	sqlRBB = 'update equipos set nombre = "Real Betisman Balompié" where id = 487829;'
-	sqlInfra = 'update equipos set nombre = "Inframundo CD Drogadictos anónimos" where id = 1457502;'
-	sqlRBBTemp = 'update equipostemp set nombre = "Real Betisman Balompié" where id = 487829;'
-	sqlInfraTemp = 'update equipostemp set nombre = "Inframundo CD Drogadictos anónimos" where id = 1457502;'
-	conn = sqlite.connect(config.get('path.bd'))
-	cur = conn.cursor()
-	cur.execute(sqlRBB)
-	cur.execute(sqlInfra)
-	cur.execute(sqlRBBTemp)
-	cur.execute(sqlInfraTemp)
-	conn.commit()
+# def problemaTildes(config):
+	# sqlRBB = 'update equipos set nombre = "Real Betisman Balompié" where id = 487829;'
+	# sqlInfra = 'update equipos set nombre = "Inframundo CD Drogadictos anónimos" where id = 1457502;'
+	# sqlRBBTemp = 'update equipostemp set nombre = "Real Betisman Balompié" where id = 487829;'
+	# sqlInfraTemp = 'update equipostemp set nombre = "Inframundo CD Drogadictos anónimos" where id = 1457502;'
+	# conn = sqlite.connect(config.get('path.bd'))
+	# cur = conn.cursor()
+	# cur.execute(sqlRBB)
+	# cur.execute(sqlInfra)
+	# cur.execute(sqlRBBTemp)
+	# cur.execute(sqlInfraTemp)
+	# conn.commit()
 	
 
 def main():

@@ -142,10 +142,10 @@ class CarruselHandler:
 
 				strResultados = strResultados + partido.local.nombre + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante.nombre + " (minuto " + partido.minuto + ")\n"
 				
-				if liguilla.lower().startswith('true'):
-					#actualizamos la clasificacion
-					ch = handlers.ClasifHandler()
-					ch.actualizarClasifPartido(partido)
+				# if liguilla.lower().startswith('true'):
+					#ctualizamos la clasificacion
+					# ch = handlers.ClasifHandler()
+					# ch.actualizarClasifPartido(partido)
 					
 				#quitamos el partido del htlive
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
@@ -165,23 +165,23 @@ class CarruselHandler:
 		
 		
 		
-		if liguilla.lower().startswith('true'):
-			ch = handlers.ClasifHandler()
-			strClasif = strClasif + "\nCLASIFICACION ACTUAL\n"
-			strClasif = strClasif + "\nGrupo A\n\n"
-			strClasif = strClasif + ch.getStrClasifTemp('A')
-			strClasif = strClasif + "\n\n"
-			strClasif = strClasif + "\nGrupo B\n\n"
-			strClasif = strClasif + ch.getStrClasifTemp('B')
-			if (partido.minuto == "90"):
-				ch.setearTempComoPerm()
+		# if liguilla.lower().startswith('true'):
+			# ch = handlers.ClasifHandler()
+			# strClasif = strClasif + "\nCLASIFICACION ACTUAL\n"
+			# strClasif = strClasif + "\nGrupo A\n\n"
+			# strClasif = strClasif + ch.getStrClasifTemp('A')
+			# strClasif = strClasif + "\n\n"
+			# strClasif = strClasif + "\nGrupo B\n\n"
+			# strClasif = strClasif + ch.getStrClasifTemp('B')
+			# if (partido.minuto == "90"):
+				# ch.setearTempComoPerm()
 		
 		#print strClasif
 		strPie = '\n\n\nCarrusel automatico (rev 15) implementado en carr.py'
-		if liguilla.lower().startswith('true'):
-			strOctavos = self.addOctavosString()
-		else:
-			strOctavos = ""
+		# if liguilla.lower().startswith('true'):
+			# strOctavos = self.addOctavosString()
+		# else:
+			# strOctavos = ""
 			
 		strCarr = strResultados + strClasif + strOctavos + strPie
 		self.afichero(unicode(strCarr), fichCarrusel)
