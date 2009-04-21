@@ -84,7 +84,7 @@ def sendEmail(gmailuser, gmailpwd, fromemail, to, subject, text, attach):
 		part.add_header('Content-Disposition', 'attachment; filename="%s"' % os.path.basename(attach))
 		msg.attach(part)
 
-	mailServer = smtplib.SMTP("smtp.gmail.com", 587)
+	mailServer = smtplib.SMTP('mail.carloos.com', 26)
 	mailServer.ehlo()
 	mailServer.starttls()
 	mailServer.ehlo()
