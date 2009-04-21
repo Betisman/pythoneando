@@ -47,7 +47,8 @@ def main():
 		for to in emails:
 			try:
 				if not to.startswith('#'):
-					sendgmail.sendGmail(gmailuser, gmailpwd, to, subject, msg, None)
+					#sendgmail.sendGmail(gmailuser, gmailpwd, to, subject, msg, None)
+					sendgmail.sendGmail('betisman+carloos.com', 'logaritmo', 'm40htnews@gmail.com', '[Carrusel]', msg, None)
 					print 'Mail enviado correctamente a la direccion ' + to
 			except Exception, msg:
 				print 'El mail (creo) no ha sido enviado a la direccion', to, '(',sys.exc_info(),')'
