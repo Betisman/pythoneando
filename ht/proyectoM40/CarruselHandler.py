@@ -125,7 +125,7 @@ class CarruselHandler:
 				inicio = datetime.datetime.fromtimestamp(inicio)
 				#ahora = datetime.datetime.now()
 				# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
-				ahora = datetime.datetime.now() + 8*60*60
+				ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
 				# ##############################################3
 				if ahora < inicio:
 					diferencia = 0
