@@ -104,6 +104,34 @@ def getMatches(path):
 	for matchid in matchids:
 		ret.append(matchid.firstChild.nodeValue)
 	return ret
+	
+def asciizacion(cadena):
+	#primero limpiamos las tildes
+	tildes = {u'á':'a', u'é':'e', u'í':'i', u'ó':'o', u'ú':'u'}
+	keys = tildes.keys()
+	try:
+		for i in tildes:
+			abuscar = keys.pop()
+			while cadena.find(abuscar) > -1:
+				cadena = cadena.replace(abuscar, tildes[abuscar])
+	except IndexError:
+		pass
+	# ahora limpiamos el resto de caracteres no ISO-8859-1
+	charsmalos = []
+	try:
+		cadena.decode('iso-8859-1')
+	except UnicodeEncodeError, message:
+		for i in cadena:
+			try:
+				i.decode('iso-8859-1')
+			except UnicodeEncodeError, message:
+				charsmalos.append(i)
+		if len(charsmalos) > 0:
+			for c in charsmalos:
+				cadena = cadena.replace(c, '?')
+	
+	# return cadena
+	return cadena.encode('utf-8')
 
 def carruselear():
 	http = httplib2.Http()
@@ -138,13 +166,17 @@ def carruselear():
 			homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
 			awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
 			# parche cutre para el 26.07.2008 ###################
-			if hometeam.startswith('SIWEL'):
-				hometeam = 'SIW'
-			awayteam = awayteam.replace('ThePiso', 'ThP')
-			if awayteam.find('Betisman') > -1:
-				awayteam = 'RBB'
-			if hometeam.find('martita') > -1:
-				hometeam = 'mar'
+			if awayteam.startswith('CONG'):
+				awayteam = 'CON'
+			hometeam = hometeam.replace('ThePiso', 'ThP')
+			if hometeam.find('Betisman') > -1:
+				hometeam = 'RBB'
+			if awayteam.find('Servelete') > -1:
+				awayteam = 'RSC'
+			hometeam.replace('Dogt', 'Dog')
+			awayteam.replace('ciatal', 'cia')
+			if awayteam.find('Espino') > -1:
+				awayteam = 'Esp'
 			# fin parche ##############################
 			
 			
@@ -174,6 +206,6 @@ def carruselear():
 			print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
 			print message
 
-	print strResultados
+	print asciizacion(strResultados)
 	#strResultados = strResultados + '\n\n\nCarrusel automatico v1.1 implementado en carr.py'
 	afichero(unicode(strResultados), pathXmls+'carr.txt')
