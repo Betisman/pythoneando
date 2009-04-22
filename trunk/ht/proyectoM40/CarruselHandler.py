@@ -123,7 +123,10 @@ class CarruselHandler:
 				inicio = doc.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
 				inicio = time.mktime(time.strptime(inicio, "%Y-%m-%d %H:%M:%S"))
 				inicio = datetime.datetime.fromtimestamp(inicio)
-				ahora = datetime.datetime.now()
+				#ahora = datetime.datetime.now()
+				# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
+				ahora = datetime.datetime.now() + 8*60*60
+				# ##############################################3
 				if ahora < inicio:
 					diferencia = 0
 				else:
