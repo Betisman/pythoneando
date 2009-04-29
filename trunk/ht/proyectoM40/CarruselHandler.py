@@ -59,7 +59,9 @@ class CarruselHandler:
 		#hasta aquí, variables globales
 		
 		recServer = self.recServer
-		now = datetime.datetime.now()
+		# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
+		now = datetime.datetime.now() + datetime.timedelta(hours=8)
+		# #########
 		strResultados = "RESULTADOS"+ " (%02d:%02d)\n\n" %(now.hour, now.minute)
 		
 		strClasif = ""
