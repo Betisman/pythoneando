@@ -166,17 +166,16 @@ def carruselear():
 			homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
 			awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
 			# parche cutre para el 26.07.2008 ###################
-			if awayteam.startswith('CONG'):
-				awayteam = 'CON'
 			hometeam = hometeam.replace('ThePiso', 'ThP')
-			if hometeam.find('Betisman') > -1:
-				hometeam = 'RBB'
-			if awayteam.find('Servelete') > -1:
-				awayteam = 'RSC'
+			if awayteam.find('Betisman') > -1:
+				awayteam = 'RBB'
+			if awayteam.find('Pitis') > -1:
+				awayteam = 'Pit'
 			hometeam.replace('Dogt', 'Dog')
-			awayteam.replace('ciatal', 'cia')
-			if awayteam.find('Espino') > -1:
-				awayteam = 'Esp'
+			if awayteam.find('ordoba') > -1:
+				awayteam = 'Cor'
+			if hometeam.find('Jumfr') > -1:
+				hometeam = 'Jum'
 			# fin parche ##############################
 			
 			
@@ -185,6 +184,8 @@ def carruselear():
 			inicio = time.mktime(time.strptime(inicio, "%Y-%m-%d %H:%M:%S"))
 			inicio = datetime.datetime.fromtimestamp(inicio)
 			ahora = datetime.datetime.now()
+			# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
+			ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
 			if ahora < inicio:
 				diferencia = 0
 			else:
