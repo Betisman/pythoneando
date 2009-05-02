@@ -170,7 +170,7 @@ def carruselear():
 			if hometeam.find('Betisman') > -1:
 				hometeam = 'RBB'
 			if hometeam.find('DESIN') > -1:
-				homeyteam = 'JDS'
+				hometeam = 'JDS'
 			if awayteam.find('Shadiers') > -1:
 				awayteam = 'Sha'
 			if awayteam.find('CONG') > -1:
