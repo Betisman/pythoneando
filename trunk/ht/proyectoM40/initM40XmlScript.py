@@ -93,9 +93,9 @@ for equipo in equipos:
 	
 	id = valorElementoSimple(htdoc, 'TeamID')
 	nombre = asciizacion(valorElementoSimple(htdoc, 'TeamName'))
-	nombrecorto = valorElementoSimple(htdoc, 'ShortTeamName')
+	nombrecorto = asciizacion(valorElementoSimple(htdoc, 'ShortTeamName'))
 	arenaid = valorElementoSimple(htdoc, 'ArenaID')
-	arenaname = valorElementoSimple(htdoc, 'ArenaName')
+	arenaname = asciizacion(valorElementoSimple(htdoc, 'ArenaName'))
 	leagueid = valorElementoSimple(htdoc, 'LeagueLevelUnitID')
 	leaguename = valorElementoSimple(htdoc, 'LeagueLevelUnitName')
 	
