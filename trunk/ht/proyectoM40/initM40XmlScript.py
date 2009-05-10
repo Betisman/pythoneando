@@ -92,7 +92,7 @@ for equipo in equipos:
 	htdoc = minidom.parseString(equipostr)
 	
 	id = valorElementoSimple(htdoc, 'TeamID')
-	nombre = valorElementoSimple(htdoc, 'TeamName')
+	nombre = asciizacion(valorElementoSimple(htdoc, 'TeamName'))
 	nombrecorto = valorElementoSimple(htdoc, 'ShortTeamName')
 	arenaid = valorElementoSimple(htdoc, 'ArenaID')
 	arenaname = valorElementoSimple(htdoc, 'ArenaName')
