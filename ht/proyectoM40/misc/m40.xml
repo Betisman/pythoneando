@@ -4,6 +4,7 @@
 			<nombre>ThePiso</nombre>
 			<teamid>1369155</teamid>
 			<nombrecorto>ThePiso</nombrecorto>
+			<micronombre>ThP</micronombre>
 			<estadio id="1365717">
 				<estadioid>1365717</estadioid>
 				<estadionombre>Coliseo Alejandro Casona</estadionombre>
@@ -14,22 +15,24 @@
 			</liga>
 		</equipo>
 		<equipo id="487829">
-			<nombre>Real Betisman Balompié</nombre>
+			<nombre>Real Betisman Balompie</nombre>
 			<teamid>487829</teamid>
 			<nombrecorto>Betisman</nombrecorto>
+			<micronombre>RBB</micronombre>
 			<estadio id="487829">
 				<estadioid>487829</estadioid>
 				<estadionombre>Coliseo de la Palmera</estadionombre>
 			</estadio>
-			<liga id="53970">
-				<ligaid>53970</ligaid>
-				<liganombre>VIII.169</liganombre>
+			<liga id="38576">
+				<ligaid>38576</ligaid>
+				<liganombre>VII.540</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="830339">
 			<nombre>Dogt</nombre>
 			<teamid>830339</teamid>
 			<nombrecorto>Dogt</nombrecorto>
+			<micronombre>Dog</micronombre>
 			<estadio id="833777">
 				<estadioid>833777</estadioid>
 				<estadionombre>Entras y no salis</estadionombre>
@@ -56,6 +59,7 @@
 			<nombre>Pitisianos SAD</nombre>
 			<teamid>491940</teamid>
 			<nombrecorto>Pitisianos</nombrecorto>
+			<micronombre>Pit</micronombre>
 			<estadio id="491940">
 				<estadioid>491940</estadioid>
 				<estadionombre>Pitis Arena</estadionombre>
@@ -69,6 +73,7 @@
 			<nombre>Jumfrys F.K.</nombre>
 			<teamid>48756</teamid>
 			<nombrecorto>Jumfrys</nombrecorto>
+			<micronombre>Jum</micronombre>
 			<estadio id="48756">
 				<estadioid>48756</estadioid>
 				<estadionombre>Jumfry Bogart</estadionombre>
@@ -82,6 +87,7 @@
 			<nombre>Real Servelete de Carfesan</nombre>
 			<teamid>1458361</teamid>
 			<nombrecorto>Servelete</nombrecorto>
+			<micronombre>RSC</micronombre>
 			<estadio id="1454923">
 				<estadioid>1454923</estadioid>
 				<estadionombre>Nuevo Vallehermoso</estadionombre>
@@ -95,13 +101,14 @@
 			<nombre>Espino F.C</nombre>
 			<teamid>492014</teamid>
 			<nombrecorto>Espino</nombrecorto>
+			<micronombre>Esp</micronombre>
 			<estadio id="492014">
 				<estadioid>492014</estadioid>
 				<estadionombre>Monumental Pucelano</estadionombre>
 			</estadio>
-			<liga id="60364">
-				<ligaid>60364</ligaid>
-				<liganombre>IX.93</liganombre>
+			<liga id="54474">
+				<ligaid>54474</ligaid>
+				<liganombre>VIII.673</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="779367">
@@ -121,13 +128,14 @@
 			<nombre>patxy`s TEAM</nombre>
 			<teamid>1370899</teamid>
 			<nombrecorto>patxy`s</nombrecorto>
+			<micronombre>ptx</micronombre>
 			<estadio id="1367461">
 				<estadioid>1367461</estadioid>
 				<estadionombre>Valhalla Stadium</estadionombre>
 			</estadio>
-			<liga id="176896">
-				<ligaid>176896</ligaid>
-				<liganombre>IX.1401</liganombre>
+			<liga id="53912">
+				<ligaid>53912</ligaid>
+				<liganombre>VIII.111</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="492560">
@@ -147,19 +155,21 @@
 			<nombre>Raul Gran Capitan</nombre>
 			<teamid>988358</teamid>
 			<nombrecorto>Capitan</nombrecorto>
+			<micronombre>RGC</micronombre>
 			<estadio id="984920">
 				<estadioid>984920</estadioid>
 				<estadionombre>Pucela arena</estadionombre>
 			</estadio>
-			<liga id="177246">
-				<ligaid>177246</ligaid>
-				<liganombre>IX.1751</liganombre>
+			<liga id="178599">
+				<ligaid>178599</ligaid>
+				<liganombre>VIII.1056</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1462225">
 			<nombre>Bukakke Team</nombre>
 			<teamid>1462225</teamid>
 			<nombrecorto>Bukakke</nombrecorto>
+			<micronombre>Buk</micronombre>
 			<estadio id="1458787">
 				<estadioid>1458787</estadioid>
 				<estadionombre>The Bol Stadium Arena</estadionombre>
@@ -170,9 +180,10 @@
 			</liga>
 		</equipo>
 		<equipo id="1457502">
-			<nombre>Inframundo CD Drogadictos anónimos</nombre>
+			<nombre>Inframundo CD Drogadictos anonimos</nombre>
 			<teamid>1457502</teamid>
 			<nombrecorto>Drogadictos</nombrecorto>
+			<micronombre>Inf</micronombre>
 			<estadio id="1454064">
 				<estadioid>1454064</estadioid>
 				<estadionombre>Inframundo CD Arena</estadionombre>
@@ -186,6 +197,7 @@
 			<nombre>A.D. Dimitri PITERMAN</nombre>
 			<teamid>1436965</teamid>
 			<nombrecorto>PITERMAN</nombrecorto>
+			<micronombre>ADP</micronombre>
 			<estadio id="1433527">
 				<estadioid>1433527</estadioid>
 				<estadionombre>CANTARRANAS Arena</estadionombre>
@@ -199,32 +211,35 @@
 			<nombre>milan chupao</nombre>
 			<teamid>799149</teamid>
 			<nombrecorto>chupao</nombrecorto>
+			<micronombre>mil</micronombre>
 			<estadio id="802587">
 				<estadioid>802587</estadioid>
 				<estadionombre>san chino</estadionombre>
 			</estadio>
-			<liga id="181838">
-				<ligaid>181838</ligaid>
-				<liganombre>X.3271</liganombre>
+			<liga id="61096">
+				<ligaid>61096</ligaid>
+				<liganombre>IX.825</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="989753">
 			<nombre>CONGRIO F.C.</nombre>
 			<teamid>989753</teamid>
 			<nombrecorto>CONGRIO</nombrecorto>
+			<micronombre>CON</micronombre>
 			<estadio id="986315">
 				<estadioid>986315</estadioid>
 				<estadionombre>Estadio Cocomo</estadionombre>
 			</estadio>
-			<liga id="181891">
-				<ligaid>181891</ligaid>
-				<liganombre>X.3324</liganombre>
+			<liga id="60767">
+				<ligaid>60767</ligaid>
+				<liganombre>IX.496</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1332838">
-			<nombre>El yogur mecánico</nombre>
+			<nombre>El yogur mecanico</nombre>
 			<teamid>1332838</teamid>
-			<nombrecorto>mecánico</nombrecorto>
+			<nombrecorto>mecanico</nombrecorto>
+			<micronombre>yog</micronombre>
 			<estadio id="1329400">
 				<estadioid>1329400</estadioid>
 				<estadionombre>La yogurtera infecta</estadionombre>
@@ -238,9 +253,10 @@
 			<nombre>el uno y sus pipas FC</nombre>
 			<teamid>489609</teamid>
 			<nombrecorto>pipas</nombrecorto>
+			<micronombre>uno</micronombre>
 			<estadio id="489609">
 				<estadioid>489609</estadioid>
-				<estadionombre>el uno y sus pipas F Arena</estadionombre>
+				<estadionombre>Reimon Hamburguer Coliseum</estadionombre>
 			</estadio>
 			<liga id="181891">
 				<ligaid>181891</ligaid>
@@ -251,6 +267,7 @@
 			<nombre>Roscuro Team</nombre>
 			<teamid>1367075</teamid>
 			<nombrecorto>Roscuro</nombrecorto>
+			<micronombre>Ros</micronombre>
 			<estadio id="1363637">
 				<estadioid>1363637</estadioid>
 				<estadionombre>Fuensanta Estadio</estadionombre>
@@ -264,13 +281,42 @@
 			<nombre>Cordoba S.A.D</nombre>
 			<teamid>771867</teamid>
 			<nombrecorto>Cordoba</nombrecorto>
+			<micronombre>Cor</micronombre>
 			<estadio id="775305">
 				<estadioid>775305</estadioid>
 				<estadionombre>El Fontanar</estadionombre>
 			</estadio>
-			<liga id="199090">
-				<ligaid>199090</ligaid>
-				<liganombre>XI.3100</liganombre>
+			<liga id="97086">
+				<ligaid>97086</ligaid>
+				<liganombre>X.1003</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="800755">
+			<nombre>Basullo</nombre>
+			<teamid>800755</teamid>
+			<nombrecorto>Basullo</nombrecorto>
+			<micronombre>Bas</micronombre>
+			<estadio id="804193">
+				<estadioid>804193</estadioid>
+				<estadionombre>Monumental de Basullo</estadionombre>
+			</estadio>
+			<liga id="61267">
+				<ligaid>61267</ligaid>
+				<liganombre>IX.996</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="1364906">
+			<nombre>Perroloro</nombre>
+			<teamid>1364906</teamid>
+			<nombrecorto>Perroloro</nombrecorto>
+			<micronombre>Per</micronombre>
+			<estadio id="1361468">
+				<estadioid>1361468</estadioid>
+				<estadionombre>Ribera del Tajo</estadionombre>
+			</estadio>
+			<liga id="176562">
+				<ligaid>176562</ligaid>
+				<liganombre>IX.1067</liganombre>
 			</liga>
 		</equipo>
 	</equipos>
