@@ -174,7 +174,7 @@ def carruselear():
 			if awayteam.find('Pitis') > -1:
 				awayteam = 'Pit'
 			if hometeam.find('Basullo') > -1:
-				awayteam = 'Cor'
+				hometeam = 'Bas'
 			if hometeam.find('Servelete') > -1:
 				hometeam = 'RSC'
 			if awayteam.find('Perroloro') > -1:
