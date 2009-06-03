@@ -169,16 +169,20 @@ def carruselear():
 			#awayteam = awayteam.replace('ThePiso', 'ThP')
 			if hometeam.find('Betisman') > -1:
 				hometeam = 'RBB'
-			if awayteam.find('ThePiso') > -1:
-				awayteam = 'ThP'
-			if awayteam.find('Van de') > -1:
-				awayteam = 'VdG'
-			if hometeam.find('oslayo') > -1:
-				hometeam = 'D'
-			if hometeam.find('asbas') > -1:
-				hometeam = 'C'
-			if awayteam.find('itisianos') > -1:
-				awayteam = 'Pit'
+			if awayteam.find('imitri') > -1:
+				awayteam = 'ADP'
+			# if awayteam.find('ThePiso') > -1:
+				# awayteam = 'ThP'
+			if hometeam.find('Bukakke') > -1:
+				hometeam = 'Buk'
+			if awayteam.find('Servelete') > -1:
+				awayteam = 'RSC'
+			if hometeam.find('CONGRIO') > -1:
+				hometeam = 'CON'
+			if awayteam.find('uno') > -1:
+				awayteam = 'uno'
+			# if awayteam.find('itisianos') > -1:
+				# awayteam = 'Pit'
 			# fin parche ##############################
 			
 			
