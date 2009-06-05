@@ -59,6 +59,7 @@ def asciizacion(cadena):
 		if len(charsmalos) > 0:
 			for c in charsmalos:
 				cadena = cadena.replace(c, '?')
+	return cadena
 
 def ordenarEquiposPorLiga(teams):
 	aux = {}
@@ -134,8 +135,6 @@ for team in teams:
 		partido['matchid'] = ultPartidoLiga.getElementsByTagName('MatchID')[0].firstChild.nodeValue
 		partido['matchhomename'] = asciizacion(ultPartidoLiga.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue)
 		partido['matchawayname'] = asciizacion(ultPartidoLiga.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue)
-		print ultPartidoLiga.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue, partido['matchhomename']
-		print ultPartidoLiga.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue, partido['matchawayname']
 		partido['liga'] = team['liga']
 		partido['hora'] = (ultPartidoLiga.getElementsByTagName('MatchDate')[0].firstChild.nodeValue).split(' ')[1][:5]
 		#carita
