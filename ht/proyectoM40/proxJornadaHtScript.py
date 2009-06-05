@@ -28,7 +28,7 @@ def crearFicheroResultados(path, matches):
 		cadena = cadena + partido['matchhomename']
 		cadena = cadena + " - "
 		cadena = cadena + partido['matchawayname'] + "\n"
-	print cadena
+	print asciizacion(cadena)
 	#afichero(cadena, path)
 
 def asciizacion(cadena):
