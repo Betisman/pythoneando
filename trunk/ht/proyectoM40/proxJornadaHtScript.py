@@ -25,7 +25,7 @@ def crearFicheroResultados(path, matches):
 			liga = liga + ' '*dif
 		pstring += partido['matchid'] + " "
 		pstring += partido['hora'] + " "
-		pstring += + liga + "\t"
+		pstring += liga + "\t"
 		pstring += partido['matchhomename']
 		pstring += " - "
 		pstring += partido['matchawayname'] + "\n"
