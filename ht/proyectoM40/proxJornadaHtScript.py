@@ -18,16 +18,19 @@ def crearFicheroResultados(path, matches):
 	cadena = ''
 	res = {'g':0, 'e':0, 'p':0}
 	for partido in matches:
+		pstring = ''
 		liga = "(" + partido['liga'] + ")"
 		if len(liga) < 11:
 			dif = 11 - len(liga)
 			liga = liga + ' '*dif
-		cadena = cadena + partido['matchid'] + " "
-		cadena = cadena + partido['hora'] + " "
-		cadena = cadena + liga + "\t"
-		cadena = cadena + partido['matchhomename']
-		cadena = cadena + " - "
-		cadena = cadena + partido['matchawayname'] + "\n"
+		pstring += partido['matchid'] + " "
+		pstring += partido['hora'] + " "
+		pstring += + liga + "\t"
+		pstring += partido['matchhomename']
+		pstring += " - "
+		pstring += partido['matchawayname'] + "\n"
+		print pstring
+		cadena += pstring
 	#print asciizacion(cadena)
 	print cadena
 	#afichero(cadena, path)
