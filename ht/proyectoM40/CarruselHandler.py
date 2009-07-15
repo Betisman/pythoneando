@@ -74,7 +74,7 @@ class CarruselHandler:
 		# ######
 		for matchid in matchids:
 			url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
-			#print url
+			print url
 			try:
 				response, content = self.http.request(url, 'GET', headers=self.headers)
 				#open('misc\\live'+matchid+'.xml', "w").write(content)
