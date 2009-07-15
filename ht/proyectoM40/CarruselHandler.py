@@ -73,7 +73,8 @@ class CarruselHandler:
 		# partidos = marcador.createElement("partidos")
 		# ######
 		for matchid in matchids:
-			url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
+			#url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
+			url = recServer + '/Common/chppxml.axd?file=live&actionType=viewNew&matchid=' + matchid
 			print url
 			try:
 				response, content = self.http.request(url, 'GET', headers=self.headers)
