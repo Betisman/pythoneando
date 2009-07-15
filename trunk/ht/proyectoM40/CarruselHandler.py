@@ -72,34 +72,45 @@ class CarruselHandler:
 		# marcador  = minidom.Document()
 		# partidos = marcador.createElement("partidos")
 		# ######
-		for matchid in matchids:
-			#url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
-			#url = recServer + '/Common/chppxml.axd?file=live&actionType=viewNew&matchid=' + matchid
-			#recuperamos el archivo actual de live
-			url = recServer + '/Common/chppxml.axd?file=live'
-			print url
-			try:
+		
+		#url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
+		#url = recServer + '/Common/chppxml.axd?file=live&actionType=viewNew&matchid=' + matchid
+		#recuperamos el archivo actual de live
+		url = recServer + '/Common/chppxml.axd?file=live'
+		print url
+		try:
+			response, content = self.http.request(url, 'GET', headers=self.headers)
+			#open('misc\\live'+matchid+'.xml', "w").write(content)
+			open('misc/live.xml', "w").write(content)
+			#import pdb;pdb.set_trace()
+			
+			doc = minidom.parseString(content)
+			
+			#recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
+			matches = doc.getElementsByTagName('Match')
+			matchidsborrar = []
+			for m in matches:
+				id_borrar = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
+				matchidsborrar.append(id_borrar)
+				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + id_borrar
 				response, content = self.http.request(url, 'GET', headers=self.headers)
-				#open('misc\\live'+matchid+'.xml', "w").write(content)
-				open('misc/live.xml', "w").write(content)
-				#import pdb;pdb.set_trace()
-				
-				doc = minidom.parseString(content)
-				
-				#recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
-				matches = doc.getElementsByTagName('Match')
-				matchidsborrar = []
-				for m in matches:
-					matchidsborrar.append(m.getElementsByTagName('MatchID')[0].firstChild.nodeValue)
-				for m in matchidsborrar:
-					print m
-				
-				hometeam = doc.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
-				awayteam = doc.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
-				homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
-				awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
-				hometeamid = doc.getElementsByTagName('HomeTeamID')[0].firstChild.nodeValue
-				awayteamid = doc.getElementsByTagName('AwayTeamID')[0].firstChild.nodeValue
+			
+			for matchid in matchids:
+				url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
+				response, content = self.http.request(url, 'GET', headers=self.headers)
+			
+			url = recServer + '/Common/chppxml.axd?file=live'
+			response, content = self.http.request(url, 'GET', headers=self.headers)
+			open('misc/live.xml', "w").write(content)
+			
+			matches = doc.getElementsByTagName('Match')
+			for m in matches:
+				hometeam = m.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
+				awayteam = m.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
+				homegoals = m.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
+				awaygoals = m.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
+				hometeamid = m.getElementsByTagName('HomeTeamID')[0].firstChild.nodeValue
+				awayteamid = m.getElementsByTagName('AwayTeamID')[0].firstChild.nodeValue
 				
 				#MOLINORR
 				# cadapartido = marcador.createElement("partido")
@@ -136,7 +147,7 @@ class CarruselHandler:
 					# partidoliga = False
 				
 				#calculo del minuto actual
-				inicio = doc.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
+				inicio = m.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
 				inicio = time.mktime(time.strptime(inicio, "%Y-%m-%d %H:%M:%S"))
 				inicio = datetime.datetime.fromtimestamp(inicio)
 				#ahora = datetime.datetime.now()
@@ -170,11 +181,11 @@ class CarruselHandler:
 				#quitamos el partido del htlive
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
 				response, content = self.http.request(url, 'GET', headers=self.headers)
-			except Exception, message:
-				traceback.print_exc()
-				#print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
-				print 'No se ha podido tratar el partido', matchid, '\n'
-				print message		
+		except Exception, message:
+			traceback.print_exc()
+			#print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
+			print 'No se ha podido tratar el partido', matchid, '\n'
+			print message		
 		
 		#MOLINORR
 		# marcador.appendChild(partidos)
