@@ -74,11 +74,13 @@ class CarruselHandler:
 		# ######
 		for matchid in matchids:
 			#url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
-			url = recServer + '/Common/chppxml.axd?file=live&actionType=viewNew&matchid=' + matchid
+			#url = recServer + '/Common/chppxml.axd?file=live&actionType=viewNew&matchid=' + matchid
+			url = recServer + '/Common/chppxml.axd?file=live'
 			print url
 			try:
 				response, content = self.http.request(url, 'GET', headers=self.headers)
 				#open('misc\\live'+matchid+'.xml', "w").write(content)
+				open('misc\\live.xml', "w").write(content)
 				#import pdb;pdb.set_trace()
 				doc = minidom.parseString(content)
 				hometeam = doc.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
