@@ -112,82 +112,84 @@ class CarruselHandler:
 			
 			matches = doc.getElementsByTagName('Match')
 			for m in matches:
-				hometeam = m.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
-				awayteam = m.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
-				homegoals = m.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
-				awaygoals = m.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
-				hometeamid = m.getElementsByTagName('HomeTeamID')[0].firstChild.nodeValue
-				awayteamid = m.getElementsByTagName('AwayTeamID')[0].firstChild.nodeValue
-				
-				#MOLINORR
-				# cadapartido = marcador.createElement("partido")
-				# local = marcador.createElement("equipolocal")
-				# local.appendChild(marcador.createTextNode(hometeam))
-				# visitante = marcador.createElement("equipovisitante")
-				# visitante.appendChild(marcador.createTextNode(awayteam))
-				# goleslocal = marcador.createElement("goleslocal")
-				# goleslocal.appendChild(marcador.createTextNode(homegoals))
-				# golesvisitante = marcador.createElement("golesvisitante")
-				# golesvisitante.appendChild(marcador.createTextNode(awaygoals))
-				
-				# cadapartido.appendChild(local)
-				# cadapartido.appendChild(goleslocal)
-				# cadapartido.appendChild(visitante)
-				# cadapartido.appendChild(golesvisitante)
-				
-				# partidos.appendChild(cadapartido)
-				# ######
-				
-				
-				#obtenemos objetos Equipo para el local y el visitante
-				# dbh = handlers.DBHandler()
-				partidoliga = True
-				# try:
-					# hometeam = dbh.getEquipoIni(hometeamid)
-				# except Exception:
-					# hometeam = model.Equipo(id=hometeamid, nombre=hometeam)
-					# partidoliga = False #indica que el partido no se corresponde con la liga (por ejemplo, cuando un equipo juega un amistoso que no le corresponde con el calendario de la liga)
-				# try:
-					# awayteam = dbh.getEquipoIni(awayteamid)
-				# except Exception:
-					# awayteam = model.Equipo(id=awayteamid, nombre=awayteam)
-					# partidoliga = False
-				
-				#calculo del minuto actual
-				inicio = m.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
-				inicio = time.mktime(time.strptime(inicio, "%Y-%m-%d %H:%M:%S"))
-				inicio = datetime.datetime.fromtimestamp(inicio)
-				#ahora = datetime.datetime.now()
-				# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
-				ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
-				# ##############################################3
-				if ahora < inicio:
-					diferencia = 0
-				else:
-					diferencia = ahora-inicio
-					diferencia, segundos = divmod(diferencia.seconds, 60)
-					if (diferencia > 45):
-						if (diferencia > 60):
-							diferencia = diferencia - 15
-							if (diferencia > 90):
-								diferencia = 90	
-						else:
-							diferencia = 45
-				minuto = str(diferencia)
-				
-				partido = model.Partido(hometeam, homegoals, awaygoals, awayteam, minuto, partidoliga)
-
-				#strResultados = strResultados + partido.local.nombre + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante.nombre + " (minuto " + partido.minuto + ")\n"
-				strResultados = strResultados + partido.local + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante + " (minuto " + partido.minuto + ")\n"
-				
-				# if liguilla.lower().startswith('true'):
-					#ctualizamos la clasificacion
-					# ch = handlers.ClasifHandler()
-					# ch.actualizarClasifPartido(partido)
+				xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
+				if xmlMatchID in matchids:
+					hometeam = m.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
+					awayteam = m.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
+					homegoals = m.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
+					awaygoals = m.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
+					hometeamid = m.getElementsByTagName('HomeTeamID')[0].firstChild.nodeValue
+					awayteamid = m.getElementsByTagName('AwayTeamID')[0].firstChild.nodeValue
 					
-				#quitamos el partido del htlive
-				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
-				response, content = self.http.request(url, 'GET', headers=self.headers)
+					#MOLINORR
+					# cadapartido = marcador.createElement("partido")
+					# local = marcador.createElement("equipolocal")
+					# local.appendChild(marcador.createTextNode(hometeam))
+					# visitante = marcador.createElement("equipovisitante")
+					# visitante.appendChild(marcador.createTextNode(awayteam))
+					# goleslocal = marcador.createElement("goleslocal")
+					# goleslocal.appendChild(marcador.createTextNode(homegoals))
+					# golesvisitante = marcador.createElement("golesvisitante")
+					# golesvisitante.appendChild(marcador.createTextNode(awaygoals))
+					
+					# cadapartido.appendChild(local)
+					# cadapartido.appendChild(goleslocal)
+					# cadapartido.appendChild(visitante)
+					# cadapartido.appendChild(golesvisitante)
+					
+					# partidos.appendChild(cadapartido)
+					# ######
+					
+					
+					#obtenemos objetos Equipo para el local y el visitante
+					# dbh = handlers.DBHandler()
+					partidoliga = True
+					# try:
+						# hometeam = dbh.getEquipoIni(hometeamid)
+					# except Exception:
+						# hometeam = model.Equipo(id=hometeamid, nombre=hometeam)
+						# partidoliga = False #indica que el partido no se corresponde con la liga (por ejemplo, cuando un equipo juega un amistoso que no le corresponde con el calendario de la liga)
+					# try:
+						# awayteam = dbh.getEquipoIni(awayteamid)
+					# except Exception:
+						# awayteam = model.Equipo(id=awayteamid, nombre=awayteam)
+						# partidoliga = False
+					
+					#calculo del minuto actual
+					inicio = m.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
+					inicio = time.mktime(time.strptime(inicio, "%Y-%m-%d %H:%M:%S"))
+					inicio = datetime.datetime.fromtimestamp(inicio)
+					#ahora = datetime.datetime.now()
+					# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
+					ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
+					# ##############################################3
+					if ahora < inicio:
+						diferencia = 0
+					else:
+						diferencia = ahora-inicio
+						diferencia, segundos = divmod(diferencia.seconds, 60)
+						if (diferencia > 45):
+							if (diferencia > 60):
+								diferencia = diferencia - 15
+								if (diferencia > 90):
+									diferencia = 90	
+							else:
+								diferencia = 45
+					minuto = str(diferencia)
+					
+					partido = model.Partido(hometeam, homegoals, awaygoals, awayteam, minuto, partidoliga)
+
+					#strResultados = strResultados + partido.local.nombre + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante.nombre + " (minuto " + partido.minuto + ")\n"
+					strResultados = strResultados + partido.local + " " + partido.goleslocal + " - " + partido.golesvisitante + " " + partido.visitante + " (minuto " + partido.minuto + ")\n"
+					
+					# if liguilla.lower().startswith('true'):
+						#ctualizamos la clasificacion
+						# ch = handlers.ClasifHandler()
+						# ch.actualizarClasifPartido(partido)
+						
+					#quitamos el partido del htlive
+					url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
+					response, content = self.http.request(url, 'GET', headers=self.headers)
 		except Exception, message:
 			traceback.print_exc()
 			#print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
