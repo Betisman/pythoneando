@@ -100,7 +100,7 @@ class CarruselHandler:
 			open('misc/live.xml', "w").write(content)
 			matches = doc.getElementsByTagName('Match')
 			for m in matches:
-				print 'ojo', m
+				print 'ojo', m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
 			
 			for matchid in matchids:
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
