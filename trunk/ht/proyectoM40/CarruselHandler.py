@@ -75,6 +75,7 @@ class CarruselHandler:
 		for matchid in matchids:
 			#url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
 			#url = recServer + '/Common/chppxml.axd?file=live&actionType=viewNew&matchid=' + matchid
+			#recuperamos el archivo actual de live
 			url = recServer + '/Common/chppxml.axd?file=live'
 			print url
 			try:
@@ -82,7 +83,17 @@ class CarruselHandler:
 				#open('misc\\live'+matchid+'.xml', "w").write(content)
 				open('misc/live.xml', "w").write(content)
 				#import pdb;pdb.set_trace()
+				
 				doc = minidom.parseString(content)
+				
+				#recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
+				matches = doc.getElementsByTagName('Match')
+				matchidsborrar = []
+				for m in matches:
+					matchidsborrar.append(m.getElementsByTagName('MatchID')[0].firstChild.nodeValue)
+				for m in matchidsborrar:
+					print m
+				
 				hometeam = doc.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
 				awayteam = doc.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
 				homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
