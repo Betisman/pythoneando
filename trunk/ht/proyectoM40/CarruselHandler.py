@@ -95,6 +95,13 @@ class CarruselHandler:
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + id_borrar
 				response, content = self.http.request(url, 'GET', headers=self.headers)
 			
+			url = recServer + '/Common/chppxml.axd?file=live'
+			response, content = self.http.request(url, 'GET', headers=self.headers)
+			open('misc/live.xml', "w").write(content)
+			matches = doc.getElementsByTagName('Match')
+			for m in matches:
+				print 'ojo', m
+			
 			for matchid in matchids:
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
 				response, content = self.http.request(url, 'GET', headers=self.headers)
