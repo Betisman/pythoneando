@@ -154,7 +154,7 @@ def carruselear():
 	print str(len(matchids)) + ' partidos'
 	for matchid in matchids:
 		url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
-		#print url
+		print url
 		try:
 			response, content = http.request(url, 'GET', headers=headers)
 			#afichero(content, pathXmls + 'live'+matchid+'.xml')
@@ -167,20 +167,20 @@ def carruselear():
 			awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
 			# parche cutre para el 26.07.2008 ###################
 			#awayteam = awayteam.replace('ThePiso', 'ThP')
-			if hometeam.find('Betisman') > -1:
-				hometeam = 'RBB'
-			if awayteam.find('milan') > -1:
-				awayteam = 'mil'
+			if awayteam.find('Betisman') > -1:
+				awayteam = 'RBB'
+			if hometeam.find('aff') > -1:
+				hometeam = 'r'
 			if hometeam.find('ThePiso') > -1:
 				hometeam = 'ThP'
 			if hometeam.find('erroloro') > -1:
 				hometeam = 'Per'
-			if awayteam.find('Servelete') > -1:
-				awayteam = 'RSC'
-			if hometeam.find('anyad') > -1:
-				hometeam = 'C'
-			if awayteam.find('Basullo') > -1:
-				awayteam = 'Bas'
+			if awayteam.find('volvo') > -1:
+				awayteam = 'v'
+			if awayteam.find('iravalle') > -1:
+				awayteam = 'm'
+			if hometeam.find('Basullo') > -1:
+				hometeam = 'Bas'
 			# if awayteam.find('itisianos') > -1:
 				# awayteam = 'Pit'
 			# fin parche ##############################
