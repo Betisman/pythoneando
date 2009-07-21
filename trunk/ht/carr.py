@@ -152,64 +152,86 @@ def carruselear():
 	http, headers = login(username, password, recServer, http)
 	matchids = getMatches(pathMatchids);
 	print str(len(matchids)) + ' partidos'
-	for matchid in matchids:
-		url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
-		print url
-		try:
-			response, content = http.request(url, 'GET', headers=headers)
-			#afichero(content, pathXmls + 'live'+matchid+'.xml')
-			
-			
-			doc = minidom.parseString(content)
-			hometeam = doc.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
-			awayteam = doc.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
-			homegoals = doc.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
-			awaygoals = doc.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
-			# parche cutre para el 26.07.2008 ###################
-			#awayteam = awayteam.replace('ThePiso', 'ThP')
-			if awayteam.find('Betisman') > -1:
-				awayteam = 'RBB'
-			if hometeam.find('aff') > -1:
-				hometeam = 'r'
-			if hometeam.find('ThePiso') > -1:
-				hometeam = 'ThP'
-			if hometeam.find('erroloro') > -1:
-				hometeam = 'Per'
-			if awayteam.find('volvo') > -1:
-				awayteam = 'v'
-			if awayteam.find('iravalle') > -1:
-				awayteam = 'm'
-			if hometeam.find('Basullo') > -1:
-				hometeam = 'Bas'
-			# if awayteam.find('itisianos') > -1:
-				# awayteam = 'Pit'
-			# fin parche ##############################
-			
-			
-			#calculo del minuto actual
-			inicio = doc.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
-			inicio = time.mktime(time.strptime(inicio, "%Y-%m-%d %H:%M:%S"))
-			inicio = datetime.datetime.fromtimestamp(inicio)
-			ahora = datetime.datetime.now()
-			# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
-			ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
-			if ahora < inicio:
-				diferencia = 0
-			else:
-				diferencia = ahora-inicio
-				diferencia, segundos = divmod(diferencia.seconds, 60)
-				if (diferencia > 45):
-					if (diferencia > 60):
-						diferencia = diferencia - 15
-						if (diferencia > 90):
-							diferencia = 90	
-					else:
-						diferencia = 45
-			minuto = str(diferencia)
-			
-			strResultados = strResultados + hometeam + " " + homegoals + " - " + awaygoals + " " + awayteam + " (" + minuto + "'); "
-			url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
-			response, content = http.request(url, 'GET', headers=headers)
+	url = recServer + '/Common/chppxml.axd?file=live'
+	try:
+		#Cargamos los partidos
+		response, content = self.http.request(url, 'GET', headers=self.headers)
+		
+		doc = minidom.parseString(content)
+		
+		#recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
+		matches = doc.getElementsByTagName('Match')
+		matchidsborrar = []
+		for m in matches:
+			id_borrar = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
+			matchidsborrar.append(id_borrar)
+			url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + id_borrar
+			response, content = self.http.request(url, 'GET', headers=self.headers)
+		
+		url = recServer + '/Common/chppxml.axd?file=live'
+		response, content = self.http.request(url, 'GET', headers=self.headers)
+		matches = doc.getElementsByTagName('Match')
+		
+		for matchid in matchids:
+			url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
+			response, content = self.http.request(url, 'GET', headers=self.headers)
+		
+		url = recServer + '/Common/chppxml.axd?file=live'
+		response, content = self.http.request(url, 'GET', headers=self.headers)
+		
+		matches = doc.getElementsByTagName('Match')
+		for m in matches:
+			xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
+			if xmlMatchID in matchids:
+				hometeam = m.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
+				awayteam = m.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
+				homegoals = m.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
+				awaygoals = m.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
+				# parche cutre para el 26.07.2008 ###################
+				#awayteam = awayteam.replace('ThePiso', 'ThP')
+				if awayteam.find('Betisman') > -1:
+					awayteam = 'RBB'
+				if hometeam.find('aff') > -1:
+					hometeam = 'r'
+				if hometeam.find('ThePiso') > -1:
+					hometeam = 'ThP'
+				if hometeam.find('erroloro') > -1:
+					hometeam = 'Per'
+				if awayteam.find('volvo') > -1:
+					awayteam = 'v'
+				if awayteam.find('iravalle') > -1:
+					awayteam = 'm'
+				if hometeam.find('Basullo') > -1:
+					hometeam = 'Bas'
+				# if awayteam.find('itisianos') > -1:
+					# awayteam = 'Pit'
+				# fin parche ##############################
+				
+				
+				#calculo del minuto actual
+				inicio = m.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
+				inicio = time.mktime(time.strptime(inicio, "%Y-%m-%d %H:%M:%S"))
+				inicio = datetime.datetime.fromtimestamp(inicio)
+				ahora = datetime.datetime.now()
+				# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
+				ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
+				if ahora < inicio:
+					diferencia = 0
+				else:
+					diferencia = ahora-inicio
+					diferencia, segundos = divmod(diferencia.seconds, 60)
+					if (diferencia > 45):
+						if (diferencia > 60):
+							diferencia = diferencia - 15
+							if (diferencia > 90):
+								diferencia = 90	
+						else:
+							diferencia = 45
+				minuto = str(diferencia)
+				
+				strResultados = strResultados + hometeam + " " + homegoals + " - " + awaygoals + " " + awayteam + " (" + minuto + "'); "
+				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
+				response, content = http.request(url, 'GET', headers=headers)
 		except Exception, message:
 			print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
 			print message
