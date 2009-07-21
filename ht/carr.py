@@ -150,6 +150,11 @@ def carruselear():
 
 	recServer = getRecommendedServer(http)
 	http, headers = login(username, password, recServer, http)
+	url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
+	response, content = http.request(url, 'GET', headers=headers)
+	recServer = getRecommendedServer(http)
+	http, headers = login(username, password, recServer, http)
+
 	matchids = getMatches(pathMatchids);
 	print str(len(matchids)) + ' partidos'
 	url = recServer + '/Common/chppxml.axd?file=live'
@@ -168,8 +173,8 @@ def carruselear():
 			# matchidsborrar.append(id_borrar)
 			# url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + id_borrar
 			# response, content = http.request(url, 'GET', headers=headers)
-		url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
-		response, content = http.request(url, 'GET', headers=headers)
+		# url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
+		# response, content = http.request(url, 'GET', headers=headers)
 		
 		url = recServer + '/Common/chppxml.axd?file=live'
 		response, content = http.request(url, 'GET', headers=headers)
