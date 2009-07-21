@@ -161,6 +161,7 @@ def carruselear():
 		
 		#recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
 		matches = doc.getElementsByTagName('Match')
+		print 'checkout0', len(matches)
 		matchidsborrar = []
 		for m in matches:
 			id_borrar = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
