@@ -155,7 +155,7 @@ def carruselear():
 	url = recServer + '/Common/chppxml.axd?file=live'
 	try:
 		#Cargamos los partidos
-		response, content = self.http.request(url, 'GET', headers=self.headers)
+		response, content = http.request(url, 'GET', headers=headers)
 		
 		doc = minidom.parseString(content)
 		
@@ -166,18 +166,18 @@ def carruselear():
 			id_borrar = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
 			matchidsborrar.append(id_borrar)
 			url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + id_borrar
-			response, content = self.http.request(url, 'GET', headers=self.headers)
+			response, content = http.request(url, 'GET', headers=headers)
 		
 		url = recServer + '/Common/chppxml.axd?file=live'
-		response, content = self.http.request(url, 'GET', headers=self.headers)
+		response, content = http.request(url, 'GET', headers=headers)
 		matches = doc.getElementsByTagName('Match')
 		
 		for matchid in matchids:
 			url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
-			response, content = self.http.request(url, 'GET', headers=self.headers)
+			response, content = http.request(url, 'GET', headers=headers)
 		
 		url = recServer + '/Common/chppxml.axd?file=live'
-		response, content = self.http.request(url, 'GET', headers=self.headers)
+		response, content = http.request(url, 'GET', headers=headers)
 		
 		matches = doc.getElementsByTagName('Match')
 		for m in matches:
