@@ -168,7 +168,7 @@ def carruselear():
 			# matchidsborrar.append(id_borrar)
 			# url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + id_borrar
 			# response, content = http.request(url, 'GET', headers=headers)
-		url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll'
+		url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
 		response, content = http.request(url, 'GET', headers=headers)
 		
 		url = recServer + '/Common/chppxml.axd?file=live'
