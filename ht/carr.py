@@ -247,6 +247,9 @@ def carruselear():
 		#print 'No se ha podido tratar el partido', xmlMatchID, '\n', sys.exc_info()
 		print 'Excepción tratando partidos\n', sys.exc_info()
 		print message
+	
+	url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
+	response, content = http.request(url, 'GET', headers=headers)
 
 	print asciizacion(strResultados)
 	#strResultados = strResultados + '\n\n\nCarrusel automatico v1.1 implementado en carr.py'
