@@ -233,7 +233,7 @@ def carruselear():
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
 				response, content = http.request(url, 'GET', headers=headers)
 	except Exception, message:
-		print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
+		print 'No se ha podido tratar el partido', xmlMatchID, '\n', sys.exc_info()
 		print message
 
 	print asciizacion(strResultados)
