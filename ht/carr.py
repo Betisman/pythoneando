@@ -181,7 +181,6 @@ def carruselear():
 		
 		matches = doc.getElementsByTagName('Match')
 		for m in matches:
-			import pdb;pdb.set_trace()
 			xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
 			if xmlMatchID in matchids:
 				hometeam = m.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
