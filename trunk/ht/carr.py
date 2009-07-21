@@ -181,6 +181,7 @@ def carruselear():
 		response, content = http.request(url, 'GET', headers=headers)
 		
 		matches = doc.getElementsByTagName('Match')
+		print matches
 		for m in matches:
 			xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
 			if xmlMatchID in matchids:
