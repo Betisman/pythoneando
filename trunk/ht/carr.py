@@ -232,9 +232,9 @@ def carruselear():
 				strResultados = strResultados + hometeam + " " + homegoals + " - " + awaygoals + " " + awayteam + " (" + minuto + "'); "
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
 				response, content = http.request(url, 'GET', headers=headers)
-		except Exception, message:
-			print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
-			print message
+	except Exception, message:
+		print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
+		print message
 
 	print asciizacion(strResultados)
 	#strResultados = strResultados + '\n\n\nCarrusel automatico v1.1 implementado en carr.py'
