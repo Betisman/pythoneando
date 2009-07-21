@@ -163,11 +163,13 @@ def carruselear():
 		matches = doc.getElementsByTagName('Match')
 		print 'checkout0', len(matches)
 		matchidsborrar = []
-		for m in matches:
-			id_borrar = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
-			matchidsborrar.append(id_borrar)
-			url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + id_borrar
-			response, content = http.request(url, 'GET', headers=headers)
+		# for m in matches:
+			# id_borrar = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
+			# matchidsborrar.append(id_borrar)
+			# url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + id_borrar
+			# response, content = http.request(url, 'GET', headers=headers)
+		url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll'
+		response, content = http.request(url, 'GET', headers=headers)
 		
 		url = recServer + '/Common/chppxml.axd?file=live'
 		response, content = http.request(url, 'GET', headers=headers)
