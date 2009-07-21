@@ -175,6 +175,7 @@ def carruselear():
 		for matchid in matchids:
 			url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
 			response, content = http.request(url, 'GET', headers=headers)
+			print 'añadido', matchid
 		
 		url = recServer + '/Common/chppxml.axd?file=live'
 		response, content = http.request(url, 'GET', headers=headers)
@@ -183,6 +184,7 @@ def carruselear():
 		for m in matches:
 			xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
 			if xmlMatchID in matchids:
+				print 'procesando', xmlMatchID
 				hometeam = m.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
 				awayteam = m.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
 				homegoals = m.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
