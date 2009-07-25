@@ -149,9 +149,9 @@ def carruselear():
 	#strResultados = "RESULTADOS"+ " (" + str(now.hour) + ":" + str(now.minute) + ")\n\n"
 
 	recServer = getRecommendedServer(http)
-	http, headers = login(username, password, recServer, http)
-	url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
-	response, content = http.request(url, 'GET', headers=headers)
+	# http, headers = login(username, password, recServer, http)
+	# url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
+	# response, content = http.request(url, 'GET', headers=headers)
 	recServer = getRecommendedServer(http)
 	http, headers = login(username, password, recServer, http)
 
