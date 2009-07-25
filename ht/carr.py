@@ -248,8 +248,8 @@ def carruselear():
 				minuto = str(diferencia)
 				
 				strResultados = strResultados + hometeam + " " + homegoals + " - " + awaygoals + " " + awayteam + " (" + minuto + "'); "
-				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
-				response, content = http.request(url, 'GET', headers=headers)
+				# url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
+				# response, content = http.request(url, 'GET', headers=headers)
 	except Exception, message:
 		#print 'No se ha podido tratar el partido', xmlMatchID, '\n', sys.exc_info()
 		print 'Excepción tratando partidos\n', sys.exc_info()
