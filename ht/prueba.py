@@ -161,7 +161,7 @@ def carruselear():
 		
 		doc = minidom.parseString(content)
 		
-		open('ml.txt').write(content)
+		open('ml.txt', 'w').write(content)
 		
 		#recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
 		matches = doc.getElementsByTagName('Match')
