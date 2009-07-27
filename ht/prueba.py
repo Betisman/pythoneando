@@ -154,7 +154,7 @@ def carruselear():
 	# url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
 	# url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
 	
-	url = recServer + '/Common/chppxml.axd?file=live&version=1.4'
+	url = recServer + '/Common/chppxml.axd?file=live&version=1.4&actionType=viewAll'
 	try:
 		#Cargamos los partidos
 		response, content = http.request(url, 'GET', headers=headers)
@@ -173,7 +173,7 @@ def carruselear():
 		# url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
 		# response, content = http.request(url, 'GET', headers=headers)
 		
-		url = recServer + '/Common/chppxml.axd?file=live&version=1.4'
+		url = recServer + '/Common/chppxml.axd?file=live&version=1.4&actionType=viewAll'
 		response, content = http.request(url, 'GET', headers=headers)
 		matches = doc.getElementsByTagName('Match')
 		print 'checkout1', len(matches)
