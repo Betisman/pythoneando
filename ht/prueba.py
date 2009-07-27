@@ -187,7 +187,9 @@ def carruselear():
 		response, content = http.request(url, 'GET', headers=headers)
 		open('ml.txt', 'w').write(content)
 		print content
-		
+		url = recServer + '/Common/chppxml.axd?file=live'
+		response, content = http.request(url, 'GET', headers=headers)
+		print content
 		
 		
 		
@@ -195,8 +197,6 @@ def carruselear():
 			url = recServer + '/Common/chppxml.axd?file=live&version=1.4&actionType=addMatch&matchid=' + matchid
 			response, content = http.request(url, 'GET', headers=headers)
 			print 'añadido', matchid
-			url = recServer + '/Common/chppxml.axd?file=live&version=1.4&actionType=viewNew&matchid=' + matchid
-			response, content = http.request(url, 'GET', headers=headers)
 			url = recServer + '/Common/chppxml.axd?file=live'
 			response, content = http.request(url, 'GET', headers=headers)
 			print 'checkout1.5', len(matches)
