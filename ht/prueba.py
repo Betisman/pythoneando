@@ -1,15 +1,9 @@
 # coding=ISO-8859-1
-import sendgmail
-import HTconnection
-#import handlers
-import model
-import Config
-import datetime
-import time
 import xml.dom.minidom as minidom
+import urllib, httplib2
 import sys
-import traceback
-import codecs
+import time, datetime
+#httplib2.debuglevel = 1
 
 def getRecommendedServer(http):
 	"""
