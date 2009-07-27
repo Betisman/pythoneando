@@ -190,7 +190,9 @@ def carruselear():
 		url = recServer + '/Common/chppxml.axd?file=live'
 		response, content = http.request(url, 'GET', headers=headers)
 		print content
-		
+		doc = minidom.parseString(content)
+		matches = doc.getElementsByTagName('Match')
+		print 'matches', matches
 		
 		
 		for matchid in matchids:
