@@ -178,6 +178,7 @@ def carruselear():
 		
 		url = recServer + '/Common/chppxml.axd?file=live'
 		response, content = http.request(url, 'GET', headers=headers)
+		doc = minidom.parseString(content)
 		matches = doc.getElementsByTagName('Match')
 		print 'checkout1', len(matches)
 		
@@ -187,10 +188,14 @@ def carruselear():
 			print 'añadido', matchid
 			url = recServer + '/Common/chppxml.axd?file=live'
 			response, content = http.request(url, 'GET', headers=headers)
+			doc = minidom.parseString(content)
+			matches = doc.getElementsByTagName('Match')
 			print 'checkout1.5', len(matches)
 		
 		url = recServer + '/Common/chppxml.axd?file=live'
 		response, content = http.request(url, 'GET', headers=headers)
+		doc = minidom.parseString(content)
+		matches = doc.getElementsByTagName('Match')
 		print 'checkout2', len(matches)
 		
 		matches = doc.getElementsByTagName('Match')
@@ -209,7 +214,7 @@ def carruselear():
 					hometeam = 'RBB'
 				if awayteam.find('NAVA') > -1:
 					awayteam = 'N'
-				if awaytem.find('ThePiso') > -1:
+				if awayteam.find('ThePiso') > -1:
 					awayteam = 'ThP'
 				if hometeam.find('esord') > -1:
 					hometeam = 'D'
@@ -257,6 +262,8 @@ def carruselear():
 	
 	url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
 	response, content = http.request(url, 'GET', headers=headers)
+	doc = minidom.parseString(content)
+	matches = doc.getElementsByTagName('Match')
 
 	print asciizacion(strResultados)
 	#strResultados = strResultados + '\n\n\nCarrusel automatico v1.1 implementado en carr.py'
