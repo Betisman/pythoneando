@@ -98,6 +98,7 @@ class CarruselHandler:
 			url = recServer + '/Common/chppxml.axd?file=live'
 			response, content = self.http.request(url, 'GET', headers=self.headers)
 			open('misc/live.xml', "w").write(content)
+			doc = minidom.parseString(content)
 			matches = doc.getElementsByTagName('Match')
 			
 			for matchid in matchids:
@@ -108,6 +109,7 @@ class CarruselHandler:
 			response, content = self.http.request(url, 'GET', headers=self.headers)
 			open('misc/live.xml', "w").write(content)
 			
+			doc = minidom.parseString(content)
 			matches = doc.getElementsByTagName('Match')
 			for m in matches:
 				xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
@@ -188,6 +190,8 @@ class CarruselHandler:
 					#quitamos el partido del htlive
 					url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
 					response, content = self.http.request(url, 'GET', headers=self.headers)
+					doc = minidom.parseString(content)
+					matches = doc.getElementsByTagName('Match')
 		except Exception, message:
 			traceback.print_exc()
 			#print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
