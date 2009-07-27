@@ -154,12 +154,14 @@ def carruselear():
 	# url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
 	# url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
 	
-	url = recServer + '/Common/chppxml.axd?file=live&version=1.4&actionType=viewAll'
+	url = recServer + '/Common/chppxml.axd?file=live&version=1.4'
 	try:
 		#Cargamos los partidos
 		response, content = http.request(url, 'GET', headers=headers)
 		
 		doc = minidom.parseString(content)
+		
+		open('ml.txt').write(content)
 		
 		#recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
 		matches = doc.getElementsByTagName('Match')
