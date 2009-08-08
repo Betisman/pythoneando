@@ -252,7 +252,8 @@ def carruselear():
 							diferencia = 45
 				minuto = str(diferencia)
 				
-				strResultados = strResultados + hometeam + " " + homegoals + " - " + awaygoals + " " + awayteam + " (" + minuto + "'); "
+				#strResultados = strResultados + hometeam + " " + homegoals + " - " + awaygoals + " " + awayteam + " (" + minuto + "'); "
+				strResultados = strResultados + hometeam + " " + homegoals + "-" + awaygoals + " " + awayteam + "(" + minuto + ")"
 				# url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
 				# response, content = http.request(url, 'GET', headers=headers)
 	except Exception, message:
