@@ -226,7 +226,7 @@ def carruselear():
 					hometeam = 'Bas'
 				if awayteam.find('erroloro') > -1:
 					awayteam = 'Per'
-				 if awayteam.find('itisianos') > -1:
+				if awayteam.find('itisianos') > -1:
 					awayteam = 'Pit'
 				# fin parche ##############################
 				
