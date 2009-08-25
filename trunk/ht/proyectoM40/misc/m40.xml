@@ -179,7 +179,7 @@
 				<liganombre>IX.1765</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="1457502">
+		<!--<equipo id="1457502">
 			<nombre>Inframundo CD Drogadictos anonimos</nombre>
 			<teamid>1457502</teamid>
 			<nombrecorto>Drogadictos</nombrecorto>
@@ -192,7 +192,7 @@
 				<ligaid>167290</ligaid>
 				<liganombre>X.2035</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 		<equipo id="1436965">
 			<nombre>A.D. Dimitri PITERMAN</nombre>
 			<teamid>1436965</teamid>
