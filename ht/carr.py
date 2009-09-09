@@ -222,12 +222,12 @@ def carruselear():
 					hometeam = 'B'
 				if awayteam.find('ordoba') > -1:
 					awayteam = 'C'
-				if hometeam.find('Basullo') > -1:
-					hometeam = 'Bas'
-				if awayteam.find('atamar') > -1:
-					awayteam = 'd'
-				if awayteam.find('itisianos') > -1:
-					awayteam = 'Pit'
+				if awayteam.find('Basullo') > -1:
+					awayteam = 'Bas'
+				if hometeam.find('PiNxO') > -1:
+					hometeam = 'P'
+				if hometeam.find('BURDINFLI') > -1:
+					hometeam = 'B'
 				# fin parche ##############################
 				
 				
