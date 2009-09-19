@@ -210,12 +210,12 @@ def carruselear():
 				awaygoals = m.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
 				# parche cutre para el 26.07.2008 ###################
 				#awayteam = awayteam.replace('ThePiso', 'ThP')
-				if hometeam.find('Ravent') > -1:
-					hometeam = 'R'
+				if hometeam.find('Tarambanas') > -1:
+					hometeam = 'T'
 				if awayteam.find('Betisman') > -1:
 					awayteam = 'RBB'
-				if hometeam.find('ThePiso') > -1:
-					hometeam = 'ThP'
+				if awayteam.find('ThePiso') > -1:
+					awayteam = 'ThP'
 				if hometeam.find('erroloro') > -1:
 					hometeam = 'P'
 				if hometeam.find('ukakke') > -1:
@@ -224,12 +224,12 @@ def carruselear():
 					awayteam = 'C'
 				if awayteam.find('Basullo') > -1:
 					awayteam = 'Bas'
-				if awayteam.find('avelasvir') > -1:
-					awayteam = 'a'
+				if hometeam.find('Guinardo') > -1:
+					hometeam = 'G'
 				if hometeam.find('Jumfr') > -1:
 					hometeam = 'J'
-				if awayteam.find('angelin') > -1:
-					awayteam = 'a'
+				if hometeam.find('MaRTiSHoS') > -1:
+					hometeam = 'M'
 				# fin parche ##############################
 				
 				
