@@ -214,22 +214,22 @@ def carruselear():
 					hometeam = 'T'
 				if awayteam.find('Betisman') > -1:
 					awayteam = 'RBB'
-				if awayteam.find('ThePiso') > -1:
-					awayteam = 'ThP'
+				if hometeam.find('ThePiso') > -1:
+					hometeam = 'ThP'
 				if hometeam.find('erroloro') > -1:
 					hometeam = 'P'
 				if hometeam.find('ukakke') > -1:
 					hometeam = 'B'
-				if awayteam.find('ordoba') > -1:
-					awayteam = 'C'
+				if awayteam.find('Demonia') > -1:
+					awayteam = 'D'
 				if hometeam.find('Basullo') > -1:
 					hometeam = 'Bas'
 				if hometeam.find('Guinardo') > -1:
 					hometeam = 'G'
 				if hometeam.find('Jumfr') > -1:
 					hometeam = 'J'
-				if awayteam.find('MaRTiSHoS') > -1:
-					awayteam = 'M'
+				if awayteam.find('CONGRIO') > -1:
+					awayteam = 'C'
 				# fin parche ##############################
 				
 				
