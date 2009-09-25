@@ -13,7 +13,7 @@ def lama():
 	gmailpwd = 'logaritmo'
 	subject = 'Carrusel'
 
-	carr.carruselear()
+	carr3.carruselear()
 	msg = leerFichero('./xmls/carr.txt')
 
         if enviar:
