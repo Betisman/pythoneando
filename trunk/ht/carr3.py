@@ -154,7 +154,7 @@ def sustituyeNombre(nombre):
     if nombre.find('CONGRIO') > -1:
         ret = 'CON'
     else:
-        ret nombre[0]
+        ret = nombre[0]
     return ret
 
 def actualizaXmlMatchids(pathMatchids, matchid, homegoals, awaygoals, minuto, nuevoEstado):
