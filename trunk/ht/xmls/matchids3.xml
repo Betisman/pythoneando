@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<matchids>
+    <!-- Estados:
+        00: Sin comenzar
+        10: Sin comenzar y enviado
+        20: En juego sin enviar
+        30: En juego y enviado
+        40: Descanso sin enviar
+        50: Descanso y enviado
+        60: Final sin enviar
+        70: Final enviado
+     -->
+	<matchid homegoals="" awaygoals="" minuto="" estado="00">241149304</matchid>
+	<matchid homegoals="" awaygoals="" minuto="" estado="00">241217175</matchid>
+	<matchid homegoals="" awaygoals="" minuto="" estado="00">241229717</matchid>
+        <matchid homegoals="" awaygoals="" minuto="" estado="00">241267296</matchid>
+        <matchid homegoals="" awaygoals="" minuto="" estado="00">241313720</matchid>
+        <matchid homegoals="" awaygoals="" minuto="" estado="00">241330130</matchid>
+</matchids>
