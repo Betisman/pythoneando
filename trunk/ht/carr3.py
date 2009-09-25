@@ -105,8 +105,7 @@ def getMatches(path):
     matchids = doc.getElementsByTagName('matchid')
     ret = []
     for matchid in matchids:
-        #ret.append(matchid.firstChild.nodeValue)
-        ret.append(matchid.getAttribute('id'))
+        ret.append(matchid.firstChild.nodeValue)
     return ret
 	
 def asciizacion(cadena):
