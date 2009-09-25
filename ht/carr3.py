@@ -349,7 +349,7 @@ def carruselear():
     doc = minidom.parseString(content)
     matches = doc.getElementsByTagName('Match')
 
-    print asciizacion(strResultados)
+    print 'mensaje\n', asciizacion(strResultados)
     afichero(unicode(strResultados), pathXmls+'carr.txt')
 
     if enviar:
