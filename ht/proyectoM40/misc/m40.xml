@@ -23,9 +23,9 @@
 				<estadioid>487829</estadioid>
 				<estadionombre>Coliseo de la Palmera</estadionombre>
 			</estadio>
-			<liga id="38576">
-				<ligaid>38576</ligaid>
-				<liganombre>VII.540</liganombre>
+			<liga id="14461">
+				<ligaid>14461</ligaid>
+				<liganombre>VI.143</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="830339">
@@ -106,9 +106,9 @@
 				<estadioid>492014</estadioid>
 				<estadionombre>Monumental Pucelano</estadionombre>
 			</estadio>
-			<liga id="54474">
-				<ligaid>54474</ligaid>
-				<liganombre>VIII.673</liganombre>
+			<liga id="38367">
+				<ligaid>38367</ligaid>
+				<liganombre>VII.331</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="779367">
@@ -174,9 +174,9 @@
 				<estadioid>1458787</estadioid>
 				<estadionombre>The Bol Stadium Arena</estadionombre>
 			</estadio>
-			<liga id="177260">
-				<ligaid>177260</ligaid>
-				<liganombre>IX.1765</liganombre>
+			<liga id="178867">
+				<ligaid>178867</ligaid>
+				<liganombre>VIII.1324</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="1457502">
@@ -230,9 +230,9 @@
 				<estadioid>986315</estadioid>
 				<estadionombre>Estadio Cocomo</estadionombre>
 			</estadio>
-			<liga id="60767">
-				<ligaid>60767</ligaid>
-				<liganombre>IX.496</liganombre>
+			<liga id="54411">
+				<ligaid>54411</ligaid>
+				<liganombre>VIII.610</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1332838">
@@ -300,9 +300,9 @@
 				<estadioid>804193</estadioid>
 				<estadionombre>Monumental de Basullo</estadionombre>
 			</estadio>
-			<liga id="61267">
-				<ligaid>61267</ligaid>
-				<liganombre>IX.996</liganombre>
+			<liga id="178574">
+				<ligaid>178574</ligaid>
+				<liganombre>VIII.1031</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1364906">
@@ -314,23 +314,23 @@
 				<estadioid>1361468</estadioid>
 				<estadionombre>Ribera del Tajo</estadionombre>
 			</estadio>
-			<liga id="176562">
-				<ligaid>176562</ligaid>
-				<liganombre>IX.1067</liganombre>
+			<liga id="54003">
+				<ligaid>54003</ligaid>
+				<liganombre>VIII.202</liganombre>
 			</liga>
 		</equipo>
                 <equipo id="311977">
-			<nombre>Basullo</nombre>
+			<nombre>cocoloco`s</nombre>
 			<teamid>311977</teamid>
-			<nombrecorto>Basullo</nombrecorto>
+			<nombrecorto>cocoloco`s</nombrecorto>
 			<micronombre>Bas</micronombre>
-			<estadio id="804193">
-				<estadioid>804193</estadioid>
-				<estadionombre>Monumental de Basullo</estadionombre>
+			<estadio id="311977">
+				<estadioid>311977</estadioid>
+				<estadionombre>Vicente Calderon</estadionombre>
 			</estadio>
-			<liga id="61267">
-				<ligaid>61267</ligaid>
-				<liganombre>IX.996</liganombre>
+			<liga id="54774">
+				<ligaid>54774</ligaid>
+				<liganombre>VIII.973</liganombre>
 			</liga>
 		</equipo>
 	</equipos>
