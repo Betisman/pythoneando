@@ -1,4 +1,5 @@
 # coding=ISO-8859-1
+from xml.dom.minidom import firstChild
 import sys
 import time
 
@@ -168,6 +169,7 @@ def actualizaXmlMatchids(pathMatchids, matchid, homegoals, awaygoals, minuto, nu
     elem.setAttribute('minuto', minuto)
     elem.setAttribute('nuevoEstado', nuevoEstado)
     afichero(pathMatchids, doc.toxml())
+    print 'nuevo estado: ', nuevoEstado
 
 def carruselear():
     http = httplib2.Http()
@@ -266,12 +268,14 @@ def carruselear():
                 #cambio de estado
                 doc = minidom.parse(pathMatchids)
                 matchid = doc.getElementById(xmlMatchID)
-                id = matchid.getAttribute('id')
+                id = matchid.getAttribute('id').firstChild.nodeValue
                 mi_homegoals = matchid.getAttribute('homegoals')
                 mi_homegoals = matchid.getAttribute('awaygoals')
                 mi_minuto = matchid.getAttribute('minuto')
                 mi_estado = matchid.getAttribute('estado')
+                import pdb;pdb.set_trace()
 
+                print 'estado actual:', mi_estado
                 if mi_estado == '00':   # Sin comenzar y no enviado
                     agregarASms = True
                     enviar = True
