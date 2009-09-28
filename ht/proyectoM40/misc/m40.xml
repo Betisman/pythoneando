@@ -28,7 +28,7 @@
 				<liganombre>VII.540</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="830339">
+		<!--<equipo id="830339">
 			<nombre>Dogt</nombre>
 			<teamid>830339</teamid>
 			<nombrecorto>Dogt</nombrecorto>
@@ -41,7 +41,7 @@
 				<ligaid>151162</ligaid>
 				<liganombre>VIII.1267</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 		<!--<equipo id="1369963">
 			<nombre>Hapiio FC</nombre>
 			<teamid>1369963</teamid>
@@ -55,7 +55,7 @@
 				<liganombre>VIII.1453</liganombre>
 			</liga>
 		</equipo>-->
-		<equipo id="491940">
+		<!--<equipo id="491940">
 			<nombre>Pitisianos SAD</nombre>
 			<teamid>491940</teamid>
 			<nombrecorto>Pitisianos</nombrecorto>
@@ -68,7 +68,7 @@
 				<ligaid>179190</ligaid>
 				<liganombre>VIII.1647</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 		<equipo id="48756">
 			<nombre>Jumfrys F.K.</nombre>
 			<teamid>48756</teamid>
@@ -317,6 +317,20 @@
 			<liga id="176562">
 				<ligaid>176562</ligaid>
 				<liganombre>IX.1067</liganombre>
+			</liga>
+		</equipo>
+                <equipo id="311977">
+			<nombre>Basullo</nombre>
+			<teamid>311977</teamid>
+			<nombrecorto>Basullo</nombrecorto>
+			<micronombre>Bas</micronombre>
+			<estadio id="804193">
+				<estadioid>804193</estadioid>
+				<estadionombre>Monumental de Basullo</estadionombre>
+			</estadio>
+			<liga id="61267">
+				<ligaid>61267</ligaid>
+				<liganombre>IX.996</liganombre>
 			</liga>
 		</equipo>
 	</equipos>
