@@ -226,6 +226,9 @@ def carruselear():
         doc = minidom.parseString(content)
         matches = doc.getElementsByTagName('Match')
         print 'checkout2', len(matches)
+        # MOCK
+        open('./xmls/live.xml', 'w').write(content)
+        # END MOCK
 
         enviar = False
 
