@@ -160,13 +160,17 @@ def actualizaXmlMatchids(pathMatchids, matchid, homegoals, awaygoals, minuto, nu
     #sería una buena opción refactorizar este metodo y el getMatches() para que
     #parseemos varias veces el mismo fichero, sino que se haga una sola vez.
     #lo dejo pendiente.
-    doc = minidom.parse(path)
-    elem = doc.getElementById('matchid')
+    doc = minidom.parse(pathMatchids)
+    mts = doc.getElementsByTagName('matchid')
+    for mt in mts:
+        if mt.firstChild.nodeValue == matchid:
+            elem = mt
     elem.setAttribute('homegoals', homegoals)
     elem.setAttribute('awaygoals', awaygoals)
-    elem.setAttribute('minuto', minuto)
-    elem.setAttribute('nuevoEstado', nuevoEstado)
-    afichero(pathMatchids, doc.toxml())
+    elem.setAttribute('minuto', str(minuto))
+    elem.setAttribute('estado', nuevoEstado)
+    #afichero(pathMatchids, doc.toxml())
+    open(pathMatchids, 'w').write(doc.toxml())
     print 'nuevo estado: ', nuevoEstado
 
 def carruselear():
@@ -184,54 +188,53 @@ def carruselear():
     now = datetime.datetime.now()
     strResultados = ''
 
-    recServer = getRecommendedServer(http)
-    # http, headers = login(username, password, recServer, http)
-    # url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
-    # response, content = http.request(url, 'GET', headers=headers)
-    recServer = getRecommendedServer(http)
-    http, headers = login(username, password, recServer, http)
+#    recServer = getRecommendedServer(http)
+#    # http, headers = login(username, password, recServer, http)
+#    # url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
+#    # response, content = http.request(url, 'GET', headers=headers)
+#    recServer = getRecommendedServer(http)
+#    http, headers = login(username, password, recServer, http)
 
     matchids = getMatches(pathMatchids);
     print str(len(matchids)) + ' partidos'
-    url = recServer + '/Common/chppxml.axd?file=live'
+#    url = recServer + '/Common/chppxml.axd?file=live'
     try:
-        #Cargamos los partidos
-        response, content = http.request(url, 'GET', headers=headers)
-		
-        doc = minidom.parseString(content)
-		
-        #recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
+#        #Cargamos los partidos
+#        response, content = http.request(url, 'GET', headers=headers)
+#
+#        doc = minidom.parseString(content)
+#
+#        #recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
+#        matches = doc.getElementsByTagName('Match')
+#        print 'checkout0', len(matches)
+#        matchidsborrar = []
+#
+#        url = recServer + '/Common/chppxml.axd?file=live'
+#        response, content = http.request(url, 'GET', headers=headers)
+#        doc = minidom.parseString(content)
+#        matches = doc.getElementsByTagName('Match')
+	
+#        for matchid in matchids:
+#            url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
+#            response, content = http.request(url, 'GET', headers=headers)
+#            print 'añadido', matchid
+#            url = recServer + '/Common/chppxml.axd?file=live'
+#            response, content = http.request(url, 'GET', headers=headers)
+#            doc = minidom.parseString(content)
+#            matches = doc.getElementsByTagName('Match')
+#
+#        url = recServer + '/Common/chppxml.axd?file=live'
+#        response, content = http.request(url, 'GET', headers=headers)
+#        doc = minidom.parseString(content)
+#        matches = doc.getElementsByTagName('Match')
+#       MOCK
+        doc = minidom.parseString(open('./xmls/live.xml', 'r').read())
         matches = doc.getElementsByTagName('Match')
-        print 'checkout0', len(matches)
-        matchidsborrar = []
-		
-        url = recServer + '/Common/chppxml.axd?file=live'
-        response, content = http.request(url, 'GET', headers=headers)
-        doc = minidom.parseString(content)
-        matches = doc.getElementsByTagName('Match')
-		
-        for matchid in matchids:
-            url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
-            response, content = http.request(url, 'GET', headers=headers)
-            print 'añadido', matchid
-            url = recServer + '/Common/chppxml.axd?file=live'
-            response, content = http.request(url, 'GET', headers=headers)
-            doc = minidom.parseString(content)
-            matches = doc.getElementsByTagName('Match')
-		
-        url = recServer + '/Common/chppxml.axd?file=live'
-        response, content = http.request(url, 'GET', headers=headers)
-        doc = minidom.parseString(content)
-        matches = doc.getElementsByTagName('Match')
-        print 'checkout2', len(matches)
-        # MOCK
-        open('./xmls/live.xml', 'w').write(content)
-        # END MOCK
+#       END MOCK
 
         enviar = False
 
         matches = doc.getElementsByTagName('Match')
-        print matches
         for m in matches:
             agregarASms = False
             xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
@@ -265,22 +268,30 @@ def carruselear():
                         else:
                             diferencia = 45
                 minuto = str(diferencia)
+                # MOCK
+                minuto = 90
+                # END MOCK
 
                 #cambio de estado
                 doc = minidom.parse(pathMatchids)
-                matchid = doc.getElementById(xmlMatchID)
-                id = matchid.getAttribute('id').firstChild.nodeValue
+                mids = doc.getElementsByTagName('matchid')
+                # encontrar el partido a usar
+                for mt in mids:
+                    if mt.firstChild.nodeValue == xmlMatchID:
+                        matchid = mt
+                # fin encontrar
+                id = matchid.firstChild.nodeValue
                 mi_homegoals = matchid.getAttribute('homegoals')
-                mi_homegoals = matchid.getAttribute('awaygoals')
+                mi_awaygoals = matchid.getAttribute('awaygoals')
                 mi_minuto = matchid.getAttribute('minuto')
                 mi_estado = matchid.getAttribute('estado')
-                import pdb;pdb.set_trace()
+                #import pdb;pdb.set_trace()
 
                 print 'estado actual:', mi_estado
                 if mi_estado == '00':   # Sin comenzar y no enviado
                     agregarASms = True
                     enviar = True
-                    actualizaXmlMatchids(xmlMatchID, matchid, homegoals, awaygoals, minuto, '10')
+                    actualizaXmlMatchids(pathMatchids, xmlMatchID, homegoals, awaygoals, minuto, '10')
                 if mi_estado == '10':   # Sin comenzar y enviado
                     if minuto <= 0:
                         agregarASms = False
@@ -289,37 +300,37 @@ def carruselear():
                         agregarASms = True
                         enviar = True
                         estado = '30'
-                    actualizaXmlMatchids(xmlMatchID, matchid, homegoals, awaygoals, minuto, estado)
-                if mi_estado == '20':   # En juego y no enviado
-                    if homegoals != mi_homegoals or awaygoals != mi_awaygoals:
-                        agregarASms = True
-                        enviar = True
-                        estado = '20'
-                    elif minuto == '45':
-                        estado = '40'
-                    elif minuto == '90':
-                        estado == '60'
-                    else:
-                        estado = '30'
-                    actualizaXmlMatchids(xmlMatchID, matchid, homegoals, awaygoals, minuto, estado)
+                    actualizaXmlMatchids(pathMatchids, xmlMatchID, homegoals, awaygoals, minuto, estado)
+#                if mi_estado == '20':   # En juego y no enviado
+#                    if homegoals != mi_homegoals or awaygoals != mi_awaygoals:
+#                        agregarASms = True
+#                        enviar = True
+#                        estado = '20'
+#                    elif minuto == 45:
+#                        estado = '40'
+#                    elif minuto == 90:
+#                        estado = '60'
+#                    else:
+#                        estado = '30'
+#                    actualizaXmlMatchids(pathMatchids, xmlMatchID, homegoals, awaygoals, minuto, estado)
                 if mi_estado == '30':   # En juego y enviado
                     if homegoals != mi_homegoals or awaygoals != mi_awaygoals:
                         agregarASms = True
                         enviar = True
-                        estado = '20'
-                    elif minuto == '45':
-                        estado = '40'
-                    elif minuto >= '90':
-                        estado == '60'
+                        #estado = '20'
+                        estado = '30'
+                    elif minuto == 45:
+                        agregarASms = True
+                        enviar = True
+                        estado = '50'
+                    elif minuto >= 90:
+                        agregarASms = True
+                        enviar = True
+                        estado = '70'
                     else:
                         estado = '30'
-                    actualizaXmlMatchids(xmlMatchID, matchid, homegoals, awaygoals, minuto, estado)
+                    actualizaXmlMatchids(pathMatchids, xmlMatchID, homegoals, awaygoals, minuto, estado)
 
-                if mi_estado == '40': # Descanso y no enviado
-                    agregarASms = True
-                    enviar = True
-                    estado = '50'
-                    actualizaXmlMatchids(xmlMatchID, matchid, homegoals, awaygoals, minuto, estado)
                 if mi_estado == '50': # Descanso y enviado
                     if minuto < 46:
                         agregarASms = False
@@ -328,17 +339,14 @@ def carruselear():
                         agregarASms = True
                         enviar = True
                         estado = '30'
-                    actualizaXmlMatchids(xmlMatchID, matchid, homegoals, awaygoals, minuto, estado)
-                if mi_estado == '60': # Final sin enviar
-                    agregarASms = True
-                    enviar = True
-                    estado = '70'
-                    actualizaXmlMatchids(xmlMatchID, matchid, homegoals, awaygoals, minuto, estado)
+                    actualizaXmlMatchids(pathMatchids, xmlMatchID, homegoals, awaygoals, minuto, estado)
+                    
                 if mi_estado == '70': # Final y enviado
                     agregarASms = False
                     estado = '70'
-                    actualizaXmlMatchids(xmlMatchID, matchid, homegoals, awaygoals, minuto, estado)
+                    actualizaXmlMatchids(pathMatchids, xmlMatchID, homegoals, awaygoals, minuto, estado)
                 #estoy viendo que es una grandisima chapuza
+                #print xmlMatchID, 'cambio de estado a', estado
 
                 #strResultados = strResultados + hometeam + " " + homegoals + "-" + awaygoals + " " + awayteam + "(" + minuto + ")"
                 if agregarASms:
@@ -347,7 +355,10 @@ def carruselear():
     except Exception, message:
         print 'Excepción tratando partidos\n', sys.exc_info()
         print message
-	
+
+    print 'enviar:', enviar
+    print strResultados
+    
     url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
     response, content = http.request(url, 'GET', headers=headers)
     doc = minidom.parseString(content)
