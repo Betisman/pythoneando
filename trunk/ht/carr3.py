@@ -246,11 +246,11 @@ def carruselear():
             agregarASms = False
             xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
             if xmlMatchID in matchids:
-                print 'procesando', xmlMatchID
                 hometeam = m.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
                 awayteam = m.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
                 homegoals = m.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
                 awaygoals = m.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
+                print 'procesando %s [%s %s - %s %s (%d'')]' %(xmlMatchID, hometeam, homegoals, awaygoals, awayteam, minuto)
 
                 hometeam = sustituyeNombre(hometeam)
                 awayteam = sustituyeNombre(awayteam)
