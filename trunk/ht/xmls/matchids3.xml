@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<matchids>
+<?xml version="1.0" ?><matchids awaygoals="0" estado="00" homegoals="0" minuto="0">
     <!-- Estados:
         00: Sin comenzar
         10: Sin comenzar y enviado
@@ -9,11 +8,12 @@
         50: Descanso y enviado
         60: Final sin enviar
         70: Final enviado
+        <matchid awaygoals="" estado="00" homegoals="" minuto="">00000000</matchid>
      -->
-	<matchid homegoals="" awaygoals="" minuto="" estado="00">241149304</matchid>
-	<matchid homegoals="" awaygoals="" minuto="" estado="00">241217175</matchid>
-	<matchid homegoals="" awaygoals="" minuto="" estado="00">241229717</matchid>
-        <matchid homegoals="" awaygoals="" minuto="" estado="00">241267296</matchid>
-        <matchid homegoals="" awaygoals="" minuto="" estado="00">241313720</matchid>
-        <matchid homegoals="" awaygoals="" minuto="" estado="00">241330130</matchid>
+	<matchid awaygoals="0" estado="00" homegoals="0" minuto="0">241149304</matchid>
+	<matchid awaygoals="0" estado="00" homegoals="0" minuto="0">241217175</matchid>
+	<matchid awaygoals="0" estado="00" homegoals="0" minuto="0">241229717</matchid>
+        <matchid awaygoals="0" estado="00" homegoals="0" minuto="0">241267296</matchid>
+        <matchid awaygoals="0" estado="00" homegoals="0" minuto="0">241313720</matchid>
+        <matchid awaygoals="0" estado="00" homegoals="0" minuto="0">241330130</matchid>
 </matchids>
