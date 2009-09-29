@@ -184,6 +184,30 @@ def inicializarXmlMatchIds(pathMatchids):
     #afichero(pathMatchids, doc.toxml())
     open(pathMatchids, 'w').write(doc.toxml())
 
+def calcularMinutoPartido(elempartido):
+    inicio = elempartido.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
+    print inicio
+    inicio = time.mktime(time.strptime(inicio, "%Y-%m-%d %H:%M:%S"))
+    inicio = datetime.datetime.fromtimestamp(inicio)
+    ahora = datetime.datetime.now()
+    # #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
+    ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
+    if ahora < inicio:
+        diferencia = 0
+    else:
+        diferencia = ahora-inicio
+        diferencia, segundos = divmod(diferencia.seconds, 60)
+        if (diferencia > 45):
+            if (diferencia > 60):
+                diferencia = diferencia - 15
+                if (diferencia > 90):
+                    diferencia = 90
+            else:
+                diferencia = 45
+    #minuto = str(diferencia)
+    minuto = diferencia
+    return minuto
+
 def carruselear():
     http = httplib2.Http()
     #variables globales
@@ -255,26 +279,7 @@ def carruselear():
                 awayteam = sustituyeNombre(awayteam)
 				
                 #calculo del minuto actual
-                inicio = m.getElementsByTagName('MatchDate')[0].firstChild.nodeValue
-                inicio = time.mktime(time.strptime(inicio, "%Y-%m-%d %H:%M:%S"))
-                inicio = datetime.datetime.fromtimestamp(inicio)
-                ahora = datetime.datetime.now()
-                # #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
-                ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
-                if ahora < inicio:
-                    diferencia = 0
-                else:
-                    diferencia = ahora-inicio
-                    diferencia, segundos = divmod(diferencia.seconds, 60)
-                    if (diferencia > 45):
-                        if (diferencia > 60):
-                            diferencia = diferencia - 15
-                            if (diferencia > 90):
-                                diferencia = 90
-                        else:
-                            diferencia = 45
-                #minuto = str(diferencia)
-                minuto = diferencia
+                minuto = calcularMinutoPartido(m)
 
                 print 'procesando %s [%s %s - %s %s (%d'')]' %(xmlMatchID, hometeam, homegoals, awaygoals, awayteam, minuto)
 
