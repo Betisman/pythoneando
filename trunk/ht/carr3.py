@@ -1,11 +1,9 @@
 # coding=ISO-8859-1
-from xml.dom.minidom import firstChild
 import sys
 import time
 
 import datetime
 import httplib2
-import urllib
 import xml.dom.minidom as minidom
 #httplib2.debuglevel = 1
 
