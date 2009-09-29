@@ -274,7 +274,8 @@ def carruselear():
                                 diferencia = 90
                         else:
                             diferencia = 45
-                minuto = str(diferencia)
+                #minuto = str(diferencia)
+                minuto = diferencia
 
                 #cambio de estado
                 doc = minidom.parse(pathMatchids)
