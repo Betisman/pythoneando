@@ -139,17 +139,17 @@ def sustituyeNombre(nombre):
     ret = nombre
     if nombre.find('Betisman') > -1:
         ret = 'RBB'
-    if nombre.find('ThePiso') > -1:
+    elif nombre.find('ThePiso') > -1:
         ret = 'ThP'
-    if nombre.find('erroloro') > -1:
+    elif nombre.find('erroloro') > -1:
         ret = 'Per'
-    if nombre.find('ukakke') > -1:
+    elif nombre.find('ukakke') > -1:
         ret = 'Buk'
-    if nombre.find('Basullo') > -1:
+    elif nombre.find('Basullo') > -1:
         ret = 'Bas'
-    if nombre.find('Jumfr') > -1:
+    elif nombre.find('Jumfr') > -1:
         ret = 'Jum'
-    if nombre.find('CONGRIO') > -1:
+    elif nombre.find('CONGRIO') > -1:
         ret = 'CON'
     else:
         ret = nombre[0]
@@ -172,6 +172,17 @@ def actualizaXmlMatchids(pathMatchids, matchid, homegoals, awaygoals, minuto, nu
     #afichero(pathMatchids, doc.toxml())
     open(pathMatchids, 'w').write(doc.toxml())
     print 'nuevo estado: ', nuevoEstado
+
+def inicializarXmlMatchIds(pathMatchids):
+    doc = minidom.parse(pathMatchids)
+    mts = doc.getElementsByTagName('matchid')
+    for elem in mts:
+        elem.setAttribute('homegoals', '0')
+        elem.setAttribute('awaygoals', '0')
+        elem.setAttribute('minuto', '0')
+        elem.setAttribute('estado', '00')
+    #afichero(pathMatchids, doc.toxml())
+    open(pathMatchids, 'w').write(doc.toxml())
 
 def carruselear():
     http = httplib2.Http()
@@ -350,7 +361,7 @@ def carruselear():
 
                 #strResultados = strResultados + hometeam + " " + homegoals + "-" + awaygoals + " " + awayteam + "(" + minuto + ")"
                 if agregarASms:
-                    strResultados = '%s %s %s-%s %s(%d)' %(strResultados, hometeam, homegoals, awaygoals, awayteam, minuto)
+                    strResultados = '%s%s %s-%s %s(%d);' %(strResultados, hometeam, homegoals, awaygoals, awayteam, minuto)
 
     except Exception, message:
         print 'Excepción tratando partidos\n', sys.exc_info()
