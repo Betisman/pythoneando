@@ -250,7 +250,6 @@ def carruselear():
                 awayteam = m.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
                 homegoals = m.getElementsByTagName('HomeGoals')[0].firstChild.nodeValue
                 awaygoals = m.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue
-                print 'procesando %s [%s %s - %s %s (%d'')]' %(xmlMatchID, hometeam, homegoals, awaygoals, awayteam, minuto)
 
                 hometeam = sustituyeNombre(hometeam)
                 awayteam = sustituyeNombre(awayteam)
@@ -276,6 +275,8 @@ def carruselear():
                             diferencia = 45
                 #minuto = str(diferencia)
                 minuto = diferencia
+
+                print 'procesando %s [%s %s - %s %s (%d'')]' %(xmlMatchID, hometeam, homegoals, awaygoals, awayteam, minuto)
 
                 #cambio de estado
                 doc = minidom.parse(pathMatchids)
