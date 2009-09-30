@@ -369,9 +369,11 @@ def carruselear():
 
     if enviar:
         print 'afichero 1'
-        afichero(pathEnviar, '1')
+        #afichero(pathEnviar, '1')
+        open('./xmls/enviar.txt', 'w').write('1')
         print open('./xmls/enviar.txt', 'r').read()
     else:
         print 'afichero 0'
-        afichero(pathEnviar, '0')
+        #afichero(pathEnviar, '0')
+        open('./xmls/enviar.txt', 'w').write('0')
         print open('./xmls/enviar.txt', 'r').read()
