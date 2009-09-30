@@ -7,7 +7,7 @@ def leerFichero(file):
 	return open(file, 'r').read()
 
 def enviar():
-    return bool(open('./xmls/enviar.txt', 'r').read())
+    return bool(int(open('./xmls/enviar.txt', 'r').read()))
 
 def lama():
     if sys.argv:
