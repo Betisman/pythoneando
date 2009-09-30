@@ -21,7 +21,7 @@ def lama():
             carr3.carruselear()
             msg = leerFichero('./xmls/carr.txt')
 
-            if enviar:
+            if enviar():
                 print 'enviamos sms'
                 mgc = gcalendar.MyGCalendar(gmailuser, gmailpwd)
                 mgc.login()
