@@ -368,8 +368,8 @@ def carruselear():
     afichero(unicode(strResultados), pathXmls+'carr.txt')
 
     if enviar:
-        afichero(pathEnviar, '1')
 		print 'afichero 1'
+        afichero(pathEnviar, '1')
     else:
-        afichero(pathEnviar, '0')
 		print 'afichero 0'
+        afichero(pathEnviar, '0')
