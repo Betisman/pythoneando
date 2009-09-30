@@ -22,9 +22,12 @@ def lama():
             msg = leerFichero('./xmls/carr.txt')
 
             if enviar:
+                print 'enviamos sms'
                 mgc = gcalendar.MyGCalendar(gmailuser, gmailpwd)
                 mgc.login()
                 mgc.enviarSms(msg)
+            else:
+                print 'no enviamos sms'
 
             open('./xmls/enviar.txt', 'w').write('0')
 	
