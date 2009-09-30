@@ -369,5 +369,7 @@ def carruselear():
 
     if enviar:
         afichero(pathEnviar, '1')
+		print 'afichero 1'
     else:
         afichero(pathEnviar, '0')
+		print 'afichero 0'
