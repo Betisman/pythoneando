@@ -30,7 +30,6 @@ def lama():
                         exit()
                     print 'enviamos sms'
                     mgc = gcalendar.MyGCalendar(gmailuser, gmailpwd)
-                    print 'gmailuser: %s, gmailpwd: %s' %(gmailuser, gmailpwd)
                     mgc.login()
                     mgc.enviarSms(msg)
             else:
