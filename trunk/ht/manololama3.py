@@ -2,6 +2,7 @@ import carr3
 import sendgmail
 import gcalendar #implica instalar la libreria gdata (de Google)!!!
 import sys
+import security
 
 def leerFichero(file):
 	return open(file, 'r').read()
@@ -14,19 +15,24 @@ def lama():
         if 'ini' in sys.argv:
             carr3.inicializarXmlMatchIds('./xmls/matchids3.xml')
         else:
-            gmailuser = 'betisman@gmail.com'
-            gmailpwd = 'logaritmo'
-            subject = 'Carrusel'
+            gmailusers = ['betisman@gmail.com', 'cbmdodo@gmail.com']
 
             carr3.carruselear()
             msg = leerFichero('./xmls/carr.txt')
 
             print 'lama', open('./xmls/enviar.txt', 'r').read(), enviar()
             if enviar():
-                print 'enviamos sms'
-                mgc = gcalendar.MyGCalendar(gmailuser, gmailpwd)
-                mgc.login()
-                mgc.enviarSms(msg)
+                for gmailuser in gmailusers:
+                    try:
+                        gmailpwd = security.getPassword(gmailuser)
+                    except KeyError:
+                        print 'El usuario %s no esta registrado.\n' %(gmailuser)
+                        exit()
+                    print 'enviamos sms'
+                    mgc = gcalendar.MyGCalendar(gmailuser, gmailpwd)
+                    print 'gmailuser: %s, gmailpwd: %s' %(gmailuser, gmailpwd)
+                    mgc.login()
+                    mgc.enviarSms(msg)
             else:
                 print 'no enviamos sms'
 
