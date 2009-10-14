@@ -151,6 +151,28 @@ def sustituyeNombre(nombre):
         ret = 'Jum'
     elif nombre.find('CONGRIO') > -1:
         ret = 'CON'
+	elif nombre.find('Espino') > -1:
+		ret = 'Esp'
+	elif nombre.find('Roscuro') > -1:
+		ret = 'Ros'
+	elif nombre.find('yogur') > -1:
+		ret = 'yog'
+	elif nombre.find('patxy') > -1:
+		ret = 'ptx'
+	elif nombre.find('Raul Gran Capitan') > -1:
+		ret = 'RGC'
+	elif nombre.find('milan chupao') > -1:
+		ret = 'mil'
+	elif nombre.find('Cordoba S.A.D') > -1:
+		ret = 'Cor'
+	elif nombre.find('A.D. Dimitri PITERMAN') > -1:
+		ret = 'ADP'
+	elif nombre.find('el uno y sus pipas FC') > -1:
+		ret = 'uno'
+	elif nombre.find('cocoloco') > -1:
+		ret = 'coc'
+	elif nombre.find('Real Servelete de Carfesan') > -1:
+		ret = 'RSC'
     else:
         ret = nombre[0]
     return ret
