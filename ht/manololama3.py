@@ -32,6 +32,11 @@ def lama():
                     mgc = gcalendar.MyGCalendar(gmailuser, gmailpwd)
                     mgc.login()
                     mgc.enviarSms(msg)
+
+                #twitter
+                import twitter
+                twitter.Api(username='m40htnews', password='conejote')
+                twitter.PostUpdate(msg)
             else:
                 print 'no enviamos sms'
 
