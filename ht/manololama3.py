@@ -35,8 +35,8 @@ def lama():
 
                 #twitter
                 import twitter
-                twitter.Api(username='m40htnews', password='casona')
-                twitter.PostUpdate(msg)
+                api = twitter.Api(username='m40htnews', password='casona')
+                status = api.PostUpdate(msg)
             else:
                 print 'no enviamos sms'
 
