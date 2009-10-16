@@ -119,9 +119,11 @@ for equipo in equipos:
 	team['id'] = equipo.getElementsByTagName('teamid')[0].firstChild.nodeValue
 	team['name'] = equipo.getElementsByTagName('nombre')[0].firstChild.nodeValue
 	team['liga'] = equipo.getElementsByTagName('liganombre')[0].firstChild.nodeValue
+        team['ligaID'] = equipo.getElementsByTagName('ligaid')[0].firstChild.nodeValue
 	teams.append(team)
 
 teams = ordenarEquiposPorLiga(teams)
+
 
 for team in teams:
 	partido = {}
@@ -153,7 +155,7 @@ for team in teams:
                 partido['homeID'] = asciizacion(ultPartidoLiga.getElementsByTagName('HomeTeamID')[0].firstChild.nodeValue)
                 partido['awayID'] = asciizacion(ultPartidoLiga.getElementsByTagName('AwayTeamID')[0].firstChild.nodeValue)
 		partido['liga'] = team['liga']
-                partido['ligaID'] = asciizacion(ultPartidoLiga.getElementsByTagName('LeagueID')[0].firstChild.nodeValue)
+                partido['ligaID'] = team['ligaID']
 		partido['hora'] = (ultPartidoLiga.getElementsByTagName('MatchDate')[0].firstChild.nodeValue).split(' ')[1][:5]
                 posiciones = getPosLiga([partido['homeID'], partido['awayID']], partido['ligaID'], headers)
                 partido['posHome'] = posiciones[0]
