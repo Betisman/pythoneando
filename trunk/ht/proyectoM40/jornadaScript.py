@@ -35,8 +35,8 @@ def strArrayEquipos(array):
     ret = ''
     for eq in array:
         ret = '%s %s,' %(ret, eq)
-    if ret[:-2] == ',':
-        ret = ret[:-2]
+    if ret[-1:] == ',':
+        ret = ret[:-1]
     return ret
 
 def crearFicheroResultados(path, matches):
@@ -68,7 +68,7 @@ def crearFicheroResultados(path, matches):
 
     cadena = cadena + '\n%d jugados: %d ganados, %d empatados, %d perdidos.' % (len(matches), res['g'], res['e'], res['p'])
     cadena = '%s\n%d equipos en ascenso: %s' % (cadena, len(arrAscenso), strArrayEquipos(arrAscenso))
-    cadena = '%s\n %d equipos en descenso: %s' % (cadena, len(arrDescenso), strArrayEquipos(arrDescenso))
+    cadena = '%s\n%d equipos en descenso: %s' % (cadena, len(arrDescenso), strArrayEquipos(arrDescenso))
     print asciizacion(cadena)
     afichero(cadena, path)
 
