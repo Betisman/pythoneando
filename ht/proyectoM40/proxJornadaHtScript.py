@@ -67,6 +67,7 @@ def getPosLiga(ids, ligaid, headers):
     for id in ids:
         url = recServer + '/Common/chppxml.axd?file=leagueDetails&leagueLevelUnitID=%s' % (ligaid)
         response, content = http.request(url, 'GET', headers=headers)
+        afichero(content, 'misc/ligaht.xml')
         doc = minidom.parseString(content)
         equipos = doc.getElementsByTagName('Team')
         for eq in equipos:
