@@ -27,7 +27,7 @@ def enAscenso(liga, posLiga):
 
 def enDescenso(liga, posLiga):
     division = fromRoman(liga.split('.')[0])
-    if posLiga == "6" or posLiga == "7":
+    if posLiga == "7" or posLiga == "8":
         return True
     return False
 
@@ -36,7 +36,7 @@ def strArrayEquipos(array):
     for eq in array:
         ret = '%s %s,' %(ret, eq)
     if ret[:-1] == ',':
-        ret = ret[:-1]
+        ret = ret[:-2]
     return ret
 
 def crearFicheroResultados(path, matches):
