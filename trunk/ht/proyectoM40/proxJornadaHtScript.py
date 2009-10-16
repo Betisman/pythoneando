@@ -73,7 +73,7 @@ def getPosLiga(ids, ligaid, headers):
         for eq in equipos:
                 eqid = eq.getElementsByTagName('TeamID')[0].firstChild.nodeValue
                 if eqid == id:
-                        ret.push(eq.getElementsByTagName('Position')[0].firstChild.nodeValue)
+                        ret.append(eq.getElementsByTagName('Position')[0].firstChild.nodeValue)
     return ret
 
 def ordenarEquiposPorLiga(teams):
