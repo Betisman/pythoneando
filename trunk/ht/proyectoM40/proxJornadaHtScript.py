@@ -26,6 +26,7 @@ def crearFicheroResultados(path, matches):
 		pstring += partido['matchid'] + " "
 		pstring += partido['hora'] + " "
 		pstring += liga + "\t"
+                pstring += '(' + partido['posHome'] + ' vs ' + partido['awayHome'] + ')\t'
 		pstring += partido['matchhomename']
 		pstring += " - "
 		pstring += partido['matchawayname'] + "\n"
@@ -60,6 +61,19 @@ def asciizacion(cadena):
 			for c in charsmalos:
 				cadena = cadena.replace(c, '?')
 	return cadena
+
+def getPosLiga(ids, ligaid, headers):
+    ret = []
+    for id in ids:
+        url = recServer + '/Common/chppxml.axd?file=leagueDetails&leagueLevelUnitID=%s' % (ligaid)
+        response, content = http.request(url, 'GET', headers=headers)
+        doc = minidom.parseString(content)
+        equipos = doc.getElementsByTagName('Team')
+        for eq in equipos:
+                eqid = eq.getElementsByTagName('TeamID')[0].firstChild.nodeValue
+                if eqid == id:
+                        ret.push(eq.getElementsByTagName('Position')[0].firstChild.nodeValue)
+    return ret
 
 def ordenarEquiposPorLiga(teams):
 	aux = {}
@@ -135,8 +149,14 @@ for team in teams:
 		partido['matchid'] = ultPartidoLiga.getElementsByTagName('MatchID')[0].firstChild.nodeValue
 		partido['matchhomename'] = asciizacion(ultPartidoLiga.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue)
 		partido['matchawayname'] = asciizacion(ultPartidoLiga.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue)
+                partido['homeID'] = asciizacion(ultPartidoLiga.getElementsByTagName('HomeTeamID')[0].firstChild.nodeValue)
+                partido['awayID'] = asciizacion(ultPartidoLiga.getElementsByTagName('AwayTeamID')[0].firstChild.nodeValue)
 		partido['liga'] = team['liga']
+                partido['ligaID'] = asciizacion(ultPartidoLiga.getElementsByTagName('LeagueID')[0].firstChild.nodeValue)
 		partido['hora'] = (ultPartidoLiga.getElementsByTagName('MatchDate')[0].firstChild.nodeValue).split(' ')[1][:5]
+                posiciones = getPosLiga([partido['homeID'], partido['awayID']], partido['ligaID'], headers)
+                partido['posHome'] = posiciones[0]
+                partido['posAway'] = posiciones[1]
 		#carita
 		matches.append(partido)
 	except Exception, msg:
