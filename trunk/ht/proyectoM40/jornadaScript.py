@@ -62,9 +62,9 @@ def crearFicheroResultados(path, matches):
             res['e'] = res['e'] + 1
 
         if enAscenso(partido['liga'], partido['posLiga']):
-            arrAscenso.append(partido['siglas'])
+            arrAscenso.append(partido['siglasEquipo'])
         if enDescenso(partido['liga'], partido['posLiga']):
-            arrDescenso.append(partido['siglas'])
+            arrDescenso.append(partido['siglasEquipo'])
 
     cadena = cadena + '\n%d jugados: %d ganados, %d empatados, %d perdidos\n' % (len(matches), res['g'], res['e'], res['p'])
     cadena = '%s\n%d equipos en ascenso: %s' % (cadena, len(arrAscenso), strArrayEquipos(arrAscenso))
