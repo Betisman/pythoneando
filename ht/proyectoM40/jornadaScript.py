@@ -14,28 +14,62 @@ def afichero(content, fichero):
 	f.close()
 	return 'Generado fichero ' + fichero
 
+def enAscenso(liga, posLiga):
+    division = fromRoman(liga.split('.')[0])
+    if posLiga == "1":
+        return True
+    elif posLiga == "2":
+        if division % 2 == 0:
+            return False
+        else return True
+    return False
+
+def enDescenso(liga, posLiga):
+    division = fromRoman(liga.split('.')[0])
+    if posLiga == "6" or posLiga == "7":
+        return True
+    return False
+
+def strArrayEquipos(array):
+    ret = ''
+    for eq in array:
+        ret = '%s %s,' %(ret, eq)
+    if ret[:-1] == ',':
+        ret = ret[:-1]
+    return ret
+
 def crearFicheroResultados(path, matches):
-	cadena = ''
-	res = {'g':0, 'e':0, 'p':0}
-	for partido in matches:
-		liga = "(" + partido['liga'] + ")"
-		if len(liga) < 11:
-			dif = 11 - len(liga)
-			liga = liga + ' '*dif
-		cadena = cadena + partido['carita'] + " "
-		cadena = cadena + liga + "\t" + "[" + partido['posLiga'] + ".]" + "\t"
-		cadena = cadena + partido['matchhomename'] + " " + partido['homegoals']
-		cadena = cadena + " - "
-		cadena = cadena + partido['awaygoals'] + " " +partido['matchawayname'] + "\n"
-		if partido['carita'].endswith(')'):
-			res['g'] = res['g'] + 1
-		elif partido['carita'].endswith('('):
-			res['p'] = res['p'] + 1
-		else:
-			res['e'] = res['e'] + 1
-	cadena = cadena + '\n%d jugados: %d ganados, %d empatados, %d perdidos\n' % (len(matches), res['g'], res['e'], res['p'])
-	print asciizacion(cadena)
-	afichero(cadena, path)
+    arrAscenso = []
+    arrDescenso = []
+    cadena = ''
+    res = {'g':0, 'e':0, 'p':0}
+    for partido in matches:
+        liga = "(" + partido['liga'] + ")"
+        if len(liga) < 11:
+            dif = 11 - len(liga)
+            liga = liga + ' ' * dif
+        cadena = cadena + partido['carita'] + " "
+        cadena = cadena + liga + "\t" + "[" + partido['posLiga'] + ".]" + "\t"
+        cadena = cadena + partido['matchhomename'] + " " + partido['homegoals']
+        cadena = cadena + " - "
+        cadena = cadena + partido['awaygoals'] + " " + partido['matchawayname'] + "\n"
+        if partido['carita'].endswith(')'):
+            res['g'] = res['g'] + 1
+        elif partido['carita'].endswith('('):
+            res['p'] = res['p'] + 1
+        else:
+            res['e'] = res['e'] + 1
+
+        if enAscenso(partido['liga'], partido['posLiga']):
+            arrAscenso.push(partido['siglas'])
+        if enDescenso(partido['liga'], partido['posLiga']):
+            arrDescenso.push(partido['siglas'])
+
+    cadena = cadena + '\n%d jugados: %d ganados, %d empatados, %d perdidos\n' % (len(matches), res['g'], res['e'], res['p'])
+    cadena = '%s\n%d equipos en ascenso: %s' % (cadena, len(arrAscenso), strArrayEquipos(arrAscenso))
+    cadena = '%s\n %d equipos en descenso: %s' % (cadena, len(arrDescenso), strArrayEquipos(arrDescenso))
+    print asciizacion(cadena)
+    afichero(cadena, path)
 
 def asciizacion(cadena):
 	#primero limpiamos las tildes
@@ -94,6 +128,48 @@ def getPosLiga(equipoid, ligaid, headers):
 			pos = eq.getElementsByTagName('Position')[0].firstChild.nodeValue
 			return pos
 	return '-1'
+
+def sustituyeNombre(nombre):
+    ret = nombre
+    if nombre.find('Betisman') > -1:
+        ret = 'RBB'
+    elif nombre.find('ThePiso') > -1:
+        ret = 'ThP'
+    elif nombre.find('erroloro') > -1:
+        ret = 'Per'
+    elif nombre.find('ukakke') > -1:
+        ret = 'Buk'
+    elif nombre.find('Basullo') > -1:
+        ret = 'Bas'
+    elif nombre.find('Jumfr') > -1:
+        ret = 'Jum'
+    elif nombre.find('CONGRIO') > -1:
+        ret = 'CON'
+    elif nombre.find('Espino') > -1:
+            ret = 'Esp'
+    elif nombre.find('Roscuro') > -1:
+            ret = 'Ros'
+    elif nombre.find('yogur') > -1:
+            ret = 'yog'
+    elif nombre.find('patxy') > -1:
+            ret = 'ptx'
+    elif nombre.find('Raul Gran Capitan') > -1:
+            ret = 'RGC'
+    elif nombre.find('milan chupao') > -1:
+            ret = 'mil'
+    elif nombre.find('Cordoba S.A.D') > -1:
+            ret = 'Cor'
+    elif nombre.find('A.D. Dimitri PITERMAN') > -1:
+            ret = 'ADP'
+    elif nombre.find('el uno y sus pipas FC') > -1:
+            ret = 'uno'
+    elif nombre.find('cocoloco') > -1:
+            ret = 'coc'
+    elif nombre.find('Real Servelete de Carfesan') > -1:
+            ret = 'RSC'
+    else:
+        ret = nombre[0]
+    return ret
 	
 config = Config.Config()
 #conectamos con Hattrick y nos logueamos
@@ -122,6 +198,7 @@ for equipo in equipos:
 	team['liga'] = equipo.getElementsByTagName('liganombre')[0].firstChild.nodeValue
 	team['ligaID'] = equipo.getElementsByTagName('ligaid')[0].firstChild.nodeValue
 	team['posLiga'] = getPosLiga(team['id'], team['ligaID'], headers)
+        team['siglas'] = sustituyeNombre(team['name'])
 	teams.append(team)
 
 teams = ordenarEquiposPorLiga(teams)
@@ -164,6 +241,7 @@ for team in teams:
 		partido['awaygoals'] = asciizacion(ultPartidoLiga.getElementsByTagName('AwayGoals')[0].firstChild.nodeValue)
 		partido['liga'] = team['liga']
 		partido['posLiga'] = team['posLiga']
+                partido['siglasEquipo'] = team['siglas']
 		#carita
 		carita = ''
 		if int(partido['homegoals']) == int(partido['awaygoals']):
