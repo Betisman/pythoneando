@@ -35,7 +35,7 @@ def strArrayEquipos(array):
     ret = ''
     for eq in array:
         ret = '%s %s,' %(ret, eq)
-    if ret[:-1] == ',':
+    if ret[:-2] == ',':
         ret = ret[:-2]
     return ret
 
@@ -66,7 +66,7 @@ def crearFicheroResultados(path, matches):
         if enDescenso(partido['liga'], partido['posLiga']):
             arrDescenso.append(partido['siglasEquipo'])
 
-    cadena = cadena + '\n%d jugados: %d ganados, %d empatados, %d perdidos\n' % (len(matches), res['g'], res['e'], res['p'])
+    cadena = cadena + '\n%d jugados: %d ganados, %d empatados, %d perdidos.' % (len(matches), res['g'], res['e'], res['p'])
     cadena = '%s\n%d equipos en ascenso: %s' % (cadena, len(arrAscenso), strArrayEquipos(arrAscenso))
     cadena = '%s\n %d equipos en descenso: %s' % (cadena, len(arrDescenso), strArrayEquipos(arrDescenso))
     print asciizacion(cadena)
