@@ -21,7 +21,8 @@ def enAscenso(liga, posLiga):
     elif posLiga == "2":
         if division % 2 == 0:
             return False
-        else return True
+        else:
+            return True
     return False
 
 def enDescenso(liga, posLiga):
