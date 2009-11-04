@@ -165,7 +165,7 @@ class CarruselHandler:
 					# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
                                         #ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
                                         # EN INVIERNO (O POR LO MENOS HOY, 28.10.2009) SON 7 HORAS DE DIFERENCIA!!!
-                                        ahora = datetime.datetime.now() + datetime.timedelta(hours=7)
+                                        ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
 					# ##############################################
 					if ahora < inicio:
 						diferencia = 0
