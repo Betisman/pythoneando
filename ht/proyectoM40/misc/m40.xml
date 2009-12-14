@@ -28,7 +28,7 @@
 				<liganombre>VI.143</liganombre>
 			</liga>
 		</equipo>
-		<!--<equipo id="830339">
+		<equipo id="830339">
 			<nombre>Dogt</nombre>
 			<teamid>830339</teamid>
 			<nombrecorto>Dogt</nombrecorto>
@@ -41,7 +41,7 @@
 				<ligaid>151162</ligaid>
 				<liganombre>VIII.1267</liganombre>
 			</liga>
-		</equipo>-->
+		</equipo>
 		<!--<equipo id="1369963">
 			<nombre>Hapiio FC</nombre>
 			<teamid>1369963</teamid>
