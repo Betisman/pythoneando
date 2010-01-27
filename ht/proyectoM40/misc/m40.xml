@@ -235,7 +235,7 @@
 				<liganombre>VIII.610</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="1332838">
+		<!--<equipo id="1332838">
 			<nombre>El yogur mecanico</nombre>
 			<teamid>1332838</teamid>
 			<nombrecorto>mecanico</nombrecorto>
@@ -248,8 +248,8 @@
 				<ligaid>181891</ligaid>
 				<liganombre>X.3324</liganombre>
 			</liga>
-		</equipo>
-		<equipo id="489609">
+		</equipo>-->
+		<!--<equipo id="489609">
 			<nombre>el uno y sus pipas FC</nombre>
 			<teamid>489609</teamid>
 			<nombrecorto>pipas</nombrecorto>
@@ -262,7 +262,7 @@
 				<ligaid>181891</ligaid>
 				<liganombre>X.3324</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 		<equipo id="1367075">
 			<nombre>Roscuro Team</nombre>
 			<teamid>1367075</teamid>
@@ -319,9 +319,23 @@
 				<liganombre>VIII.202</liganombre>
 			</liga>
 		</equipo>
-                <equipo id="311977">
+        <equipo id="311977">
 			<nombre>cocoloco`s</nombre>
 			<teamid>311977</teamid>
+			<nombrecorto>cocoloco`s</nombrecorto>
+			<micronombre>coc</micronombre>
+			<estadio id="311977">
+				<estadioid>311977</estadioid>
+				<estadionombre>Vicente Calderon</estadionombre>
+			</estadio>
+			<liga id="54774">
+				<ligaid>54774</ligaid>
+				<liganombre>VIII.973</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="800043">
+			<nombre>cocoloco`s</nombre>
+			<teamid>800043</teamid>
 			<nombrecorto>cocoloco`s</nombrecorto>
 			<micronombre>coc</micronombre>
 			<estadio id="311977">
