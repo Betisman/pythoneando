@@ -37,9 +37,9 @@
 				<estadioid>833777</estadioid>
 				<estadionombre>Entras y no salis</estadionombre>
 			</estadio>
-			<liga id="151162">
-				<ligaid>151162</ligaid>
-				<liganombre>VIII.1267</liganombre>
+			<liga id="40638">
+				<ligaid>40638</ligaid>
+				<liganombre>VII.554</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="1369963">
@@ -78,9 +78,9 @@
 				<estadioid>48756</estadioid>
 				<estadionombre>Jumfry Bogart</estadionombre>
 			</estadio>
-			<liga id="179470">
-				<ligaid>179470</ligaid>
-				<liganombre>VIII.1927</liganombre>
+			<liga id="38458">
+				<ligaid>38458</ligaid>
+				<liganombre>VII.422</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1458361">
@@ -160,9 +160,9 @@
 				<estadioid>984920</estadioid>
 				<estadionombre>Pucela arena</estadionombre>
 			</estadio>
-			<liga id="178599">
-				<ligaid>178599</ligaid>
-				<liganombre>VIII.1056</liganombre>
+			<liga id="38274">
+				<ligaid>38274</ligaid>
+				<liganombre>VII.238</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1462225">
@@ -202,9 +202,9 @@
 				<estadioid>1433527</estadioid>
 				<estadionombre>CANTARRANAS Arena</estadionombre>
 			</estadio>
-			<liga id="170513">
-				<ligaid>170513</ligaid>
-				<liganombre>X.2186</liganombre>
+			<liga id="60619">
+				<ligaid>60619</ligaid>
+				<liganombre>IX.348</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="799149">
@@ -216,9 +216,9 @@
 				<estadioid>802587</estadioid>
 				<estadionombre>san chino</estadionombre>
 			</estadio>
-			<liga id="61096">
-				<ligaid>61096</ligaid>
-				<liganombre>IX.825</liganombre>
+			<liga id="179060">
+				<ligaid>179060</ligaid>
+				<liganombre>VIII.1517</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="989753">
@@ -230,9 +230,9 @@
 				<estadioid>986315</estadioid>
 				<estadionombre>Estadio Cocomo</estadionombre>
 			</estadio>
-			<liga id="54411">
-				<ligaid>54411</ligaid>
-				<liganombre>VIII.610</liganombre>
+			<liga id="38471">
+				<ligaid>38471</ligaid>
+				<liganombre>VII.435</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="1332838">
@@ -272,9 +272,9 @@
 				<estadioid>1363637</estadioid>
 				<estadionombre>Fuensanta Estadio</estadionombre>
 			</estadio>
-			<liga id="98970">
-				<ligaid>98970</ligaid>
-				<liganombre>XI.115</liganombre>
+			<liga id="182053">
+				<ligaid>182053</ligaid>
+				<liganombre>X.3486</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="771867">
@@ -286,9 +286,9 @@
 				<estadioid>775305</estadioid>
 				<estadionombre>El Fontanar</estadionombre>
 			</estadio>
-			<liga id="97086">
-				<ligaid>97086</ligaid>
-				<liganombre>X.1003</liganombre>
+			<liga id="177146">
+				<ligaid>177146</ligaid>
+				<liganombre>IX.1651</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="800755">
@@ -334,31 +334,31 @@
 			</liga>
 		</equipo>-->
 		<equipo id="800043">
-			<nombre>cocoloco`s</nombre>
+			<nombre>C.C.F Team</nombre>
 			<teamid>800043</teamid>
-			<nombrecorto>cocoloco`s</nombrecorto>
+			<nombrecorto>C.C.F</nombrecorto>
 			<micronombre>coc</micronombre>
-			<estadio id="311977">
-				<estadioid>311977</estadioid>
-				<estadionombre>Vicente Calderon</estadionombre>
+			<estadio id="803481">
+				<estadioid>803481</estadioid>
+				<estadionombre>C.C.F Arena</estadionombre>
 			</estadio>
-			<liga id="54774">
-				<ligaid>54774</ligaid>
-				<liganombre>VIII.973</liganombre>
+			<liga id="170753">
+				<ligaid>170753</ligaid>
+				<liganombre>X.2426</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="777114">
-			<nombre>cocoloco`s</nombre>
+			<nombre>sisaponova</nombre>
 			<teamid>777114</teamid>
-			<nombrecorto>cocoloco`s</nombrecorto>
+			<nombrecorto>sisaponova</nombrecorto>
 			<micronombre>coc</micronombre>
-			<estadio id="311977">
-				<estadioid>311977</estadioid>
-				<estadionombre>Vicente Calderon</estadionombre>
+			<estadio id="780552">
+				<estadioid>780552</estadioid>
+				<estadionombre>rorricorrico</estadionombre>
 			</estadio>
-			<liga id="54774">
-				<ligaid>54774</ligaid>
-				<liganombre>VIII.973</liganombre>
+			<liga id="197890">
+				<ligaid>197890</ligaid>
+				<liganombre>XI.1900</liganombre>
 			</liga>
 		</equipo>
 	</equipos>
