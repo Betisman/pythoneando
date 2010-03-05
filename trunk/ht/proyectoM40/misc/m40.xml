@@ -319,7 +319,7 @@
 				<liganombre>VIII.202</liganombre>
 			</liga>
 		</equipo>
-        <equipo id="311977">
+        <!--<equipo id="311977">
 			<nombre>cocoloco`s</nombre>
 			<teamid>311977</teamid>
 			<nombrecorto>cocoloco`s</nombrecorto>
@@ -332,10 +332,24 @@
 				<ligaid>54774</ligaid>
 				<liganombre>VIII.973</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 		<equipo id="800043">
 			<nombre>cocoloco`s</nombre>
 			<teamid>800043</teamid>
+			<nombrecorto>cocoloco`s</nombrecorto>
+			<micronombre>coc</micronombre>
+			<estadio id="311977">
+				<estadioid>311977</estadioid>
+				<estadionombre>Vicente Calderon</estadionombre>
+			</estadio>
+			<liga id="54774">
+				<ligaid>54774</ligaid>
+				<liganombre>VIII.973</liganombre>
+			</liga>
+		</equipo>
+		<equipo id="777114">
+			<nombre>cocoloco`s</nombre>
+			<teamid>777114</teamid>
 			<nombrecorto>cocoloco`s</nombrecorto>
 			<micronombre>coc</micronombre>
 			<estadio id="311977">
