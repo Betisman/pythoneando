@@ -169,7 +169,7 @@ def sustituyeNombre(nombre):
     elif nombre.find('Dogt') > -1:
             ret = 'Dog'
     elif nombre.find('sisaponova') > -1:
-            ret = 'sis'C.C.F Team 
+            ret = 'sis' 
 	elif nombre.find('C.C.F Team') > -1:
             ret = 'CCF'
 	elif nombre.find('Real Servelete de Carfesan') > -1:
