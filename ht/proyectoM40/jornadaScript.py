@@ -170,14 +170,14 @@ def sustituyeNombre(nombre):
             ret = 'Dog'
     elif nombre.find('sisaponova') > -1:
             ret = 'sis' 
-	elif nombre.find('C.C.F Team') > -1:
+    elif nombre.find('C.C.F Team') > -1:
             ret = 'CCF'
-	elif nombre.find('Real Servelete de Carfesan') > -1:
+    elif nombre.find('Real Servelete de Carfesan') > -1:
             ret = 'RSC'
-	else:
+    else:
         ret = nombre[0]
     return ret
-	
+
 config = Config.Config()
 #conectamos con Hattrick y nos logueamos
 htconn = HTconnection.HtConnManager()
