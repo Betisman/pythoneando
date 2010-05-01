@@ -166,9 +166,15 @@ def sustituyeNombre(nombre):
             ret = 'uno'
     elif nombre.find('cocoloco') > -1:
             ret = 'coc'
-    elif nombre.find('Real Servelete de Carfesan') > -1:
+    elif nombre.find('Dogt') > -1:
+            ret = 'Dog'
+    elif nombre.find('sisaponova') > -1:
+            ret = 'sis'C.C.F Team 
+	elif nombre.find('C.C.F Team') > -1:
+            ret = 'CCF'
+	elif nombre.find('Real Servelete de Carfesan') > -1:
             ret = 'RSC'
-    else:
+	else:
         ret = nombre[0]
     return ret
 	
