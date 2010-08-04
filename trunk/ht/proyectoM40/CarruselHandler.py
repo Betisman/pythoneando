@@ -115,9 +115,10 @@ class CarruselHandler:
 			
 			doc = minidom.parseString(content)
 			matches = doc.getElementsByTagName('Match')
-			print matches, "partidos recuperados de live.xml"
+			print len(matches), "partidos recuperados de live.xml"
 			for m in matches:
 				xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
+				print "procesamos el partido", xmlMatchID
 				if xmlMatchID in matchids:
 					hometeam = m.getElementsByTagName('HomeTeamName')[0].firstChild.nodeValue
 					awayteam = m.getElementsByTagName('AwayTeamName')[0].firstChild.nodeValue
