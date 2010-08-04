@@ -102,7 +102,7 @@ class CarruselHandler:
 			open('misc/live.xml', "w").write(content)
 			doc = minidom.parseString(content)
 			matches = doc.getElementsByTagName('Match')
-			print "el fichero live.xml tiene", matches, "partidos"
+			print "el fichero live.xml tiene", len(matches), "partidos"
 			
 			print "Vamos a añadir", len(matchids), "partidos"
 			for matchid in matchids:
@@ -198,11 +198,11 @@ class CarruselHandler:
 						# ch.actualizarClasifPartido(partido)
 						
 					#quitamos el partido del htlive
-					url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + matchid
+					url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + xmlMatchID
 					response, content = self.http.request(url, 'GET', headers=self.headers)
 					doc = minidom.parseString(content)
 					matches = doc.getElementsByTagName('Match')
-					print "procesado y borrado el partido", matchid
+					print "procesado y borrado el partido", xmlMatchID
 					print "Quedan", len(matches), "en live.xml"
 			#url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
 			#response, content = http.request(url, 'GET', headers=headers)
