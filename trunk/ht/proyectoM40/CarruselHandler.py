@@ -68,7 +68,7 @@ class CarruselHandler:
 		
 		strClasif = ""
 
-		matchids = self.getMatches(pathMatchids);
+		matchids = self.getMatches(pathMatchids)
 		print str(len(matchids)) + ' partidos'
 		#MOLINORR
 		# marcador  = minidom.Document()
@@ -104,8 +104,10 @@ class CarruselHandler:
 			matches = doc.getElementsByTagName('Match')
 			
 			for matchid in matchids:
+				print "añadiendo partido", matchid
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
 				response, content = self.http.request(url, 'GET', headers=self.headers)
+				print "añadido partido", matchid
 			
 			url = recServer + '/Common/chppxml.axd?file=live'
 			response, content = self.http.request(url, 'GET', headers=self.headers)
@@ -113,6 +115,7 @@ class CarruselHandler:
 			
 			doc = minidom.parseString(content)
 			matches = doc.getElementsByTagName('Match')
+			print "%s partidos recuperados de live.xml", %(matches)
 			for m in matches:
 				xmlMatchID = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
 				if xmlMatchID in matchids:
