@@ -102,7 +102,9 @@ class CarruselHandler:
 			open('misc/live.xml', "w").write(content)
 			doc = minidom.parseString(content)
 			matches = doc.getElementsByTagName('Match')
+			print "el fichero live.xml tiene", matches, "partidos"
 			
+			print "Vamos a añadir", len(matchids), "partidos"
 			for matchid in matchids:
 				print "añadiendo partido", matchid
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=addMatch&matchid=' + matchid
