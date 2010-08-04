@@ -97,6 +97,7 @@ class CarruselHandler:
 				matchidsborrar.append(id_borrar)
 				url = recServer + '/Common/chppxml.axd?file=live&actionType=deleteMatch&matchid=' + id_borrar
 				response, content = self.http.request(url, 'GET', headers=self.headers)
+				print "borrado el partido", id_borrar
 			
 			url = recServer + '/Common/chppxml.axd?file=live'
 			response, content = self.http.request(url, 'GET', headers=self.headers)
