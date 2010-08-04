@@ -91,6 +91,7 @@ class CarruselHandler:
 			#recuperamos el fichero y sacamos los ids de todos los partidos que se encuentran en el
 			matches = doc.getElementsByTagName('Match')
 			matchidsborrar = []
+			print "el fichero live.xml tiene", len(matches), "partidos antes de ponerme a borrarlos"
 			for m in matches:
 				id_borrar = m.getElementsByTagName('MatchID')[0].firstChild.nodeValue
 				matchidsborrar.append(id_borrar)
