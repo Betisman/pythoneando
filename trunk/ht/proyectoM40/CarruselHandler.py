@@ -202,10 +202,12 @@ class CarruselHandler:
 					response, content = self.http.request(url, 'GET', headers=self.headers)
 					doc = minidom.parseString(content)
 					matches = doc.getElementsByTagName('Match')
-			url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
-			response, content = http.request(url, 'GET', headers=headers)
-			doc = minidom.parseString(content)
-			matches = doc.getElementsByTagName('Match')
+					print "procesado y borrado el partido", matchid
+					print "Quedan", len(matches), "en live.xml"
+			#url = recServer + '/Common/chppxml.axd?file=live&actionType=clearAll&version=1.4'
+			#response, content = http.request(url, 'GET', headers=headers)
+			#doc = minidom.parseString(content)
+			#matches = doc.getElementsByTagName('Match')
 		except Exception, message:
 			traceback.print_exc()
 			#print 'No se ha podido tratar el partido', matchid, '\n', sys.exc_info()
