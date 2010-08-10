@@ -9,9 +9,9 @@
 				<estadioid>1365717</estadioid>
 				<estadionombre>Coliseo Alejandro Casona</estadionombre>
 			</estadio>
-			<liga id="38591">
-				<ligaid>38591</ligaid>
-				<liganombre>VII.555</liganombre>
+			<liga id="14945">
+				<ligaid>14945</ligaid>
+				<liganombre>VI.627</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="487829">
@@ -37,9 +37,9 @@
 				<estadioid>833777</estadioid>
 				<estadionombre>Entras y no salis</estadionombre>
 			</estadio>
-			<liga id="40638">
-				<ligaid>40638</ligaid>
-				<liganombre>VII.554</liganombre>
+			<liga id="26348">
+				<ligaid>26348</ligaid>
+				<liganombre>VI.36</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="1369963">
@@ -78,9 +78,9 @@
 				<estadioid>48756</estadioid>
 				<estadionombre>Jumfry Bogart</estadionombre>
 			</estadio>
-			<liga id="38458">
-				<ligaid>38458</ligaid>
-				<liganombre>VII.422</liganombre>
+			<liga id="39060">
+				<ligaid>39060</ligaid>
+				<liganombre>VII.1024</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1458361">
@@ -92,9 +92,9 @@
 				<estadioid>1454923</estadioid>
 				<estadionombre>Nuevo Vallehermoso</estadionombre>
 			</estadio>
-			<liga id="179564">
-				<ligaid>179564</ligaid>
-				<liganombre>VIII.2021</liganombre>
+			<liga id="61055">
+				<ligaid>61055</ligaid>
+				<liganombre>IX.784</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="492014">
@@ -106,9 +106,9 @@
 				<estadioid>492014</estadioid>
 				<estadionombre>Monumental Pucelano</estadionombre>
 			</estadio>
-			<liga id="38367">
-				<ligaid>38367</ligaid>
-				<liganombre>VII.331</liganombre>
+			<liga id="38768">
+				<ligaid>38768</ligaid>
+				<liganombre>VII.732</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="779367">
@@ -160,9 +160,9 @@
 				<estadioid>984920</estadioid>
 				<estadionombre>Pucela arena</estadionombre>
 			</estadio>
-			<liga id="38274">
-				<ligaid>38274</ligaid>
-				<liganombre>VII.238</liganombre>
+			<liga id="14534">
+				<ligaid>14534</ligaid>
+				<liganombre>VI.216</liganombre>
 			</liga>
 		</equipo>
 		<equipo id="1462225">
@@ -202,25 +202,25 @@
 				<estadioid>1433527</estadioid>
 				<estadionombre>CANTARRANAS Arena</estadionombre>
 			</estadio>
-			<liga id="60619">
-				<ligaid>60619</ligaid>
-				<liganombre>IX.348</liganombre>
+			<liga id="54441">
+				<ligaid>54441</ligaid>
+				<liganombre>VIII.640</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="799149">
-			<nombre>milan chupao</nombre>
+		<!--<equipo id="799149">
+			<nombre>morenoteams</nombre>
 			<teamid>799149</teamid>
-			<nombrecorto>chupao</nombrecorto>
+			<nombrecorto>morenoteams</nombrecorto>
 			<micronombre>mil</micronombre>
 			<estadio id="802587">
 				<estadioid>802587</estadioid>
-				<estadionombre>san chino</estadionombre>
+				<estadionombre>moreno arena</estadionombre>
 			</estadio>
-			<liga id="179060">
-				<ligaid>179060</ligaid>
-				<liganombre>VIII.1517</liganombre>
+			<liga id="166720">
+				<ligaid>166720</ligaid>
+				<liganombre>X.1465</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 		<equipo id="989753">
 			<nombre>CONGRIO F.C.</nombre>
 			<teamid>989753</teamid>
@@ -230,9 +230,9 @@
 				<estadioid>986315</estadioid>
 				<estadionombre>Estadio Cocomo</estadionombre>
 			</estadio>
-			<liga id="38471">
-				<ligaid>38471</ligaid>
-				<liganombre>VII.435</liganombre>
+			<liga id="60761">
+				<ligaid>60761</ligaid>
+				<liganombre>IX.490</liganombre>
 			</liga>
 		</equipo>
 		<!--<equipo id="1332838">
@@ -314,9 +314,9 @@
 				<estadioid>1361468</estadioid>
 				<estadionombre>Ribera del Tajo</estadionombre>
 			</estadio>
-			<liga id="54003">
-				<ligaid>54003</ligaid>
-				<liganombre>VIII.202</liganombre>
+			<liga id="60733">
+				<ligaid>60733</ligaid>
+				<liganombre>IX.462</liganombre>
 			</liga>
 		</equipo>
         <!--<equipo id="311977">
@@ -342,12 +342,12 @@
 				<estadioid>803481</estadioid>
 				<estadionombre>C.C.F Arena</estadionombre>
 			</estadio>
-			<liga id="170753">
-				<ligaid>170753</ligaid>
-				<liganombre>X.2426</liganombre>
+			<liga id="176987">
+				<ligaid>176987</ligaid>
+				<liganombre>IX.1492</liganombre>
 			</liga>
 		</equipo>
-		<equipo id="777114">
+		<!--<equipo id="777114">
 			<nombre>sisaponova</nombre>
 			<teamid>777114</teamid>
 			<nombrecorto>sisaponova</nombrecorto>
@@ -356,11 +356,11 @@
 				<estadioid>780552</estadioid>
 				<estadionombre>rorricorrico</estadionombre>
 			</estadio>
-			<liga id="197890">
-				<ligaid>197890</ligaid>
-				<liganombre>XI.1900</liganombre>
+			<liga id="60441">
+				<ligaid>60441</ligaid>
+				<liganombre>IX.170</liganombre>
 			</liga>
-		</equipo>
+		</equipo>-->
 	</equipos>
 	<ligam40>
 		<grupo id="A">
