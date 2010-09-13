@@ -11,7 +11,7 @@ http = httplib2.Http()
 recServer = ''
 headers = {'Content-type': 'application/x-www-form-urlencoded'}
 username = 'betisman'
-password = 'logaritmo'
+password = 'xxx'
 #hasta aquí, variables globales
 
 def login():
