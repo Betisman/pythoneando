@@ -5,7 +5,7 @@ import CarruselHandler
 import Config
 import sys
 import os
-import time
+import timeimport security
 #from pysqlite2 import dbapi2 as sqlite
 
 def leerFichero(file):
@@ -68,7 +68,7 @@ def main():
 			try:
 				if not to.startswith('#'):
 					#sendgmail.sendGmail(gmailuser, gmailpwd, to, subject, msg, None)
-					sendgmail.sendEmail('betisman+carloos.com', 'logaritmo', 'betisman@carloos.com', 'm40htnews@googlegroups.com', '[Carrusel]', msg, None)
+					sendgmail.sendEmail('betisman+carloos.com', security.getPassword('betisman@gmail.com'), 'betisman@carloos.com', 'm40htnews@googlegroups.com', '[Carrusel]', msg, None)
 					print 'Mail enviado correctamente a la direccion ' + to
 			except Exception, msg:
 				print 'El mail (creo) no ha sido enviado a la direccion', to, '(',sys.exc_info(),')'

@@ -10,6 +10,7 @@ import tools.BeautifulSoup as BeautifulSoup
 from model import Equipo
 from handlers import EquipoHandler
 from pysqlite2 import dbapi2 as sqlite
+import security
 
 #script para inicialización de la bd
 
@@ -55,7 +56,7 @@ http = httplib2.Http()
 recServer = ''
 headers = {'Content-type': 'application/x-www-form-urlencoded'}
 username = 'betisman'
-password = 'logaritmo'
+password = security.getPassword('betisman@gmail.com')
 #hasta aquí, variables globales
 
 def login():

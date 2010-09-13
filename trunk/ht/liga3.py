@@ -6,6 +6,7 @@ import xml.dom.minidom as minidom
 import urllib, httplib2
 import sys
 import time, datetime
+import security
 
 def leerFichero(file):
 	return open(file, 'r').read()
@@ -129,6 +130,8 @@ def liga(log):
     msg = txt
     log.info(txt)
 
+    user='betisman@gmail.com'
+    password=security.getPassword(user)
     ant = open('liga.txt', 'r').read()
     if msg != ant:
         mgc = gcalendar.MyGCalendar('betisman@gmail.com', 'logaritmo')
