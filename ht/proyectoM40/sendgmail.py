@@ -94,8 +94,8 @@ def sendEmail(gmailuser, gmailpwd, fromemail, to, subject, text, attach):
 	mailServer.close()
 	
 def prueba():
-	gmailuser = 'betisman@gmail.com'
-	gmailpwd = 'logaritmo'
+	gmailuser = 'm40htnews@gmail.com'
+	gmailpwd = 'conejote'
 	#to = 'betisman@gmail.com'
 	to = 'betisman@gmail.com'
 	subject = 'Esto es una prueba automatica'
