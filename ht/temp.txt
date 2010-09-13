@@ -27,7 +27,7 @@ in a few clicks !" src="images/logo.gif" width="218" height="90" border=0></a></
         <tr> 
           <td colspan="2" valign="bottom"> <table width="562" border="0" cellpadding="0" cellspacing="0">
             <tr bgcolor="267F30">
-			                 <form action="/index.php?page=identification&login=betisman&password=logaritmo&ident=1" method="post">
+			                 <form action="/index.php?page=identification&login=betisman&password=xxx&ident=1" method="post">
               <td valign="bottom" bgcolor="267F30" class=texte-blanc><b>Language :</b> 
 			         <select name="lang" onChange="ChangeLang(this.form)">
                  

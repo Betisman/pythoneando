@@ -2,6 +2,7 @@
 import xml.dom.minidom as minidom
 import urllib, httplib2
 import sys
+import security
 #httplib2.debuglevel = 1
 http = httplib2.Http()
 
@@ -9,7 +10,7 @@ http = httplib2.Http()
 recServer = ''
 headers = {'Content-type': 'application/x-www-form-urlencoded'}
 username = 'betisman'
-password = 'logaritmo'
+password = security.getPassword('betisman@gmail.com')
 #hasta aquí, variables globales
 
 def getRecommendedServer():
