@@ -10,8 +10,8 @@ htArenaUrl = 'http://www.ht-arena.com/'
 headers = {'Content-type': 'application/x-www-form-urlencoded'}
 
 username = 'betisman'
-password = 'logaritmo'
-security = 'odonkor'
+password = 'xxx'
+security = 'xxx'
 nombreWeb = 'realbetismanbalompie'
 
 numJugadoresTransfer = '25'
