@@ -137,7 +137,7 @@ class MyGCalendar():
 			pass
 
 
-##mygc = MyGCalendar('betisman@gmail.com', 'logaritmo')
+##mygc = MyGCalendar('betisman@gmail.com', 'xxx')
 #####
 # username = raw_input('email: ')
 # password = getpass.getpass('password: ')
