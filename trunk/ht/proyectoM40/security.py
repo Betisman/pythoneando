@@ -2,8 +2,8 @@ import bz2
 import sys
 import getpass
 
-pathXml = 'xmls/'
-pathSecfile = 'xmls/security.txt'
+pathXml = 'misc/'
+pathSecfile = 'misc/security.txt'
 
 def leerSecurity(path):
     ret = {}
