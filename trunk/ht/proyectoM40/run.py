@@ -5,7 +5,7 @@ import CarruselHandler
 import Config
 import sys
 import os
-import timefrom tools import security
+import timefrom tools.security import *
 #from pysqlite2 import dbapi2 as sqlite
 
 def leerFichero(file):
