@@ -74,8 +74,8 @@ def main():
 				print 'El mail (creo) no ha sido enviado a la direccion', to, '(',sys.exc_info(),')'
 		# subirFicheroAFtp(ficheroMarcadorXml, ftpASubir)
 		
-		os.remove('misc/generando.lock')
-		print 'Fichero de bloqueo eliminado'
+	os.remove('misc/generando.lock')
+	print 'Fichero de bloqueo eliminado'
 
 if __name__ == "__main__":
 	main()
