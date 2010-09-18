@@ -53,9 +53,9 @@ def lama():
                     mgc.enviarSms(msg)
 
                 #twitter
-                import twitter
-                api = twitter.Api(username='m40htnews', password='casona')
-                status = api.PostUpdate(msg)
+                #import twitter
+                #api = twitter.Api(username='m40htnews', password='casona')
+                #status = api.PostUpdate(msg)
             else:
                 print 'no enviamos sms'
 
