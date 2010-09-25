@@ -31,7 +31,7 @@ def lama():
                 time.sleep(segundos)
                 acumulados = acumulados + segundos
                 if acumulados >= totalespera:
-                    os.remove('misc/generando.lock')
+                    os.remove('proyectoM40/misc/generando.lock')
                     print 'Fichero de bloqueo eliminado de forma forzada tras', totalespera, ' segundos esperando que se desbloquee'
             open('proyectoM40/misc/generando.lock', 'w')
             print 'Fichero de bloqueo creado.'
