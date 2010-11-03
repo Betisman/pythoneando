@@ -62,7 +62,7 @@ class CarruselHandler:
 		 # #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
                 #now = datetime.datetime.now() + datetime.timedelta(hours=8)
                 # EN INVIERNO (O POR LO MENOS HOY, 28.10.2009) SON 7 HORAS DE DIFERENCIA!!!
-                #now = datetime.datetime.now() + datetime.timedelta(hours=8)				now = datetime.datetime.now() + datetime.timedelta(hours=7)
+                #now = datetime.datetime.now() + datetime.timedelta(hours=8)                now = datetime.datetime.now() + datetime.timedelta(hours=7)
 		# #########
 		strResultados = "RESULTADOS"+ " (%02d:%02d)\n\n" %(now.hour, now.minute)
 		
@@ -183,7 +183,7 @@ class CarruselHandler:
 					# #########PARCHE CUTRE PARA LOS TIEMPOS CON LA DIFERENCIA DE 8 HORAS DE BLUEHOST
                                         #ahora = datetime.datetime.now() + datetime.timedelta(hours=8)
                                         # EN INVIERNO (O POR LO MENOS HOY, 28.10.2009) SON 7 HORAS DE DIFERENCIA!!!
-                                        ahora = datetime.datetime.now() + datetime.timedelta(hours=8)										ahora = datetime.datetime.now() + datetime.timedelta(hours=7)
+                                        ahora = datetime.datetime.now() + datetime.timedelta(hours=8)                                        ahora = datetime.datetime.now() + datetime.timedelta(hours=7)
 					# ##############################################
 					if ahora < inicio:
 						diferencia = 0
