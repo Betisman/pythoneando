@@ -360,7 +360,21 @@
 				<ligaid>60441</ligaid>
 				<liganombre>IX.170</liganombre>
 			</liga>
-		</equipo>-->
+		</equipo>-->1369894
+		<equipo id="1369894">
+			<nombre>C.C.F Team</nombre>
+			<teamid>1369894</teamid>
+			<nombrecorto>C.C.F</nombrecorto>
+			<micronombre>CCF</micronombre>
+			<estadio id="803481">
+				<estadioid>803481</estadioid>
+				<estadionombre>C.C.F Arena</estadionombre>
+			</estadio>
+			<liga id="176987">
+				<ligaid>176987</ligaid>
+				<liganombre>IX.1492</liganombre>
+			</liga>
+		</equipo>
 	</equipos>
 	<ligam40>
 		<grupo id="A">

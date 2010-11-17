@@ -1,23 +1,20 @@
-:-) (VII.555)  	[4.]	makokis 0 - 7 ThePiso
-:-) (VIII.169) 	[2.]	Real Betisman Balompie 5 - 1 CHOCOS_FC
-:-( (VIII.1267)	[8.]	Pink Floyd 1970 3 - 2 Dogt
-:-( (VIII.1453)	[7.]	Hapiio FC 0 - 5 puertasinai
-:-| (VIII.1647)	[3.]	Wandervogel 4 - 4 Pitisianos SAD
-:-) (VIII.1927)	[2.]	Jumfrys F.K. 10 - 0 Los ligres
-:-) (VIII.2021)	[3.]	Real Servelete de Carfesan 3 - 1 -Fitti's team-
-:-) (IX.93)    	[1.]	Espino F.C 3 - 2 Chim-pun
-:-) (IX.199)   	[2.]	LittleBlueCow United 3 - 1 Los SON
-:-) (IX.1401)  	[1.]	patxy`s TEAM 5 - 3 ala vianes
-:-) (IX.1422)  	[2.]	sad. dep. setas 0 - 6 ollauris F.C.
-:-) (IX.1751)  	[1.]	Vincios C.F 0 - 7 Raul Gran Capitan
-:-) (IX.1765)  	[4.]	Bukakke Team 2 - 0 RAMRODORI1
-:-) (X.2035)   	[5.]	Inframundo CD Drogadictos anonimos 4 - 2 Chovar CF
-:-) (X.2186)   	[2.]	A.D. Dimitri PITERMAN 3 - 2 Forza-United
-:-) (X.3271)   	[1.]	milan chupao 3 - 1 burgohondo CF
-:-( (X.3324)   	[4.]	J@KE DESING C.F. 4 - 1 El yogur mecanico
-:-) (X.3324)   	[6.]	Torroja Team 0 - 2 el uno y sus pipas FC
-:-) (X.3324)   	[1.]	joelypabloboys 0 - 6 CONGRIO F.C.
-:-) (XI.115)   	[1.]	Volcanos F.C. 0 - 4 Roscuro Team
-:-) (XI.3100)  	[2.]	Llamantol 1 - 4 Cordoba S.A.D
+:-( (VII.555)  	[6.]	Eagle Pride.C.F 3 - 1 ThePiso
+:-) (VIII.169) 	[1.]	Jarno A.C. 0 - 5 Real Betisman Balompie
+:-| (VIII.1267)	[2.]	Bokonazos 0 - 0 Dogt
+:-| (VIII.1647)	[5.]	Sa crisi 2 - 2 Pitisianos SAD
+:-| (VIII.1927)	[2.]	Jumfrys F.K. 3 - 3 olabeagako
+:-( (VIII.2021)	[6.]	chusma juniors 4 - 1 Real Servelete de Carfesan
+:-) (IX.93)    	[1.]	Espino F.C 9 - 0 viciosos fc
+:-) (IX.1401)  	[2.]	patxy`s TEAM 7 - 0 Fistro
+:-) (IX.1751)  	[1.]	jugemos c.f. 2 - 4 Raul Gran Capitan
+:-) (IX.1765)  	[3.]	the cracks 0 - 3 Bukakke Team
+:-) (X.2035)   	[3.]	Inframundo CD Drogadictos anonimos 7 - 0 Puce F.C.
+:-) (X.2186)   	[4.]	A.D. Dimitri PITERMAN 6 - 0 Elektrik Team
+:-) (X.3271)   	[1.]	Ojo de Halcon 1 - 7 milan chupao
+:-( (X.3324)   	[5.]	El yogur mecanico 3 - 4 gallur team
+:-( (X.3324)   	[6.]	J@KE DESING C.F. 6 - 0 el uno y sus pipas FC
+:-) (X.3324)   	[3.]	CONGRIO F.C. 4 - 0 angel gumix
+:-( (XI.115)   	[5.]	Roscuro Team 0 - 5 Arizmendi A.J.
+:-) (XI.3100)  	[1.]	Cordoba S.A.D 7 - 1 C.A.V.
 
-21 jugados: 17 ganados, 1 empatados, 3 perdidos
+18 jugados: 10 ganados, 3 empatados, 5 perdidos
