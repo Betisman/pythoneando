@@ -1,5 +1,6 @@
 # coding=UTF-8
 from model import Equipo, Partido
+import model
 import Config
 from pysqlite2 import dbapi2 as sqlite
 import xml.dom.minidom as minidom
@@ -233,3 +234,34 @@ class DBHandler:
 		cur.execute(sql)
 		self.conn.commit()
 		return cur
+
+class M40XmlHandler:
+	__metaclass__ = model.Singleton
+	def __init__(self):
+		print "M40XMLHANDLER"
+		self.config = Config.Config()
+		self.m40 = self.config.get('file.m40')
+	
+	def getXmlEquipo(self, id):
+		team = None
+		doc = minidom.parse(self.m40)
+		teams = doc.getElementsByTagName('equipo')
+		for t in teams:
+			if t.getAttribute('id') == str(id):
+				return t
+		return None
+
+	def getNombreFromXml(self, id):
+		team = self.getXmlEquipo(id)
+		try:
+			return team.getElementsByTagName('nombre')[0].firstChild.nodeValue
+		except AttributeError:
+			raise Exception("No se encuentra el equipo con id", id, "en getNombreFromXml")
+
+	def getNombreCortoFromXml(self, id):
+		team = self.getXmlEquipo(id)
+		return team.getElementsByTagName('nombrecorto')[0].firstChild.nodeValue
+
+	def getMicroNombreFromXml(self, id):
+		team = self.getXmlEquipo(id)
+		return team.getElementsByTagName('micronombre')[0].firstChild.nodeValue

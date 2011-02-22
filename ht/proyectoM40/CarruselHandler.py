@@ -16,7 +16,7 @@ class CarruselHandler:
 		self.config = Config.Config()
 		#conectamos con Hattrick y nos logueamos
 		self.htconn = HTconnection.HtConnManager()
-		self.http, self.headers = self.htconn.login(self.config.get('hattrick.username'), self.config.get('hattrick.password'))
+		self.http, self.headers = self.htconn.login(self.config.get('hattrick.username'), self.config.get('hattrick.password'), self.config.get('hattrick.securitycode'))
 		self.recServer = self.htconn.recServer
 	
 	def valorElementoSimple(self, elem, tag):
