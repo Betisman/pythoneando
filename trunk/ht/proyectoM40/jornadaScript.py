@@ -181,7 +181,7 @@ def sustituyeNombre(nombre):
 config = Config.Config()
 #conectamos con Hattrick y nos logueamos
 htconn = HTconnection.HtConnManager()
-http, headers = htconn.login(config.get('hattrick.username'), config.get('hattrick.password'))
+http, headers = htconn.login(config.get('hattrick.username'), config.get('hattrick.password'), config.get('hattrick.securitycode'))
 recServer = htconn.recServer
 #headers = {'Content-type': 'application/x-www-form-urlencoded'}
 username = config.get('hattrick.username')
