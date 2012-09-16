@@ -1,6 +1,6 @@
 # coding=ISO-8859-1
-import carr
 import sendgmail
+print 'cagao'
 import gcalendar #implica instalar la libreria gdata (de Google)!!!
 import xml.dom.minidom as minidom
 import urllib, httplib2
@@ -56,59 +56,62 @@ def asciizacion(cadena):
 def liga(log):
     log.info('ejecucion ----------------------------------------------')
     #url = 'http://www.marca.com/'
-    url = 'http://www.marca.com/marcador/futbol/2010_11/segunda/jornada_2/'
+    url = 'http://www.marca.com/eventos/marcador/futbol/2012_13/primera/jornada_2/'
     http = httplib2.Http()
     headers = {}
     response, content = http.request(url, 'GET', headers=headers)
     #open('marca.txt', 'w').write(content)
     #content = open('marca.txt', 'r').read()
 
+    ini = content.find('<div class="col_izq">')
+    fin = content.find('<div class="col_der">')
+	# ÑAPA por los problemas de Unicode y ese calvario
+    trozo = content[ini:fin];
+    trozo = trozo.replace('&aacute;', 'a').replace('&eacute;', 'e').replace('&iacute;', 'i').replace('&oacute;', 'o').replace('&uacute;', 'u')
+    trozo = trozo.replace('&Aacute;', 'A').replace('&Eacute;', 'E').replace('&Iacute;', 'I').replace('&Oacute;', 'O').replace('&Uacute;', 'U')
+    trozo = trozo.replace('á', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u')
+    trozo = trozo.replace('&ntilde;', 'n').replace('&Ntilde;', 'N')
+    trozo = trozo.replace('Á', 'A').replace('É', 'E').replace('Í', 'I').replace('Ó', 'O').replace('Ú', 'U')
+    trozo = trozo.replace('ñ', 'n').replace('Ñ', 'N')
+    html = ''
+    for linea in trozo.split('\n'):
+        if linea.find('select') > -1 or linea.find('option') > -1:
+            pass
+        else:
+            html = html + linea + '\n'
+
+    #html = trozo
+    htmlsindoctype = html[html.find('>')+1:]
+
+    import xml.parsers.expat
+    parsingok = False
+    while (parsingok == False) :
+        try:
+            text = '<?xml version="1.0" encoding="iso-8859-1"?>'
+            html = text + html;print html[7380:7392]
+            afichero(html, 'docxml.xml')
+            doc = minidom.parseString(html)
+            parsingok = True
+        except xml.parsers.expat.ExpatError, excmsg:
+            print excmsg
+		
+
     partidos = {}
-
-    #ini = content.find('<!-- = Modulo Todos los partidos de segunda = -->')
-    #fin = content.find('<!-- = Fin Modulo Todos los partidos de segunda = -->', ini)
-    print 'url:', url
-    ini = content.find('<div class="tabcontenedor_jornada" title="Jornada 2">')
-    fin = content.find('<table class="pichichi">', ini)
-    pos = ini + 1
-    eqpartido = 1
-    part = 1
-
-    tr = content[ini:fin]
-    tr = tr.split('\n')
-    part = 1
-    local = True
-    partido = {}
-    for i in tr:
-
-        if i.find('class="equipo"') > 0:
-            equipo = i[i.find('>') + 1:i.find('</td>')]
-            equipo = equipo[equipo.find('>')+1:equipo.find('</a>')]
-            if local:
-                partido['local'] = equipo
-            else:
-                partido['visitante'] = equipo
-        if i.find('class="resultado"') > 0:
-            resultado = i[i.find('>') + 1:i.find('</td>')]
-            resultado = resultado[resultado.find('>')+1:resultado.find('</a>')]
-            if local:
-                partido['reslocal'] = resultado
-                local = False
-            else:
-                partido['resvisitante'] = resultado
-        if i.find('class="estado') > 0:
-            if i.find('inalizado') > 0:
-                partido['finalizado'] = '*'
-            else:
-                partido['finalizado'] = ''
-        if i.find('</tbody>') > -1:
-            partidos[part] = partido
+    i = 0
+    for div in doc.getElementsByTagName('div') :
+        if div.getAttribute('class').find('equipos') > -1 :
             partido = {}
-            local = True
-            part = part + + 1
-
+            elems = div.getElementsByTagName('div')
+            partido['local'] 		= elems[1].firstChild.data
+            partido['reslocal']  	= elems[2].firstChild.data
+            partido['resvisitante']	= elems[3].firstChild.data
+            partido['visitante'] 	= elems[4].firstChild.data
+            partidos[i] = partido
+            i = i + 1
+			
+	
     for i in partidos:
-        print i, partidos[i]['local'], partidos[i]['reslocal'], '-', partidos[i]['resvisitante'], partidos[i]['visitante']
+        print i, partidos[i]['local'], partidos[i]['reslocal'], '-', partidos[i]['resvisitante'], partidos[i]['visitante']			
 
     txt = ''
     # for i in (1, 2, 3, 4):
@@ -117,7 +120,8 @@ def liga(log):
 
     for i in partidos:
         #if partidos[i]['local'].find('Betis') > -1 or partidos[i]['visitante'].find('Betis') > -1:
-        if partidos[i]['local'].find('Betis') > -1 or partidos[i]['visitante'].find('Betis') > -1 or partidos[i]['local'].find('Cartagena') > -1 or partidos[i]['visitante'].find('Cartagena') > -1:
+        if partidos[i]['local'].find('Betis') > -1 or partidos[i]['visitante'].find('Betis') > -1 or partidos[i]['local'].find('Malaga') > -1 or partidos[i]['visitante'].find('Malaga') > -1:
+        #if partidos[i]['local'].find('Deportivo') > -1 or partidos[i]['visitante'].find('Deportivo') > -1 or partidos[i]['local'].find('Rayo') > -1 or partidos[i]['visitante'].find('Rayo') > -1:
             txt += '%s%s-%s%s; ' % (partidos[i]['local'], partidos[i]['reslocal'], partidos[i]['resvisitante'], partidos[i]['visitante'])
             txt = txt.replace('&aacute;', 'a')
             txt = txt.replace('&eacute;', 'e')
@@ -134,7 +138,7 @@ def liga(log):
     password=security.getPassword(user)
     ant = open('liga.txt', 'r').read()
     if msg != ant:
-        mgc = gcalendar.MyGCalendar('betisman@gmail.com', 'logaritmo')
+        mgc = gcalendar.MyGCalendar(user, password)
         mgc.login()
         mgc.enviarSms(msg)
         print 'envío', '\n', txt
