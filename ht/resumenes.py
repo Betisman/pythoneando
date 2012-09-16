@@ -20,7 +20,7 @@ def inicializar(nivelLog, log):
 	fh.setFormatter(formatter)
 	log.addHandler(fh)
 
-mapNombres = {'Betisman':'RBB', 'Roscuro':'Ros', 'PITERMAN':'ADP', 'Jumfrys':'Jum', 'ThePiso':'ThP', 'Cordoba':'Cor', 'Dogt':'Dog', 'C.C.F':'CCF', 'Capitan':'RGC', 'CONGRIO':'CON'}
+mapNombres = {'Betisman':'RBB', 'Roscuro':'Ros', 'PITERMAN':'ADP', 'Jumfrys':'Jum', 'ThePiso':'ThP', 'Cordoba':'Cor', 'Dogt':'Dog', 'C.C.F':'CCF', 'Capitan':'RGC', 'CONGRIO':'CON', 'Fantasma': 'Fan'}
 infoEquipos = {}
 
 #class Equipo(self, _nombre, _id=0, _pj=0, _pg=0, _pe=0, _pp=0, _gf=0, _gc=0, _ptos=0):
@@ -112,26 +112,24 @@ def equiposMenosGoleados():
   return ret
   
 host = 'http://www.hattrick.org/Club/Matches/Match.aspx?matchID='
-# XII Liga M40
-#jornada01 = {'Jornada 1': []}
-#jornada02 = {'Jornada 2': []}
-#jornada03 = {'Jornada 3': ['346204554']}
-#jornada04 = {'Jornada 4': ['346342481', '346417469', '346362799']}
-#jornada05 = {'Jornada 5': ['346597156', '346638523', '346591082']}
-#jornada06 = {'Jornada 6': ['346802991', '346832036', '346876103', '346708744']}
-#jornada07 = {'Jornada 7': ['347040320', '347089249', '347071306', '347023394']}
-#jornada08 = {'Jornada 8': ['347275944', '347247890', '347268156', '347107130', '347301359']}
-#jornada09 = {'Jornada 9': ['347450518', '347422977', '347316790', '347394123']}
-#jornada10 = {'Jornada 10':['347611486', '347689213', '347588528', '347689337']}
-#jornada11 = {'Jornada 11':['347865162', '347767353', '347869534', '347801894']}
-#jornadas = [jornada01, jornada02, jornada03, jornada04, jornada05, jornada06, jornada07, jornada08, jornada09, jornada10, jornada11]
+jornadas = []
+# XIV Liga M40
+#jornadas.append({'Jornada 1': ['393178767', 'partidosinjugar_Capitan 3 - 0 PITERMAN']})
+#jornadas.append({'Jornada 2': ['393367432', '393369812', '393257368']})
+#jornadas.append({'Jornada 3': ['393570234', '393515400']})
+#jornadas.append({'Jornada 4': ['393717060', '393652590']})
+#jornadas.append({'Jornada 5': ['393912729', 'partidosinjugar_Roscuro 3 - 0 CONGRIO', 'partidosinjugar_Betisman 3 - 0 Capitan']})
+#jornadas.append({'Jornada 6': ['394062321', '394124632', 'partidosinjugar_Capitan 3 - 0 CONGRIO']})
+#jornadas.append({'Jornada 7': ['394320798', 'partidosinjugar_Capitan 3 - 0 Cordoba', '394243013']})
+#jornadas.append({'Jornada 8': ['363373735', '363353881', '363340722', '363362061', 'partidosinjugar_Capitan 3 - 0 Jumfrys']})
+#jornadas.append({'Jornada 9': ['363539272', '363524345', '363490686', 'partidosinjugar_C.C.F 0 - 3 Roscuro', 'partidosinjugar_Dogt 3 - 0 Jumfrys']})
 
-# XII Copa M40
-jornada01 = {'Octavos de Final': ['348005753', '348093546', '348028643', '348072649', '348087926']}
-jornada02 = {'Cuartos de Final': ['348298511', '348301744', '348243820', '348263462']}
-jornada03 = {'Semifinales': ['348447767', '348499343']}
-jornada04 = {'Final': ['348715290']}
-jornadas = [jornada01, jornada02, jornada03, jornada04]
+# XIII Copa M40
+#jornadas.append({'Octavos de Final': ['partidosinjugar_CONGRIO 3 - 0 Fantasma', 'partidosinjugar_ThePiso 3 - 0 Cordoba', '379235790', '379324963', '363770697']})
+jornadas.append({'Cuartos de Final': ['partidosinjugar_ThePiso 3 - 0 Fantasma', 'partidosinjugar_PITERMAN 3 - 0 Roscuro', '394407592', '394436966']})
+#jornadas.append({'Semifinales': ['379493907', '379477859']})
+#jornadas.append({'Final': ['379715186']})
+
 
 def lanzar2(nivelLog, segundos):
   inicializar(nivelLog, log)
@@ -152,13 +150,18 @@ def lanzar2(nivelLog, segundos):
     print '----------------------', strJornada, '----------------------'
     idpartidos = jornada[jornada.keys()[0]]
     urls = []
+    partidosSinJugar = []
     for idpartido in idpartidos:
-      urls.append(host + idpartido)
+      if idpartido.startswith('partidosinjugar_'):
+		partidosSinJugar.append(idpartido.replace('partidosinjugar_', ''))
+      else:
+		urls.append(host + idpartido)
       
     for url in urls:
       inicio = time.time()
       #print url
       response, content = http.request(url, 'GET', headers=headers)
+      open('content.txt', 'w').write(url + content)
       i += 1
       content = content.decode('utf-8')
       #print content
@@ -187,7 +190,7 @@ def lanzar2(nivelLog, segundos):
       if ini == -1:
         ini = content.find('>Highlights</h2>')
       
-      ini = content.find('<table>', ini)
+      ini = content.find('<table class="tblHighlights">', ini)
       fin = content.find('</table>', ini)
       tabla = content[ini:fin]
       
@@ -211,9 +214,13 @@ def lanzar2(nivelLog, segundos):
             #print "*res", resultado, "*"
             #print "*gol", goleador, "*"
             #print "*min", minuto, "*"
-            strResultado = resultado[resultado.find('>')+1:resultado.find('</td>')].replace('&nbsp;', '').strip()
+            casa = resultado.split('</span>')[0]; casa = casa[casa.rfind('>')+1:]
+            fuera = resultado.split('</span>')[1]; fuera = fuera[fuera.rfind('>')+1:]
+            #strResultado = resultado[resultado.find('>')+1:resultado.find('</td>')].replace('&nbsp;', '').strip()
+            strResultado = casa + '-' + fuera
             link = goleador[goleador.find('<a'):goleador.find('</a>')]
             strJugador = link[link.find('>')+1:]
+            #idJugador = link[link.find('PlayerID=')+len('PlayerID='):link.find('"', link.find('PlayerID="')+len('PlayerID="')):]
             idJugador = link[link.find('playerId=')+len('playerId='):link.find('"', link.find('playerId="')+len('playerId="')):]
             info = '%s %s (%s)' %(strResultado, strJugador, idJugador)
             while True:
@@ -233,8 +240,13 @@ def lanzar2(nivelLog, segundos):
             except KeyError:
               goleadores[strJugador + ' (' + idJugador + ')'] = 1
             
-        ev = ev + 1  
-    
+        ev = ev + 1 
+		
+    for psj in partidosSinJugar:
+      print ''
+      print psj, '->', '-1'
+      resultadoAInfoEquipos(psj)
+
     #info = '%d - %s %7d %f %s %s' %(i, url, len(content), tiempoPeticion, status, indica)
     infor = ""
     print infor
@@ -259,7 +271,7 @@ def lanzar2(nivelLog, segundos):
   sorted_goleadores.sort()
   sorted_goleadores.reverse()             # so largest is first
   sorted_goleadores = [(k, v) for v, k in sorted_goleadores]
-        
+       
         
   headers = {}
   http = httplib2.Http()
@@ -274,12 +286,15 @@ def lanzar2(nivelLog, segundos):
     fin = content.find('</table>', ini)
     tabla = content[ini:fin]
     trs = tabla.split('<tr')
-    fila = trs[1]
-    tds = fila.split('<td')
-    celda = tds[2]
-    link = celda[celda.find('<a'):celda.find('</a')]
-    strEquipo = link[link.find('>')+1:]
-    info = '%2d %s --- %s' %(goleador[1], goleador[0], strEquipo)
+    if len(trs) > 1 :
+      fila = trs[1]
+      tds = fila.split('<td')
+      celda = tds[2]
+      link = celda[celda.find('<a'):celda.find('</a')]
+      strEquipo = link[link.find('>')+1:]
+      info = '%2d %s --- %s' %(goleador[1], goleador[0], strEquipo)
+    else:
+      info = '%2d %s --- %s' %(goleador[1], goleador[0], '----------')
     while True:
             try:
               print info

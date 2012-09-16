@@ -172,8 +172,12 @@ def sustituyeNombre(nombre):
         ret = 'sis' 
     elif nombre.find('C.C.F Team') > -1:
         ret = 'CCF'
+    elif nombre.find('recre!') > -1:
+        ret = 'rec'
     elif nombre.find('Real Servelete de Carfesan') > -1:
         ret = 'RSC'
+    elif nombre.find('digas del Ikea') > -1:
+        ret = 'Alb'
     else:
         ret = nombre[0]
     return ret
